@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML><HEAD></HEAD><BODY>
+<OBJECT type="text/site properties">
+<param name="FrameName" value="right">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Main Page"><param name="Local" value="index.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Todo List"><param name="Local" value="todo.html"><param name="ImageNumber" value="11"></OBJECT>
+  <UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Modules"><param name="Local" value="modules.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="VirtualBox COM result codes"><param name="Local" value="group___virtual_box___c_o_m__result__codes.html"><param name="ImageNumber" value="11"></OBJECT>
+    <UL>
+    </UL>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class List"><param name="Local" value="annotated.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IAdditionsFacility"><param name="Local" value="interface_i_additions_facility.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IAdditionsStateChangedEvent"><param name="Local" value="interface_i_additions_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IAppliance"><param name="Local" value="interface_i_appliance.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IAudioAdapter"><param name="Local" value="interface_i_audio_adapter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IBandwidthControl"><param name="Local" value="interface_i_bandwidth_control.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IBandwidthGroup"><param name="Local" value="interface_i_bandwidth_group.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IBandwidthGroupChangedEvent"><param name="Local" value="interface_i_bandwidth_group_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IBIOSSettings"><param name="Local" value="interface_i_b_i_o_s_settings.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ICanShowWindowEvent"><param name="Local" value="interface_i_can_show_window_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IConsole"><param name="Local" value="interface_i_console.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ICPUChangedEvent"><param name="Local" value="interface_i_c_p_u_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ICPUExecutionCapChangedEvent"><param name="Local" value="interface_i_c_p_u_execution_cap_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IDHCPServer"><param name="Local" value="interface_i_d_h_c_p_server.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IDisplay"><param name="Local" value="interface_i_display.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IEvent"><param name="Local" value="interface_i_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IEventListener"><param name="Local" value="interface_i_event_listener.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IEventSource"><param name="Local" value="interface_i_event_source.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IEventSourceChangedEvent"><param name="Local" value="interface_i_event_source_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPack"><param name="Local" value="interface_i_ext_pack.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackBase"><param name="Local" value="interface_i_ext_pack_base.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackFile"><param name="Local" value="interface_i_ext_pack_file.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackManager"><param name="Local" value="interface_i_ext_pack_manager.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackPlugIn"><param name="Local" value="interface_i_ext_pack_plug_in.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtraDataCanChangeEvent"><param name="Local" value="interface_i_extra_data_can_change_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtraDataChangedEvent"><param name="Local" value="interface_i_extra_data_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IFramebuffer"><param name="Local" value="interface_i_framebuffer.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IFramebufferOverlay"><param name="Local" value="interface_i_framebuffer_overlay.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuest"><param name="Local" value="interface_i_guest.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestDirEntry"><param name="Local" value="interface_i_guest_dir_entry.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestKeyboardEvent"><param name="Local" value="interface_i_guest_keyboard_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestMonitorChangedEvent"><param name="Local" value="interface_i_guest_monitor_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestMouseEvent"><param name="Local" value="interface_i_guest_mouse_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestOSType"><param name="Local" value="interface_i_guest_o_s_type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestPropertyChangedEvent"><param name="Local" value="interface_i_guest_property_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IHost"><param name="Local" value="interface_i_host.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostNetworkInterface"><param name="Local" value="interface_i_host_network_interface.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostPciDevicePlugEvent"><param name="Local" value="interface_i_host_pci_device_plug_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostUSBDevice"><param name="Local" value="interface_i_host_u_s_b_device.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostUSBDeviceFilter"><param name="Local" value="interface_i_host_u_s_b_device_filter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IInternalMachineControl"><param name="Local" value="interface_i_internal_machine_control.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IInternalSessionControl"><param name="Local" value="interface_i_internal_session_control.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IKeyboard"><param name="Local" value="interface_i_keyboard.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IKeyboardLedsChangedEvent"><param name="Local" value="interface_i_keyboard_leds_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachine"><param name="Local" value="interface_i_machine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineDataChangedEvent"><param name="Local" value="interface_i_machine_data_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineDebugger"><param name="Local" value="interface_i_machine_debugger.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineEvent"><param name="Local" value="interface_i_machine_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineRegisteredEvent"><param name="Local" value="interface_i_machine_registered_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineStateChangedEvent"><param name="Local" value="interface_i_machine_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IManagedObjectRef"><param name="Local" value="interface_i_managed_object_ref.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMedium"><param name="Local" value="interface_i_medium.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumAttachment"><param name="Local" value="interface_i_medium_attachment.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumChangedEvent"><param name="Local" value="interface_i_medium_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumFormat"><param name="Local" value="interface_i_medium_format.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumRegisteredEvent"><param name="Local" value="interface_i_medium_registered_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMouse"><param name="Local" value="interface_i_mouse.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMouseCapabilityChangedEvent"><param name="Local" value="interface_i_mouse_capability_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMousePointerShapeChangedEvent"><param name="Local" value="interface_i_mouse_pointer_shape_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="INATEngine"><param name="Local" value="interface_i_n_a_t_engine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="INATRedirectEvent"><param name="Local" value="interface_i_n_a_t_redirect_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="INetworkAdapter"><param name="Local" value="interface_i_network_adapter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="INetworkAdapterChangedEvent"><param name="Local" value="interface_i_network_adapter_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IParallelPort"><param name="Local" value="interface_i_parallel_port.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IParallelPortChangedEvent"><param name="Local" value="interface_i_parallel_port_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPciAddress"><param name="Local" value="interface_i_pci_address.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPciDeviceAttachment"><param name="Local" value="interface_i_pci_device_attachment.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPerformanceCollector"><param name="Local" value="interface_i_performance_collector.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPerformanceMetric"><param name="Local" value="interface_i_performance_metric.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IProgress"><param name="Local" value="interface_i_progress.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IReusableEvent"><param name="Local" value="interface_i_reusable_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IRuntimeErrorEvent"><param name="Local" value="interface_i_runtime_error_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISerialPort"><param name="Local" value="interface_i_serial_port.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISerialPortChangedEvent"><param name="Local" value="interface_i_serial_port_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISession"><param name="Local" value="interface_i_session.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISessionStateChangedEvent"><param name="Local" value="interface_i_session_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISharedFolder"><param name="Local" value="interface_i_shared_folder.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISharedFolderChangedEvent"><param name="Local" value="interface_i_shared_folder_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IShowWindowEvent"><param name="Local" value="interface_i_show_window_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshot"><param name="Local" value="interface_i_snapshot.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotChangedEvent"><param name="Local" value="interface_i_snapshot_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotDeletedEvent"><param name="Local" value="interface_i_snapshot_deleted_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotEvent"><param name="Local" value="interface_i_snapshot_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotTakenEvent"><param name="Local" value="interface_i_snapshot_taken_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IStateChangedEvent"><param name="Local" value="interface_i_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IStorageController"><param name="Local" value="interface_i_storage_controller.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IStorageControllerChangedEvent"><param name="Local" value="interface_i_storage_controller_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IStorageDeviceChangedEvent"><param name="Local" value="interface_i_storage_device_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISystemProperties"><param name="Local" value="interface_i_system_properties.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBController"><param name="Local" value="interface_i_u_s_b_controller.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBControllerChangedEvent"><param name="Local" value="interface_i_u_s_b_controller_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBDevice"><param name="Local" value="interface_i_u_s_b_device.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBDeviceFilter"><param name="Local" value="interface_i_u_s_b_device_filter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBDeviceStateChangedEvent"><param name="Local" value="interface_i_u_s_b_device_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVBoxSVCAvailabilityChangedEvent"><param name="Local" value="interface_i_v_box_s_v_c_availability_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVetoEvent"><param name="Local" value="interface_i_veto_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVFSExplorer"><param name="Local" value="interface_i_v_f_s_explorer.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualBox"><param name="Local" value="interface_i_virtual_box.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualBoxClient"><param name="Local" value="interface_i_virtual_box_client.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualBoxErrorInfo"><param name="Local" value="interface_i_virtual_box_error_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualSystemDescription"><param name="Local" value="interface_i_virtual_system_description.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServer"><param name="Local" value="interface_i_v_r_d_e_server.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServerChangedEvent"><param name="Local" value="interface_i_v_r_d_e_server_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServerInfo"><param name="Local" value="interface_i_v_r_d_e_server_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServerInfoChangedEvent"><param name="Local" value="interface_i_v_r_d_e_server_info_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IWebsessionManager"><param name="Local" value="interface_i_websession_manager.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class Hierarchy"><param name="Local" value="hierarchy.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IAdditionsFacility"><param name="Local" value="interface_i_additions_facility.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IAppliance"><param name="Local" value="interface_i_appliance.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IAudioAdapter"><param name="Local" value="interface_i_audio_adapter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IBandwidthControl"><param name="Local" value="interface_i_bandwidth_control.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IBandwidthGroup"><param name="Local" value="interface_i_bandwidth_group.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IBIOSSettings"><param name="Local" value="interface_i_b_i_o_s_settings.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IConsole"><param name="Local" value="interface_i_console.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IDHCPServer"><param name="Local" value="interface_i_d_h_c_p_server.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IDisplay"><param name="Local" value="interface_i_display.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IEvent"><param name="Local" value="interface_i_event.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IAdditionsStateChangedEvent"><param name="Local" value="interface_i_additions_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IBandwidthGroupChangedEvent"><param name="Local" value="interface_i_bandwidth_group_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="ICPUChangedEvent"><param name="Local" value="interface_i_c_p_u_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="ICPUExecutionCapChangedEvent"><param name="Local" value="interface_i_c_p_u_execution_cap_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IEventSourceChangedEvent"><param name="Local" value="interface_i_event_source_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtraDataChangedEvent"><param name="Local" value="interface_i_extra_data_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestKeyboardEvent"><param name="Local" value="interface_i_guest_keyboard_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestMonitorChangedEvent"><param name="Local" value="interface_i_guest_monitor_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IKeyboardLedsChangedEvent"><param name="Local" value="interface_i_keyboard_leds_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineEvent"><param name="Local" value="interface_i_machine_event.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestPropertyChangedEvent"><param name="Local" value="interface_i_guest_property_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostPciDevicePlugEvent"><param name="Local" value="interface_i_host_pci_device_plug_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineDataChangedEvent"><param name="Local" value="interface_i_machine_data_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineRegisteredEvent"><param name="Local" value="interface_i_machine_registered_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineStateChangedEvent"><param name="Local" value="interface_i_machine_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="INATRedirectEvent"><param name="Local" value="interface_i_n_a_t_redirect_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ISessionStateChangedEvent"><param name="Local" value="interface_i_session_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotEvent"><param name="Local" value="interface_i_snapshot_event.html"><param name="ImageNumber" value="1"></OBJECT>
+        <UL>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotChangedEvent"><param name="Local" value="interface_i_snapshot_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotDeletedEvent"><param name="Local" value="interface_i_snapshot_deleted_event.html"><param name="ImageNumber" value="11"></OBJECT>
+        <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshotTakenEvent"><param name="Local" value="interface_i_snapshot_taken_event.html"><param name="ImageNumber" value="11"></OBJECT>
+        </UL>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumChangedEvent"><param name="Local" value="interface_i_medium_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumRegisteredEvent"><param name="Local" value="interface_i_medium_registered_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IMouseCapabilityChangedEvent"><param name="Local" value="interface_i_mouse_capability_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IMousePointerShapeChangedEvent"><param name="Local" value="interface_i_mouse_pointer_shape_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="INetworkAdapterChangedEvent"><param name="Local" value="interface_i_network_adapter_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IParallelPortChangedEvent"><param name="Local" value="interface_i_parallel_port_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IReusableEvent"><param name="Local" value="interface_i_reusable_event.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestMouseEvent"><param name="Local" value="interface_i_guest_mouse_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IRuntimeErrorEvent"><param name="Local" value="interface_i_runtime_error_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="ISerialPortChangedEvent"><param name="Local" value="interface_i_serial_port_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="ISharedFolderChangedEvent"><param name="Local" value="interface_i_shared_folder_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IShowWindowEvent"><param name="Local" value="interface_i_show_window_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IStateChangedEvent"><param name="Local" value="interface_i_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IStorageControllerChangedEvent"><param name="Local" value="interface_i_storage_controller_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IStorageDeviceChangedEvent"><param name="Local" value="interface_i_storage_device_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBControllerChangedEvent"><param name="Local" value="interface_i_u_s_b_controller_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBDeviceStateChangedEvent"><param name="Local" value="interface_i_u_s_b_device_state_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IVBoxSVCAvailabilityChangedEvent"><param name="Local" value="interface_i_v_box_s_v_c_availability_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IVetoEvent"><param name="Local" value="interface_i_veto_event.html"><param name="ImageNumber" value="1"></OBJECT>
+      <UL>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="ICanShowWindowEvent"><param name="Local" value="interface_i_can_show_window_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtraDataCanChangeEvent"><param name="Local" value="interface_i_extra_data_can_change_event.html"><param name="ImageNumber" value="11"></OBJECT>
+      </UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServerChangedEvent"><param name="Local" value="interface_i_v_r_d_e_server_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServerInfoChangedEvent"><param name="Local" value="interface_i_v_r_d_e_server_info_changed_event.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IEventListener"><param name="Local" value="interface_i_event_listener.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IEventSource"><param name="Local" value="interface_i_event_source.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackBase"><param name="Local" value="interface_i_ext_pack_base.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPack"><param name="Local" value="interface_i_ext_pack.html"><param name="ImageNumber" value="11"></OBJECT>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackFile"><param name="Local" value="interface_i_ext_pack_file.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackManager"><param name="Local" value="interface_i_ext_pack_manager.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IExtPackPlugIn"><param name="Local" value="interface_i_ext_pack_plug_in.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IFramebuffer"><param name="Local" value="interface_i_framebuffer.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IFramebufferOverlay"><param name="Local" value="interface_i_framebuffer_overlay.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuest"><param name="Local" value="interface_i_guest.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestDirEntry"><param name="Local" value="interface_i_guest_dir_entry.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IGuestOSType"><param name="Local" value="interface_i_guest_o_s_type.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IHost"><param name="Local" value="interface_i_host.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostNetworkInterface"><param name="Local" value="interface_i_host_network_interface.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IInternalMachineControl"><param name="Local" value="interface_i_internal_machine_control.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IInternalSessionControl"><param name="Local" value="interface_i_internal_session_control.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IKeyboard"><param name="Local" value="interface_i_keyboard.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachine"><param name="Local" value="interface_i_machine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMachineDebugger"><param name="Local" value="interface_i_machine_debugger.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IManagedObjectRef"><param name="Local" value="interface_i_managed_object_ref.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMedium"><param name="Local" value="interface_i_medium.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumAttachment"><param name="Local" value="interface_i_medium_attachment.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMediumFormat"><param name="Local" value="interface_i_medium_format.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IMouse"><param name="Local" value="interface_i_mouse.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="INATEngine"><param name="Local" value="interface_i_n_a_t_engine.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="INetworkAdapter"><param name="Local" value="interface_i_network_adapter.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IParallelPort"><param name="Local" value="interface_i_parallel_port.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPciAddress"><param name="Local" value="interface_i_pci_address.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPciDeviceAttachment"><param name="Local" value="interface_i_pci_device_attachment.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPerformanceCollector"><param name="Local" value="interface_i_performance_collector.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IPerformanceMetric"><param name="Local" value="interface_i_performance_metric.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IProgress"><param name="Local" value="interface_i_progress.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISerialPort"><param name="Local" value="interface_i_serial_port.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISession"><param name="Local" value="interface_i_session.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISharedFolder"><param name="Local" value="interface_i_shared_folder.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISnapshot"><param name="Local" value="interface_i_snapshot.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IStorageController"><param name="Local" value="interface_i_storage_controller.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="ISystemProperties"><param name="Local" value="interface_i_system_properties.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBController"><param name="Local" value="interface_i_u_s_b_controller.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBDevice"><param name="Local" value="interface_i_u_s_b_device.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostUSBDevice"><param name="Local" value="interface_i_host_u_s_b_device.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IUSBDeviceFilter"><param name="Local" value="interface_i_u_s_b_device_filter.html"><param name="ImageNumber" value="1"></OBJECT>
+    <UL>
+    <LI><OBJECT type="text/sitemap"><param name="Name" value="IHostUSBDeviceFilter"><param name="Local" value="interface_i_host_u_s_b_device_filter.html"><param name="ImageNumber" value="11"></OBJECT>
+    </UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVFSExplorer"><param name="Local" value="interface_i_v_f_s_explorer.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualBox"><param name="Local" value="interface_i_virtual_box.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualBoxClient"><param name="Local" value="interface_i_virtual_box_client.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualBoxErrorInfo"><param name="Local" value="interface_i_virtual_box_error_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVirtualSystemDescription"><param name="Local" value="interface_i_virtual_system_description.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServer"><param name="Local" value="interface_i_v_r_d_e_server.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IVRDEServerInfo"><param name="Local" value="interface_i_v_r_d_e_server_info.html"><param name="ImageNumber" value="11"></OBJECT>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="IWebsessionManager"><param name="Local" value="interface_i_websession_manager.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="Class Members"><param name="Local" value="functions.html"><param name="ImageNumber" value="11"></OBJECT>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="File List"><param name="Local" value="files.html"><param name="ImageNumber" value="1"></OBJECT>
+  <UL>
+  <LI><OBJECT type="text/sitemap"><param name="Name" value="VirtualBox.idl"><param name="Local" value="_virtual_box_8idl.html"><param name="ImageNumber" value="11"></OBJECT>
+  </UL>
+<LI><OBJECT type="text/sitemap"><param name="Name" value="File Members"><param name="Local" value="globals.html"><param name="ImageNumber" value="11"></OBJECT>
+</UL>
+</BODY>
+</HTML>
