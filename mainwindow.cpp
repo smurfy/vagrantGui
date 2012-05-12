@@ -38,14 +38,26 @@ void MainWindow::onVirtualBoxMachineStateChanged(VirtualBoxMachine machine)
 {
     VagrantConfig vgcfg = vagrant->getByVirtualBoxId(machine.id);
     if (vgcfg.valid) {
+        QString boxName = vgcfg.name;
+
+        if (vgcfg.registeredVmIds.count() > 1) {
+            foreach (VagrantVirtualBoxMachineInfo boxInfo, vgcfg.registeredVmIds) {
+                if (boxInfo.id == machine.id) {
+                    boxName.append(" - ");
+                    boxName.append(boxInfo.name);
+                    break;
+                }
+            }
+        }
+
         if (machine.state == 5) {
-            trayIcon->showMessage(tr("VagrantGui: ") + vgcfg.name, tr("Virtual machine is now running.") );
+            trayIcon->showMessage(tr("VagrantGui: ") + boxName, tr("Virtual machine is now running.") );
         } else if (machine.state == 1) {
-            trayIcon->showMessage(tr("VagrantGui: ") + vgcfg.name, tr("Virtual machine halted.") );
+            trayIcon->showMessage(tr("VagrantGui: ") + boxName, tr("Virtual machine halted.") );
         } else if (machine.state == 2) {
-            trayIcon->showMessage(tr("VagrantGui: ") + vgcfg.name, tr("Virtual machine suspended.") );
+            trayIcon->showMessage(tr("VagrantGui: ") + boxName, tr("Virtual machine suspended.") );
         } else if (machine.state == 10) {
-            trayIcon->showMessage(tr("VagrantGui: ") + vgcfg.name, tr("Virtual machine starting.") );
+            trayIcon->showMessage(tr("VagrantGui: ") + boxName, tr("Virtual machine starting.") );
         } else {
             qDebug()<<machine.state;
         }
@@ -91,25 +103,60 @@ void MainWindow::updateGui()
     foreach(VagrantConfig vbcfg, vagrant->getVagrantSystems())
     {
         QMenu *vagrantMnu = mnu->addMenu(vbcfg.name);
+        if (vbcfg.registeredVmIds.count() > 1) {
+            VirtualBoxMachine somevboxmachine;
+            bool hasOnline = false;
+            bool hasOffline = false;
+            foreach(VagrantVirtualBoxMachineInfo boxinfo, vbcfg.registeredVmIds)
+            {
+                foreach(VirtualBoxMachine vboxmachine, virtualbox->getVirtualMachines())
+                {
+                    if (vboxmachine.id == boxinfo.id) {
+                        somevboxmachine = vboxmachine;
+                        if (vboxmachine.state == 5) {
+                            hasOnline = true;
+                        } else {
+                            hasOffline = true;
+                        }
+                        break;
+                    }
+                }
+            }
+
+            if (hasOffline) {
+                addMnuAction(vagrantMnu, tr("up"), somevboxmachine, "vagrant up");
+            }
+            if (hasOnline) {
+                addMnuAction(vagrantMnu, tr("halt"), somevboxmachine, "vagrant halt");
+                addMnuAction(vagrantMnu, tr("reload"), somevboxmachine, "vagrant reload");
+                addMnuAction(vagrantMnu, tr("suspend"), somevboxmachine, "vagrant suspend");
+            }
+            if (hasOffline || hasOnline) {
+                vagrantMnu->addSeparator();
+            }
+        }
         foreach(VagrantVirtualBoxMachineInfo boxinfo, vbcfg.registeredVmIds)
         {
             foreach(VirtualBoxMachine vboxmachine, virtualbox->getVirtualMachines())
             {
                 if (vboxmachine.id == boxinfo.id) {
                     QString prefix = "";
+                    QString suffix = "";
                     if (vbcfg.registeredVmIds.count() > 1) {
                         prefix = boxinfo.name + ": ";
+                        suffix = boxinfo.name;
                     }
                     if (vboxmachine.state == 5) {
-                        addMnuAction(vagrantMnu, prefix + tr("ssh"), vboxmachine, "vagrant ssh");
-                        addMnuAction(vagrantMnu, prefix + tr("halt"), vboxmachine, "vagrant halt");
-                        addMnuAction(vagrantMnu, prefix + tr("reload"), vboxmachine, "vagrant reload");
-                        addMnuAction(vagrantMnu, prefix + tr("suspend"), vboxmachine, "vagrant suspend");
+                        addMnuAction(vagrantMnu, prefix + tr("ssh"), vboxmachine, "vagrant ssh " + suffix );
+                        addMnuAction(vagrantMnu, prefix + tr("halt"), vboxmachine, "vagrant halt " + suffix);
+                        addMnuAction(vagrantMnu, prefix + tr("reload"), vboxmachine, "vagrant reload " + suffix);
+                        addMnuAction(vagrantMnu, prefix + tr("suspend"), vboxmachine, "vagrant suspend " + suffix);
                     } else if (vboxmachine.state == 2) {
-                        addMnuAction(vagrantMnu, prefix + tr("resume"), vboxmachine, "vagrant resume");
+                        addMnuAction(vagrantMnu, prefix + tr("resume"), vboxmachine, "vagrant resume " + suffix);
                     } else {
-                        addMnuAction(vagrantMnu, prefix + tr("up"), vboxmachine, "vagrant up");
+                        addMnuAction(vagrantMnu, prefix + tr("up"), vboxmachine, "vagrant up " + suffix);
                     }
+                    break;
                 }
             }
         }
@@ -218,7 +265,7 @@ void MainWindow::onActionTriggered()
 
 #ifdef Q_WS_WIN
     //On Windows we launch Putty
-    if (command == "vagrant ssh") {
+    if (command.startsWith("vagrant ssh")) {
         QString puttyCmd = settings->value("putty").toString();
         if (puttyCmd.isEmpty() || !QFile::exists(puttyCmd)) {
             QMessageBox::warning(this, tr("VagrantGui"), tr("Please specify your putty path"));
