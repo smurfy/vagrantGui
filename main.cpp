@@ -9,6 +9,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    a.setQuitOnLastWindowClosed(false);
+
 #ifdef Q_WS_MACX
     ProcessSerialNumber psn;
     if (GetCurrentProcess(&psn) == noErr)

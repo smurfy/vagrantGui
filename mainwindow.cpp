@@ -286,6 +286,7 @@ void MainWindow::onActionTriggered()
 
 void MainWindow::onQuit()
 {
+    QApplication::setQuitOnLastWindowClosed(true);
     close();
 }
 
