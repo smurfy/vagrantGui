@@ -24,6 +24,8 @@ unix {
                     RT_OS_DARWIN
 
         QMAKE_LFLAGS += -framework Carbon
+    } else {
+        DEFINES += RT_OS_LINUX
     }
 }
 

@@ -16,7 +16,7 @@ MainWindow::MainWindow(QWidget *parent) :
         connect(virtualbox, SIGNAL(virtualBoxMachineStateChanged(VirtualBoxMachine)), this, SLOT(onVirtualBoxMachineStateChanged(VirtualBoxMachine)));
         connect(updateStateTimer, SIGNAL(timeout()), this, SLOT(onUpdateTime()));
 
-        trayIcon = new QSystemTrayIcon();
+        trayIcon = new QSystemTrayIcon(this);
         trayIcon->setIcon(QIcon(":/icon.png"));
         trayIcon->setToolTip(tr("VagrantGui"));
         trayIcon->show();
@@ -212,6 +212,45 @@ void MainWindow::updateGui()
         }
 #endif
 
+#ifdef RT_OS_LINUX
+        manageMnu->addSeparator();
+        QMenu *terminalMnu = manageMnu->addMenu(tr("Terminal to use"));
+        QActionGroup *actionGroup = new QActionGroup(this);
+        actionGroup->setExclusive(true);
+        QAction *defaultAction = terminalMnu->addAction(tr("xterm"));
+        connect(defaultAction, SIGNAL(triggered()), this, SLOT(onTerminalClicked()));
+        defaultAction->setCheckable(true);
+        defaultAction->setData("xterm");
+        QAction *konsoleAction = terminalMnu->addAction(tr("konsole"));
+        connect(konsoleAction, SIGNAL(triggered()), this, SLOT(onTerminalClicked()));
+        konsoleAction->setCheckable(true);
+        konsoleAction->setData("konsole");
+        QAction *gnomeAction = terminalMnu->addAction(tr("gnome-terminal"));
+        connect(gnomeAction, SIGNAL(triggered()), this, SLOT(onTerminalClicked()));
+        gnomeAction->setCheckable(true);
+        gnomeAction->setData("gnome-terminal");
+        QAction *xfceAction = terminalMnu->addAction(tr("xfce4-terminal"));
+        connect(xfceAction, SIGNAL(triggered()), this, SLOT(onTerminalClicked()));
+        xfceAction->setCheckable(true);
+        xfceAction->setData("xfce4-terminal");
+
+        actionGroup->addAction(defaultAction);
+        actionGroup->addAction(konsoleAction);
+        actionGroup->addAction(gnomeAction);
+        actionGroup->addAction(xfceAction);
+
+        if (settings->value("terminal", "xterm") == "xterm") {
+            defaultAction->setChecked(true);
+        } else if (settings->value("terminal", "xterm") == "konsole") {
+            konsoleAction->setChecked(true);
+        } else if (settings->value("terminal", "xterm") == "gnome-terminal") {
+            gnomeAction->setChecked(true);
+        } else if (settings->value("terminal", "xterm") == "xfce4-terminal") {
+            xfceAction->setChecked(true);
+        }
+
+#endif
+
     mnu->addSeparator();
 
     QAction *quitAction = mnu->addAction(tr("Quit"));
@@ -224,7 +263,7 @@ void MainWindow::updateGui()
     trayIcon->setContextMenu(mnu);
 }
 
-#ifdef Q_WS_MACX
+#if defined(Q_WS_MACX) || defined(RT_OS_LINUX)
 void MainWindow::onTerminalClicked()
 {
     QAction *mnuAction = (QAction *)sender();
@@ -281,6 +320,11 @@ void MainWindow::onActionTriggered()
         cmd = "open -a iTerm ";
     }
 #endif
+
+#ifdef Q_OS_LINUX
+    cmd = settings->value("terminal", "xterm").toString() + " -e ";
+#endif
+
     vagrant->executeCommand(actionItem->vboxmachine.id, command, cmd);
 }
 

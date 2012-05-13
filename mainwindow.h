@@ -39,7 +39,7 @@ private slots:
 #ifdef Q_WS_WIN
     void onSetPuttyPath();
 #endif
-#ifdef Q_WS_MACX
+#if defined(Q_WS_MACX) || defined(RT_OS_LINUX)
     void onTerminalClicked();
 #endif
     

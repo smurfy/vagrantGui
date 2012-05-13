@@ -69,7 +69,7 @@ void VagrantInterface::executeCommand(QString id, QString command, QString cmd)
     fileheader.append(":\n");
     QString tmpFile = QDir::tempPath() + "/vagrantGui.bat";
 #else
-    QString fileheader = "";
+    QString fileheader = "#!/bin/sh\n";
     QString tmpFile =  QDir::tempPath() + "/vagrantGui.sh";
 #endif
     QFile file(tmpFile);
