@@ -47,8 +47,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the framebuffer for given screen.  <a href="#a7254d84c1ee8fce3ab276c16d5a56c4c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_display.html#ae9c6c0f4e729e1e5f83d0b72840c5579">getFramebuffer</a> (in unsigned long screenId, out <a class="el" href="interface_i_framebuffer.html">IFramebuffer</a> framebuffer, out long xOrigin, out long yOrigin)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Queries the framebuffer for given screen.  <a href="#ae9c6c0f4e729e1e5f83d0b72840c5579"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_display.html#a92c7438e43a8885afe06262541f903aa">setVideoModeHint</a> (in unsigned long width, in unsigned long height, in unsigned long bitsPerPixel, in unsigned long display)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asks VirtualBox to request the given video mode from the guest.  <a href="#a92c7438e43a8885afe06262541f903aa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_display.html#a1a4da65b9ad3775327dc9eec5e311cd3">setVideoModeHint</a> (in unsigned long display, in boolean enabled, in boolean changeOrigin, in long originX, in long originY, in unsigned long width, in unsigned long height, in unsigned long bitsPerPixel)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Asks VirtualBox to request the given video mode from the guest.  <a href="#a1a4da65b9ad3775327dc9eec5e311cd3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_display.html#afcb558d99cf7f18561162a0f2db2aeba">setSeamlessMode</a> (in boolean enabled)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables or disables seamless guest display rendering (seamless desktop integration) mode.  <a href="#afcb558d99cf7f18561162a0f2db2aeba"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_display.html#a6a5c4f84adbe7ce8ffb5ebefe4f835ec">takeScreenShot</a> (in unsigned long screenId, in octetPtr address, in unsigned long width, in unsigned long height)</td></tr>
@@ -65,12 +65,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signals that a framebuffer has completed the resize operation.  <a href="#a6800f95f283bec4fa1d2f9310222b702"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_display.html#acec4d4138daf56f5d520366c61579733">completeVHWACommand</a> (in octetPtr command)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signals that the Video HW Acceleration command has completed.  <a href="#acec4d4138daf56f5d520366c61579733"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_display.html#accb40d82b0d6d8db8d655929797713ce">viewportChanged</a> (in unsigned long screenId, in unsigned long x, in unsigned long y, in unsigned long width, in unsigned long height)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signals that framebuffer window viewport has changed.  <a href="#accb40d82b0d6d8db8d655929797713ce"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>The <a class="el" href="interface_i_display.html" title="The IDisplay interface represents the virtual machine&#39;s display.">IDisplay</a> interface represents the virtual machine's display. </p>
 <p>The object implementing this interface is contained in each <a class="el" href="interface_i_console.html#a57b6e398132075bfc31a14f291c9535b">IConsole::display</a><b></b> attribute and represents the visual output of the virtual machine.</p>
 <p>The virtual display supports pluggable output targets represented by the <a class="el" href="interface_i_framebuffer.html">IFramebuffer</a> interface. Examples of the output target are a window on the host computer or an RDP session's display on a remote computer.</p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{09EED313-CD56-4D06-BD56-FAC0F716B5DD}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{B83EE395-8679-40CA-8D60-1A0CBE724930}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="adf8e97629f0beedfd38f7d9a1f8fc5aa"></a><!-- doxytag: member="IDisplay::getScreenResolution" ref="adf8e97629f0beedfd38f7d9a1f8fc5aa" args="(in unsigned long screenId, out unsigned long width, out unsigned long height, out unsigned long bitsPerPixel)" -->
 <div class="memitem">
@@ -183,13 +185,43 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a92c7438e43a8885afe06262541f903aa"></a><!-- doxytag: member="IDisplay::setVideoModeHint" ref="a92c7438e43a8885afe06262541f903aa" args="(in unsigned long width, in unsigned long height, in unsigned long bitsPerPixel, in unsigned long display)" -->
+<a class="anchor" id="a1a4da65b9ad3775327dc9eec5e311cd3"></a><!-- doxytag: member="IDisplay::setVideoModeHint" ref="a1a4da65b9ad3775327dc9eec5e311cd3" args="(in unsigned long display, in boolean enabled, in boolean changeOrigin, in long originX, in long originY, in unsigned long width, in unsigned long height, in unsigned long bitsPerPixel)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void IDisplay::setVideoModeHint </td>
           <td>(</td>
+          <td class="paramtype">in unsigned long&nbsp;</td>
+          <td class="paramname"> <em>display</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in boolean&nbsp;</td>
+          <td class="paramname"> <em>enabled</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in boolean&nbsp;</td>
+          <td class="paramname"> <em>changeOrigin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>originX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>originY</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">in unsigned long&nbsp;</td>
           <td class="paramname"> <em>width</em>, </td>
         </tr>
@@ -203,13 +235,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in unsigned long&nbsp;</td>
-          <td class="paramname"> <em>bitsPerPixel</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in unsigned long&nbsp;</td>
-          <td class="paramname"> <em>display</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>bitsPerPixel</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -224,6 +250,16 @@ Public Member Functions</h2></td></tr>
 <p>This is just a hint and it cannot be guaranteed that the requested resolution will be used. Guest Additions are required for the request to be seen by guests. The caller should issue the request and wait for a resolution change and after a timeout retry.</p>
 <p>Specifying <code>0</code> for either <em>width</em>, <em>height</em> or <em>bitsPerPixel</em> parameters means that the corresponding values should be taken from the current video mode (i.e. left unchanged).</p>
 <p>If the guest OS supports multi-monitor configuration then the <em>display</em> parameter specifies the number of the guest display to send the hint to: <code>0</code> is the primary display, <code>1</code> is the first secondary and so on. If the multi-monitor configuration is not supported, <em>display</em> must be <code>0</code>.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>display</em>&nbsp;</td><td>The number of the guest display to send the hint to.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>enabled</em>&nbsp;</td><td><code>True</code>, if this guest screen is enabled, <code>False</code> otherwise.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>changeOrigin</em>&nbsp;</td><td><code>True</code>, if the origin of the guest screen should be changed, <code>False</code> otherwise.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>originX</em>&nbsp;</td><td>The X origin of the guest screen.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>originY</em>&nbsp;</td><td>The Y origin of the guest screen.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
 <tr>
 <td>E_INVALIDARG </td><td>The <em>display</em> is not associated with any monitor.  </td></tr>
@@ -568,8 +604,70 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="accb40d82b0d6d8db8d655929797713ce"></a><!-- doxytag: member="IDisplay::viewportChanged" ref="accb40d82b0d6d8db8d655929797713ce" args="(in unsigned long screenId, in unsigned long x, in unsigned long y, in unsigned long width, in unsigned long height)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IDisplay::viewportChanged </td>
+          <td>(</td>
+          <td class="paramtype">in unsigned long&nbsp;</td>
+          <td class="paramname"> <em>screenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in unsigned long&nbsp;</td>
+          <td class="paramname"> <em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in unsigned long&nbsp;</td>
+          <td class="paramname"> <em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in unsigned long&nbsp;</td>
+          <td class="paramname"> <em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in unsigned long&nbsp;</td>
+          <td class="paramname"> <em>height</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<div class="memdoc">
+
+<p>Signals that framebuffer window viewport has changed. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>screenId</em>&nbsp;</td><td>Monitor to take the screenshot from.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>x</em>&nbsp;</td><td>Framebuffer x offset.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>y</em>&nbsp;</td><td>Framebuffer y offset.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>width</em>&nbsp;</td><td>Viewport width.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>height</em>&nbsp;</td><td>Viewport height.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
+<tr>
+<td>E_INVALIDARG </td><td>The specified viewport data is invalid.  </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -68,9 +68,12 @@
 <li>deleteBandwidthGroup()
 : <a class="el" href="interface_i_bandwidth_control.html#a965b5d7413dfcbacbcd9c76dbed36a0c">IBandwidthControl</a>
 </li>
+<li>deleteGuestProperty()
+: <a class="el" href="interface_i_machine.html#a2b5bc248ab2a58bdab899dd0ab0b6b10">IMachine</a>
+</li>
 <li>deleteSnapshot()
-: <a class="el" href="interface_i_console.html#aae96e7c62ee31ae37f88c94293dc9bfe">IConsole</a>
-, <a class="el" href="interface_i_internal_machine_control.html#a1e0241ac54e66b17f2506a192c048989">IInternalMachineControl</a>
+: <a class="el" href="interface_i_internal_machine_control.html#a1e0241ac54e66b17f2506a192c048989">IInternalMachineControl</a>
+, <a class="el" href="interface_i_console.html#aae96e7c62ee31ae37f88c94293dc9bfe">IConsole</a>
 </li>
 <li>deleteSnapshotAndAllChildren()
 : <a class="el" href="interface_i_console.html#aa9d3dacde05f48896c6e2022b7638b2f">IConsole</a>
@@ -93,8 +96,8 @@
 <li>detachDevice()
 : <a class="el" href="interface_i_machine.html#a59a8e406027e901cc260488f8617fb22">IMachine</a>
 </li>
-<li>detachHostPciDevice()
-: <a class="el" href="interface_i_machine.html#ac7c33d85adb6c14b9d99976a8d408e2f">IMachine</a>
+<li>detachHostPCIDevice()
+: <a class="el" href="interface_i_machine.html#a6b94280b4763b7522c4003b095a463d2">IMachine</a>
 </li>
 <li>detachUSBDevice()
 : <a class="el" href="interface_i_internal_machine_control.html#a8abc6dce9460bf423b19b4ed21990bd6">IInternalMachineControl</a>
@@ -103,20 +106,35 @@
 <li>detectOS()
 : <a class="el" href="interface_i_machine_debugger.html#afea9067d2c76d9ccf834ea078e99271a">IMachineDebugger</a>
 </li>
-<li>dhcpRediscover()
-: <a class="el" href="interface_i_host_network_interface.html#a045f508bdb1a109d91bcd02485666d98">IHostNetworkInterface</a>
-</li>
-<li>directoryClose()
-: <a class="el" href="interface_i_guest.html#a41a6bb1ce7a547552896a3dea43777b4">IGuest</a>
+<li>DHCPRediscover()
+: <a class="el" href="interface_i_host_network_interface.html#a36f9f2fc1fc1c9d60286dde19e350c3e">IHostNetworkInterface</a>
 </li>
 <li>directoryCreate()
-: <a class="el" href="interface_i_guest.html#ab210ed114e54f5f91c999700caca80a5">IGuest</a>
+: <a class="el" href="interface_i_guest_session.html#aa52f1ec6ffce47c156a8e58d643262e5">IGuestSession</a>
+</li>
+<li>directoryCreateTemp()
+: <a class="el" href="interface_i_guest_session.html#aa0e6fa0266eb11ae89ddfdadb33a0a23">IGuestSession</a>
+</li>
+<li>directoryExists()
+: <a class="el" href="interface_i_guest_session.html#a97a09bdadda959da4a1ebf702188799f">IGuestSession</a>
 </li>
 <li>directoryOpen()
-: <a class="el" href="interface_i_guest.html#a1df87e4502414a74058ffdd12c38c8d3">IGuest</a>
+: <a class="el" href="interface_i_guest_session.html#a9a9f95fd8c3bf69c02b1d5393f8500e8">IGuestSession</a>
 </li>
-<li>directoryRead()
-: <a class="el" href="interface_i_guest.html#aa91329bd4e8fd0fd332acda2e2fc1fb3">IGuest</a>
+<li>directoryQueryInfo()
+: <a class="el" href="interface_i_guest_session.html#ac9940565160b456d28defcb3432b18c7">IGuestSession</a>
+</li>
+<li>directoryRemove()
+: <a class="el" href="interface_i_guest_session.html#ac6048f58ef38e4dd59d8877a16f6d7fb">IGuestSession</a>
+</li>
+<li>directoryRemoveRecursive()
+: <a class="el" href="interface_i_guest_session.html#a16a1e8e1b468a6641c3df9726d3b38ed">IGuestSession</a>
+</li>
+<li>directoryRename()
+: <a class="el" href="interface_i_guest_session.html#abec3b6bc5e2b0b7e513c0792e5a0f7e5">IGuestSession</a>
+</li>
+<li>directorySetACL()
+: <a class="el" href="interface_i_guest_session.html#af42919bba22c6056e87f4b4fe90d6174">IGuestSession</a>
 </li>
 <li>disableMetrics()
 : <a class="el" href="interface_i_performance_collector.html#a0b5501196fd5f736cab8ee3a8672a1a8">IPerformanceCollector</a>
@@ -126,6 +144,30 @@
 </li>
 <li>discardSettings()
 : <a class="el" href="interface_i_machine.html#a341ac035501a0c168ad9571bbe86eb02">IMachine</a>
+</li>
+<li>dragGHDropped()
+: <a class="el" href="interface_i_guest.html#af13bf28038f31a7f656a531a333ee3f1">IGuest</a>
+</li>
+<li>dragGHGetData()
+: <a class="el" href="interface_i_guest.html#a7b62f32bb502183bad4066de068b3d96">IGuest</a>
+</li>
+<li>dragGHPending()
+: <a class="el" href="interface_i_guest.html#a19769a42fc408cc1949e22532cea1dbe">IGuest</a>
+</li>
+<li>dragHGDrop()
+: <a class="el" href="interface_i_guest.html#abab02db491b3ace56ff05744d0f8a3fe">IGuest</a>
+</li>
+<li>dragHGEnter()
+: <a class="el" href="interface_i_guest.html#a75daa4e184503b6ce93d3cb83f0d5e11">IGuest</a>
+</li>
+<li>dragHGLeave()
+: <a class="el" href="interface_i_guest.html#a2e3bb638a83ff2fdab685de0d3935381">IGuest</a>
+</li>
+<li>dragHGMove()
+: <a class="el" href="interface_i_guest.html#a11fb414f5025859025c6769bdf5bd0d3">IGuest</a>
+</li>
+<li>dragHGPutData()
+: <a class="el" href="interface_i_guest.html#a9caee6441b77e91cd3c0a5428d0e9119">IGuest</a>
 </li>
 <li>drawToScreen()
 : <a class="el" href="interface_i_display.html#aa5934c90eed929362425f9397f7a2541">IDisplay</a>
@@ -144,7 +186,7 @@
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -59,7 +59,7 @@ Public Attributes</h2></td></tr>
 <p>In MS COM, this interface extends the IErrorInfo interface, in XPCOM, it extends the nsIException interface. In both cases, it provides a set of common attributes to retrieve error information.</p>
 <p>Sometimes invocation of some component's method may involve methods of other components that may also fail (independently of this method's failure), or a series of non-fatal errors may precede a fatal error that causes method failure. In cases like that, it may be desirable to preserve information about all errors happened during method invocation and deliver it to the caller. The <a class="el" href="interface_i_virtual_box_error_info.html#af4433c133f918240ff39f09cbede89c9">next</a><b></b> attribute is intended specifically for this purpose and allows to represent a chain of errors through a single <a class="el" href="interface_i_virtual_box_error_info.html" title="The IVirtualBoxErrorInfo interface represents extended error information.">IVirtualBoxErrorInfo</a> object set after method invocation.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>errors are stored to a chain in the reverse order, i.e. the initial error object you query right after method invocation is the last error set by the callee, the object it points to in the <em>next</em> attribute is the previous error and so on, up to the first error (which is the last in the chain).</dd></dl>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{E053D3C0-F493-491B-A735-3A9F0B1FEED4}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{F91E6E91-49E1-4FD2-B21E-269003350D06}</code> </dd></dl>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="ade7b2739cfcaa6a17e90ebb132a59619"></a><!-- doxytag: member="IVirtualBoxErrorInfo::resultCode" ref="ade7b2739cfcaa6a17e90ebb132a59619" args="" -->
 <div class="memitem">
@@ -143,7 +143,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:49 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

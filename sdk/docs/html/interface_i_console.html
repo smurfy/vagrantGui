@@ -121,8 +121,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="interface_i_event_source.html">IEventSource</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_console.html#a30bf5297c7efbaaaf1a24ec71cc7ded5">eventSource</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Event source for console events.  <a href="#a30bf5297c7efbaaaf1a24ec71cc7ded5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
-<a class="el" href="interface_i_pci_device_attachment.html">IPciDeviceAttachment</a>[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_console.html#af219e20abfa2b2405572491e44975f23">attachedPciDevices</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Array of PCI devices attached to this machine.  <a href="#af219e20abfa2b2405572491e44975f23"></a><br/></td></tr>
+<a class="el" href="interface_i_p_c_i_device_attachment.html">IPCIDeviceAttachment</a>[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_console.html#a6d41c200e67a37cdbc9c270317831774">attachedPCIDevices</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Array of PCI devices attached to this machine.  <a href="#a6d41c200e67a37cdbc9c270317831774"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_console.html#af0b340e815d6016fff312254b2c26067">useHostClipboard</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the guest clipboard should be connected to the host one or whether it should only be allowed access to the VRDE clipboard.  <a href="#af0b340e815d6016fff312254b2c26067"></a><br/></td></tr>
 </table>
@@ -131,7 +131,7 @@ Public Attributes</h2></td></tr>
 <p>A console object gets created when a machine has been locked for a particular session (client process) using <a class="el" href="interface_i_machine.html#af28da645b00a821547d9cb8e92f8b7b0">IMachine::lockMachine</a><b></b> or <a class="el" href="interface_i_machine.html#a5f6e112de89f7e1d300738c9a055d5c9">IMachine::launchVMProcess</a><b></b>. The console object can then be found in the session's <a class="el" href="interface_i_session.html#a9e36ef0b77cc8ef17fbe480f39492fad">ISession::console</a><b></b> attribute.</p>
 <p>Methods of the <a class="el" href="interface_i_console.html" title="The IConsole interface represents an interface to control virtual machine execution.">IConsole</a> interface allow the caller to query the current virtual machine execution state, pause the machine or power it down, save the machine state or take a snapshot, attach and detach removable media and so on.</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_session.html">ISession</a><b></b></dd></dl>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{1968B7D3-E3BF-4CEB-99E0-CB7C913317BB}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{DB7AB4CA-2A3F-4183-9243-C1208DA92392}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a0191f0ffb739504065c05f6e33a65a7c"></a><!-- doxytag: member="IConsole::powerUp" ref="a0191f0ffb739504065c05f6e33a65a7c" args="([retval] out IProgress progress)" -->
 <div class="memitem">
@@ -852,7 +852,7 @@ The machine must be in the Running or Paused state, otherwise the operation will
 
 <p>Saves the current execution state and all settings of the machine and creates differencing images for all normal (non-independent) media. </p>
 <p>See <a class="el" href="interface_i_snapshot.html">ISnapshot</a><b></b> for an introduction to snapshots.</p>
-<p>This method can be called for a PoweredOff, Saved (see <a class="el" href="interface_i_console.html#a6fe532c5267423f0a0d3f04da13019db">saveState</a><b></b>), Running or Paused virtual machine. When the machine is PoweredOff, an offline snapshot is created. When the machine is Running a live snapshot is created, and an online snapshot is is created when Paused.</p>
+<p>This method can be called for a PoweredOff, Saved (see <a class="el" href="interface_i_console.html#a6fe532c5267423f0a0d3f04da13019db">saveState</a><b></b>), Running or Paused virtual machine. When the machine is PoweredOff, an offline snapshot is created. When the machine is Running a live snapshot is created, and an online snapshot is created when Paused.</p>
 <p>The taken snapshot is always based on the <a class="el" href="interface_i_machine.html#ac785dbe04eccc0793d949d6940202767">current snapshot</a><b></b> of the associated virtual machine and becomes a new current snapshot.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
@@ -1331,12 +1331,12 @@ If the machine state is <a class="el" href="_virtual_box_8idl.html#a80b08f71210a
 
 </div>
 </div>
-<a class="anchor" id="af219e20abfa2b2405572491e44975f23"></a><!-- doxytag: member="IConsole::attachedPciDevices" ref="af219e20abfa2b2405572491e44975f23" args="" -->
+<a class="anchor" id="a6d41c200e67a37cdbc9c270317831774"></a><!-- doxytag: member="IConsole::attachedPCIDevices" ref="a6d41c200e67a37cdbc9c270317831774" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute <a class="el" href="interface_i_pci_device_attachment.html">IPciDeviceAttachment</a> [] <a class="el" href="interface_i_console.html#af219e20abfa2b2405572491e44975f23">IConsole::attachedPciDevices</a></td>
+          <td class="memname">readonly attribute <a class="el" href="interface_i_p_c_i_device_attachment.html">IPCIDeviceAttachment</a> [] <a class="el" href="interface_i_console.html#a6d41c200e67a37cdbc9c270317831774">IConsole::attachedPCIDevices</a></td>
         </tr>
       </table>
 </div>
@@ -1363,7 +1363,7 @@ If the machine state is <a class="el" href="_virtual_box_8idl.html#a80b08f71210a
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -81,7 +81,7 @@ Public Attributes</h2></td></tr>
 <p class="startli"><a class="el" href="interface_i_console.html#aae96e7c62ee31ae37f88c94293dc9bfe">IConsole::deleteSnapshot</a><b></b> deletes a snapshot without affecting the current machine state.</p>
 <p>This does not change the current machine state, but instead frees the resources allocated when the snapshot was taken: the settings and machine state file are deleted (if any), and the snapshot's differencing image for each of the machine's media gets merged with its parent image.</p>
 <p>Neither the current machine state nor other snapshots are affected by this operation, except that parent media will be modified to contain the disk data associated with the snapshot being deleted.</p>
-<p class="endli">When deleting the current snapshot, the <a class="el" href="interface_i_machine.html#ac785dbe04eccc0793d949d6940202767">IMachine::currentSnapshot</a><b></b> attribute is set to the current snapshot's parent or NULL if it has no parent. Otherwise the attribute is unchanged.  </p>
+<p class="endli">When deleting the current snapshot, the <a class="el" href="interface_i_machine.html#ac785dbe04eccc0793d949d6940202767">IMachine::currentSnapshot</a><b></b> attribute is set to the current snapshot's parent or <code>null</code> if it has no parent. Otherwise the attribute is unchanged.  </p>
 </li>
 </ul>
 <p>Each snapshot contains a copy of virtual machine's settings (hardware configuration etc.). This copy is contained in an immutable (read-only) instance of <a class="el" href="interface_i_machine.html">IMachine</a><b></b> which is available from the snapshot's <a class="el" href="interface_i_snapshot.html#a24c0389ee2c91ee8db14f5a09a956bc4">machine</a><b></b> attribute. When restoring the snapshot, these settings are copied back to the original machine.</p>
@@ -245,7 +245,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:49 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

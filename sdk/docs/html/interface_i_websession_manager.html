@@ -46,7 +46,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_websession_manager.html#a58378d2556023a16c40935222bab8452">getSessionObject</a> (in <a class="el" href="interface_i_virtual_box.html">IVirtualBox</a> refIVirtualBox,[retval] out <a class="el" href="interface_i_session.html">ISession</a> return)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns a managed object reference to the internal <a class="el" href="interface_i_session.html" title="The ISession interface represents a client process and allows for locking virtual machines (represent...">ISession</a> object that was created for this web service session when the client logged on.  <a href="#a58378d2556023a16c40935222bab8452"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_websession_manager.html#ac452cfeaea0fb236e67d305b38e1a54d">logoff</a> (in <a class="el" href="interface_i_virtual_box.html">IVirtualBox</a> refIVirtualBox)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Logs off the client who has previously logged on with <a class="el" href="interface_i_websession_manager.html#ac452cfeaea0fb236e67d305b38e1a54d">IWebsessionManager::logoff</a><b></b> and destroys all resources associated with the session (most importantly, all managed objects created in the server while the session was active).  <a href="#ac452cfeaea0fb236e67d305b38e1a54d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Logs off the client who has previously logged on with <a class="el" href="interface_i_websession_manager.html#ada0de436851fc0da29319592ca868294">IWebsessionManager::logon</a><b></b> and destroys all resources associated with the session (most importantly, all managed objects created in the server while the session was active).  <a href="#ac452cfeaea0fb236e67d305b38e1a54d"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Websession manager. </p>
@@ -134,12 +134,12 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Logs off the client who has previously logged on with <a class="el" href="interface_i_websession_manager.html#ac452cfeaea0fb236e67d305b38e1a54d">IWebsessionManager::logoff</a><b></b> and destroys all resources associated with the session (most importantly, all managed objects created in the server while the session was active). </p>
+<p>Logs off the client who has previously logged on with <a class="el" href="interface_i_websession_manager.html#ada0de436851fc0da29319592ca868294">IWebsessionManager::logon</a><b></b> and destroys all resources associated with the session (most importantly, all managed objects created in the server while the session was active). </p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:49 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

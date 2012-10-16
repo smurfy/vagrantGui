@@ -1634,7 +1634,6 @@ enum AdditionsFacilityType
 {
     AdditionsFacilityType_None = 0,
     AdditionsFacilityType_VBoxGuestDriver = 20,
-    AdditionsFacilityType_AutoLogon = 90,
     AdditionsFacilityType_VBoxService = 100,
     AdditionsFacilityType_VBoxTrayClient = 101,
     AdditionsFacilityType_Seamless = 1000,
@@ -2779,10 +2778,10 @@ struct IVirtualSystemDescription
 
 
 /* Start of struct IInternalMachineControl Declaration */
-#define IINTERNALMACHINECONTROL_IID_STR "ec824977-e43f-479c-81c9-ac6cae1423a5"
+#define IINTERNALMACHINECONTROL_IID_STR "2087906d-bb92-43a0-8014-4cab009e4888"
 #define IINTERNALMACHINECONTROL_IID { \
-    0xec824977, 0xe43f, 0x479c, \
-    { 0x81, 0xc9, 0xac, 0x6c, 0xae, 0x14, 0x23, 0xa5 } \
+    0x2087906d, 0xbb92, 0x43a0, \
+    { 0x80, 0x14, 0x4c, 0xab, 0x00, 0x9e, 0x48, 0x88 } \
 }
 struct IInternalMachineControl_vtbl
 {
@@ -2944,24 +2943,6 @@ struct IInternalMachineControl_vtbl
         IInternalMachineControl *pThis,
         IMediumAttachment * attachment,
         IMediumAttachment * * newAttachment
-    );
-
-    nsresult (*ReportGuestStatistics)(
-        IInternalMachineControl *pThis,
-        PRUint32 validStats,
-        PRUint32 cpuUser,
-        PRUint32 cpuKernel,
-        PRUint32 cpuIdle,
-        PRUint32 memTotal,
-        PRUint32 memFree,
-        PRUint32 memBalloon,
-        PRUint32 memShared,
-        PRUint32 memCache,
-        PRUint32 pagedTotal,
-        PRUint32 memAllocTotal,
-        PRUint32 memFreeTotal,
-        PRUint32 memBalloonTotal,
-        PRUint32 memSharedTotal
     );
 
 };
@@ -5919,10 +5900,10 @@ struct ISharedFolder
 
 
 /* Start of struct IInternalSessionControl Declaration */
-#define IINTERNALSESSIONCONTROL_IID_STR "c2b4cd5f-d3ce-4dd6-b915-123272163ef5"
+#define IINTERNALSESSIONCONTROL_IID_STR "0bdda5da-67c8-47be-a610-b83a7fa3e8b6"
 #define IINTERNALSESSIONCONTROL_IID { \
-    0xc2b4cd5f, 0xd3ce, 0x4dd6, \
-    { 0xb9, 0x15, 0x12, 0x32, 0x72, 0x16, 0x3e, 0xf5 } \
+    0x0bdda5da, 0x67c8, 0x47be, \
+    { 0xa6, 0x10, 0xb8, 0x3a, 0x7f, 0xa3, 0xe8, 0xb6 } \
 }
 struct IInternalSessionControl_vtbl
 {
@@ -6070,11 +6051,6 @@ struct IInternalSessionControl_vtbl
         PRUint32 childrenToReparentSize,
         IMedium ** childrenToReparent,
         IProgress * progress
-    );
-
-    nsresult (*EnableVMMStatistics)(
-        IInternalSessionControl *pThis,
-        PRBool enable
     );
 
 };

@@ -1,5 +1,5 @@
 /*
- * DO NOT EDIT.  THIS FILE IS GENERATED FROM /home/vbox/tinderbox/4.1-sdk/src/libs/xpcom18a4/xpcom/io/nsILineInputStream.idl
+ * DO NOT EDIT.  THIS FILE IS GENERATED FROM /home/vbox/tinderbox/sdk/src/libs/xpcom18a4/xpcom/io/nsILineInputStream.idl
  */
 
 #ifndef __gen_nsILineInputStream_h__

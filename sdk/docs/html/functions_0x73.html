@@ -84,9 +84,12 @@ Here is a list of all class members with links to the classes they belong to:
 <li>scrollLock
 : <a class="el" href="interface_i_keyboard_leds_changed_event.html#aee7d92e6b8d01158de04233903e32574">IKeyboardLedsChangedEvent</a>
 </li>
+<li>seek()
+: <a class="el" href="interface_i_file.html#a15ebca8f10be9c916ddfda8493b321e5">IFile</a>
+</li>
 <li>serialNumber
-: <a class="el" href="interface_i_u_s_b_device_filter.html#aacc6463f190b0254082438d856cbce13">IUSBDeviceFilter</a>
-, <a class="el" href="interface_i_u_s_b_device.html#a93dfee8b2f4a77aabc4eb77f7e966ec9">IUSBDevice</a>
+: <a class="el" href="interface_i_u_s_b_device.html#a93dfee8b2f4a77aabc4eb77f7e966ec9">IUSBDevice</a>
+, <a class="el" href="interface_i_u_s_b_device_filter.html#aacc6463f190b0254082438d856cbce13">IUSBDeviceFilter</a>
 </li>
 <li>serialPort
 : <a class="el" href="interface_i_serial_port_changed_event.html#a18846a42ef797d1c9ac09ab08059a13c">ISerialPortChangedEvent</a>
@@ -100,14 +103,23 @@ Here is a list of all class members with links to the classes they belong to:
 <li>session
 : <a class="el" href="interface_i_virtual_box_client.html#ac96240a4d71f386385b58f0eb0299b39">IVirtualBoxClient</a>
 </li>
-<li>sessionPid
-: <a class="el" href="interface_i_machine.html#ac1fbf27ec86d5529787088410eaaf073">IMachine</a>
+<li>sessionPID
+: <a class="el" href="interface_i_machine.html#a7380f79a10f9813dbced54f51004c6b5">IMachine</a>
+</li>
+<li>sessions
+: <a class="el" href="interface_i_guest.html#ace5635124343b6345a905297f727bbb9">IGuest</a>
 </li>
 <li>sessionState
 : <a class="el" href="interface_i_machine.html#aecc00e3c014d4548a025e4eafff7056e">IMachine</a>
 </li>
 <li>sessionType
 : <a class="el" href="interface_i_machine.html#a7f8692397b0743822a9be4dd81be9019">IMachine</a>
+</li>
+<li>setACL()
+: <a class="el" href="interface_i_file.html#afe40b15b4eb2dcef4dc45ef782e73842">IFile</a>
+</li>
+<li>setAutoDiscardForDevice()
+: <a class="el" href="interface_i_machine.html#aa02655252429d66d75188bcc56e41e7d">IMachine</a>
 </li>
 <li>setBandwidthGroupForDevice()
 : <a class="el" href="interface_i_machine.html#aa8ed8a03befa534d4df3c5342bf7fcf8">IMachine</a>
@@ -149,11 +161,8 @@ Here is a list of all class members with links to the classes they belong to:
 <li>setHWVirtExProperty()
 : <a class="el" href="interface_i_machine.html#a4e38cff5f3af00bdb490548a82ac7b44">IMachine</a>
 </li>
-<li>setIDEEmulationPort()
-: <a class="el" href="interface_i_storage_controller.html#a905893ae31e1f76e018e327b11d7f8c4">IStorageController</a>
-</li>
-<li>setIDs()
-: <a class="el" href="interface_i_medium.html#ac8b65ec862de84d76d9097b79bbca5e7">IMedium</a>
+<li>setIds()
+: <a class="el" href="interface_i_medium.html#ae80cb8c0dd6ce11b6c16a00871980f57">IMedium</a>
 </li>
 <li>setNetworkSettings()
 : <a class="el" href="interface_i_n_a_t_engine.html#afdf3bfaa7d7fcaabca37434b084beaba">INATEngine</a>
@@ -161,11 +170,11 @@ Here is a list of all class members with links to the classes they belong to:
 <li>setNextOperation()
 : <a class="el" href="interface_i_progress.html#ab2a628ae0022d82637d332cb93b1643f">IProgress</a>
 </li>
+<li>setNoBandwidthGroupForDevice()
+: <a class="el" href="interface_i_machine.html#a94c2637db1f0f0fe4a687a4c2c245218">IMachine</a>
+</li>
 <li>setProcessed()
 : <a class="el" href="interface_i_event.html#a3c6dca949a20f509a58eedb31462cf16">IEvent</a>
-</li>
-<li>setProcessInput()
-: <a class="el" href="interface_i_guest.html#ac52add2b2b2c4b5874636f6bc3f6a392">IGuest</a>
 </li>
 <li>setProperties()
 : <a class="el" href="interface_i_medium.html#a34eea84f94452bce694f4f69f6ad9d24">IMedium</a>
@@ -186,6 +195,9 @@ Here is a list of all class members with links to the classes they belong to:
 <li>setSeamlessMode()
 : <a class="el" href="interface_i_display.html#afcb558d99cf7f18561162a0f2db2aeba">IDisplay</a>
 </li>
+<li>setSettingsSecret()
+: <a class="el" href="interface_i_virtual_box.html#a38fb6658059621ddffb5c5482bd63289">IVirtualBox</a>
+</li>
 <li>setStorageControllerBootable()
 : <a class="el" href="interface_i_machine.html#a5d4d1c7791274f8baaef6e341f029cd2">IMachine</a>
 </li>
@@ -200,7 +212,7 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="interface_i_performance_collector.html#a434a1a92dc59e2bdaed255d61cfdf35b">IPerformanceCollector</a>
 </li>
 <li>setVideoModeHint()
-: <a class="el" href="interface_i_display.html#a92c7438e43a8885afe06262541f903aa">IDisplay</a>
+: <a class="el" href="interface_i_display.html#a1a4da65b9ad3775327dc9eec5e311cd3">IDisplay</a>
 </li>
 <li>setVisibleRegion()
 : <a class="el" href="interface_i_framebuffer.html#aac811856aac09ce54871faf9bf07950a">IFramebuffer</a>
@@ -222,8 +234,8 @@ Here is a list of all class members with links to the classes they belong to:
 <li>showLicense
 : <a class="el" href="interface_i_ext_pack_base.html#a26d560b34edc2acddb543c0fe2892237">IExtPackBase</a>
 </li>
-<li>singlestep
-: <a class="el" href="interface_i_machine_debugger.html#ac669033f7cb9417e957e1e69b8459fc5">IMachineDebugger</a>
+<li>singleStep
+: <a class="el" href="interface_i_machine_debugger.html#abf989736b7a4e6d1102ec9c30f3a8049">IMachineDebugger</a>
 </li>
 <li>size
 : <a class="el" href="interface_i_medium.html#aed8a9c1cb0779b5482322d96b9da600b">IMedium</a>
@@ -232,10 +244,10 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="interface_i_console.html#abb1765d1e1210d3ee205c98abe0babf0">IConsole</a>
 </li>
 <li>slot
-: <a class="el" href="interface_i_parallel_port.html#abbfebec6867356824979bd9e0088160d">IParallelPort</a>
-, <a class="el" href="interface_i_n_a_t_redirect_event.html#af00276a208747717be7b1a3c3d0582f7">INATRedirectEvent</a>
+: <a class="el" href="interface_i_network_adapter.html#aff2522a0782457caa9071fdb2035fb10">INetworkAdapter</a>
 , <a class="el" href="interface_i_serial_port.html#af1ab24b7888b4c85e5a1f3e71b4482f8">ISerialPort</a>
-, <a class="el" href="interface_i_network_adapter.html#aff2522a0782457caa9071fdb2035fb10">INetworkAdapter</a>
+, <a class="el" href="interface_i_parallel_port.html#abbfebec6867356824979bd9e0088160d">IParallelPort</a>
+, <a class="el" href="interface_i_n_a_t_redirect_event.html#af00276a208747717be7b1a3c3d0582f7">INATRedirectEvent</a>
 </li>
 <li>snapshotCount
 : <a class="el" href="interface_i_machine.html#a1946d487a58f17cf4ee78a28c64a50da">IMachine</a>
@@ -253,14 +265,14 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="interface_i_d_h_c_p_server.html#a877d87e2e37816af3acd5770e8320820">IDHCPServer</a>
 </li>
 <li>state
-: <a class="el" href="interface_i_session_state_changed_event.html#a426a533f5ca4ca7629d881edac5c0dbf">ISessionStateChangedEvent</a>
-, <a class="el" href="interface_i_host_u_s_b_device.html#a95cfe6b78a8636a2b038d08ea2722bb4">IHostUSBDevice</a>
+: <a class="el" href="interface_i_host_u_s_b_device.html#a95cfe6b78a8636a2b038d08ea2722bb4">IHostUSBDevice</a>
 , <a class="el" href="interface_i_session.html#aac4763cc59a693a81170ed9d1118d571">ISession</a>
-, <a class="el" href="interface_i_console.html#a884bd1bd3f302b09d36076fce629b9f9">IConsole</a>
-, <a class="el" href="interface_i_machine_state_changed_event.html#a93482489926a6f639af533353fb7a5c2">IMachineStateChangedEvent</a>
-, <a class="el" href="interface_i_machine.html#a9653e9d996d60fc54e8bed22179d92b2">IMachine</a>
 , <a class="el" href="interface_i_state_changed_event.html#a3ef96dde1a453fd4c27e6d7dcd4b05e3">IStateChangedEvent</a>
+, <a class="el" href="interface_i_machine_state_changed_event.html#a93482489926a6f639af533353fb7a5c2">IMachineStateChangedEvent</a>
 , <a class="el" href="interface_i_medium.html#ac250d2252217354b21b272b9387c94d4">IMedium</a>
+, <a class="el" href="interface_i_session_state_changed_event.html#a426a533f5ca4ca7629d881edac5c0dbf">ISessionStateChangedEvent</a>
+, <a class="el" href="interface_i_machine.html#a9653e9d996d60fc54e8bed22179d92b2">IMachine</a>
+, <a class="el" href="interface_i_console.html#a884bd1bd3f302b09d36076fce629b9f9">IConsole</a>
 </li>
 <li>stateFilePath
 : <a class="el" href="interface_i_machine.html#a6bf84094ff47ad0f8f2517ee513eed02">IMachine</a>
@@ -269,7 +281,8 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="interface_i_guest.html#aa1b7827f9228e604ed5112495e967f7f">IGuest</a>
 </li>
 <li>status
-: <a class="el" href="interface_i_host_network_interface.html#a8f0a2950efa45b2928778c77e8855bb9">IHostNetworkInterface</a>
+: <a class="el" href="interface_i_process.html#a38e5212e7bebf2a0d6164a108a5779c9">IProcess</a>
+, <a class="el" href="interface_i_host_network_interface.html#a8f0a2950efa45b2928778c77e8855bb9">IHostNetworkInterface</a>
 , <a class="el" href="interface_i_additions_facility.html#af3fabbfc4642b40c58ae3d8c84bfc58f">IAdditionsFacility</a>
 </li>
 <li>stop()
@@ -282,7 +295,7 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="interface_i_storage_device_changed_event.html#abb4e65456e01b1023b09e5a1d7f7ce94">IStorageDeviceChangedEvent</a>
 </li>
 <li>success
-: <a class="el" href="interface_i_host_pci_device_plug_event.html#ab07acc628c263e8dea50c20bb30a010b">IHostPciDevicePlugEvent</a>
+: <a class="el" href="interface_i_host_p_c_i_device_plug_event.html#abd3718103bd3b9b01baabcd8c7dd45cd">IHostPCIDevicePlugEvent</a>
 </li>
 <li>supportsAbsolute
 : <a class="el" href="interface_i_mouse_capability_changed_event.html#a490de3eb359814f5e75c1635c5519e96">IMouseCapabilityChangedEvent</a>
@@ -290,12 +303,27 @@ Here is a list of all class members with links to the classes they belong to:
 <li>supportsRelative
 : <a class="el" href="interface_i_mouse_capability_changed_event.html#a796917dbd7a2a2a20035b7c173417f62">IMouseCapabilityChangedEvent</a>
 </li>
+<li>symlinkCreate()
+: <a class="el" href="interface_i_guest_session.html#af1c85274751bd9f6fcb35636915e8cc8">IGuestSession</a>
+</li>
+<li>symlinkExists()
+: <a class="el" href="interface_i_guest_session.html#a45c2503b61f587450b68f916779bd5ea">IGuestSession</a>
+</li>
+<li>symlinkRead()
+: <a class="el" href="interface_i_guest_session.html#ac9bf2337dc694021b93de32f23ad5e9f">IGuestSession</a>
+</li>
+<li>symlinkRemoveDirectory()
+: <a class="el" href="interface_i_guest_session.html#a5c19fc13e17244e208172fcfa130c929">IGuestSession</a>
+</li>
+<li>symlinkRemoveFile()
+: <a class="el" href="interface_i_guest_session.html#ae9c79980211bbaf387e4ae852bd2daf6">IGuestSession</a>
+</li>
 <li>systemProperties
 : <a class="el" href="interface_i_virtual_box.html#a66cc0a8609f72dbb30d9c6ec8bc365f7">IVirtualBox</a>
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

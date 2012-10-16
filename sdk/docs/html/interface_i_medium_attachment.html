@@ -59,6 +59,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Signals that the removable medium has been ejected.  <a href="#a320a50b5509caf8f53ddd6eca62f4f57"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium_attachment.html#a23a2f10ea4cc9e54303255c200c4a00c">nonRotational</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the associated medium is non-rotational.  <a href="#a23a2f10ea4cc9e54303255c200c4a00c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium_attachment.html#a331c0def1fa2fd7818f148e4545863a1">discard</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the associated medium supports discarding unused blocks.  <a href="#a331c0def1fa2fd7818f148e4545863a1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="interface_i_bandwidth_group.html">IBandwidthGroup</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium_attachment.html#a903459f8dc8952f9fdbd74281ce85af4">bandwidthGroup</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The bandwidth group this medium attachment is assigned to.  <a href="#a903459f8dc8952f9fdbd74281ce85af4"></a><br/></td></tr>
 </table>
@@ -101,7 +103,7 @@ BEFORE attaching B.vdi:       AFTER attaching B.vdi:</pre><pre>Snapshot 1 (B.vdi
 <p>As we can see from the example, the hard disk <code>B.vdi</code> was detached from the machine before taking Snapshot 4. Later, after Snapshot 4 was taken, the user decides to attach <code>B.vdi</code> again. <code>B.vdi</code> has dependent child hard disks (<code>D1.vdi</code>, <code>D2.vdi</code>), therefore it cannot be attached directly and needs an indirect attachment (i.e. implicit creation of a new differencing hard disk). Due to the smart attachment procedure, the new differencing hard disk (<code>D3.vdi</code>) will be based on <code>D2.vdi</code>, not on <code>B.vdi</code> itself, since <code>D2.vdi</code> is the most recent view of <code>B.vdi</code> existing for this snapshot branch of the given virtual machine.</p>
 <p>Note that if there is more than one descendant hard disk of the given base hard disk found in a snapshot, and there is an exact device, channel and bus match, then this exact match will be used. Otherwise, the youngest descendant will be picked up.</p>
 <p>There is one more important aspect of the smart attachment procedure which is not related to snapshots at all. Before walking through the snapshots as described above, the backup copy of the current list of hard disk attachment is searched for descendants. This backup copy is created when the hard disk configuration is changed for the first time after the last <a class="el" href="interface_i_machine.html#a2eb47e1d878566569b26893cc12bd8e1">IMachine::saveSettings</a><b></b> call and used by <a class="el" href="interface_i_machine.html#a341ac035501a0c168ad9571bbe86eb02">IMachine::discardSettings</a><b></b> to undo the recent hard disk changes. When such a descendant is found in this backup copy, it will be simply re-attached back, without creating a new differencing hard disk for it. This optimization is necessary to make it possible to re-attach the base or immutable hard disk to a different bus, channel or device slot without losing the contents of the differencing hard disk actually attached to the machine in place of it.</p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{B5DFBB8C-7498-48C3-BF10-78FC60F064E1}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{5EE464D6-0613-4331-B154-7CE12170EF9F}</code> </dd></dl>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a355b355bc5b11560309c24904f63369d"></a><!-- doxytag: member="IMediumAttachment::medium" ref="a355b355bc5b11560309c24904f63369d" args="" -->
 <div class="memitem">
@@ -241,6 +243,21 @@ BEFORE attaching B.vdi:       AFTER attaching B.vdi:</pre><pre>Snapshot 1 (B.vdi
 
 </div>
 </div>
+<a class="anchor" id="a331c0def1fa2fd7818f148e4545863a1"></a><!-- doxytag: member="IMediumAttachment::discard" ref="a331c0def1fa2fd7818f148e4545863a1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_medium_attachment.html#a331c0def1fa2fd7818f148e4545863a1">IMediumAttachment::discard</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Whether the associated medium supports discarding unused blocks. </p>
+
+</div>
+</div>
 <a class="anchor" id="a903459f8dc8952f9fdbd74281ce85af4"></a><!-- doxytag: member="IMediumAttachment::bandwidthGroup" ref="a903459f8dc8952f9fdbd74281ce85af4" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -257,7 +274,7 @@ BEFORE attaching B.vdi:       AFTER attaching B.vdi:</pre><pre>Snapshot 1 (B.vdi
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

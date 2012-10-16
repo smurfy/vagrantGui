@@ -17,7 +17,7 @@ class VirtualBoxReflectionInfo:
 
    _Values = {
                 'SettingsVersion':{
-                  'Null':0,'v1_0':1,'v1_1':2,'v1_2':3,'v1_3pre':4,'v1_3':5,'v1_4':6,'v1_5':7,'v1_6':8,'v1_7':9,'v1_8':10,'v1_9':11,'v1_10':12,'v1_11':13,'v1_12':14,'Future':99999},
+                  'Null':0,'v1_0':1,'v1_1':2,'v1_2':3,'v1_3pre':4,'v1_3':5,'v1_4':6,'v1_5':7,'v1_6':8,'v1_7':9,'v1_8':10,'v1_9':11,'v1_10':12,'v1_11':13,'v1_12':14,'v1_13':15,'Future':99999},
                 'AccessMode':{
                   'ReadOnly':1,'ReadWrite':2},
                 'MachineState':{
@@ -31,7 +31,7 @@ class VirtualBoxReflectionInfo:
                 'FaultToleranceState':{
                   'Inactive':1,'Master':2,'Standby':3},
                 'LockType':{
-                  'Write':2,'Shared':1},
+                  'Write':2,'Shared':1,'VM':3},
                 'SessionType':{
                   'Null':0,'WriteLock':1,'Remote':2,'Shared':3},
                 'DeviceType':{
@@ -39,6 +39,8 @@ class VirtualBoxReflectionInfo:
                 'DeviceActivity':{
                   'Null':0,'Idle':1,'Reading':2,'Writing':3},
                 'ClipboardMode':{
+                  'Disabled':0,'HostToGuest':1,'GuestToHost':2,'Bidirectional':3},
+                'DragAndDropMode':{
                   'Disabled':0,'HostToGuest':1,'GuestToHost':2,'Bidirectional':3},
                 'Scope':{
                   'Global':0,'Machine':1,'Session':2},
@@ -48,9 +50,9 @@ class VirtualBoxReflectionInfo:
                   'HWVirtEx':0,'PAE':1,'LongMode':2,'NestedPaging':3},
                 'FirmwareType':{
                   'BIOS':1,'EFI':2,'EFI32':3,'EFI64':4,'EFIDUAL':5},
-                'PointingHidType':{
+                'PointingHIDType':{
                   'None':1,'PS2Mouse':2,'USBMouse':3,'USBTablet':4,'ComboMouse':5},
-                'KeyboardHidType':{
+                'KeyboardHIDType':{
                   'None':1,'PS2Keyboard':2,'USBKeyboard':3,'ComboKeyboard':4},
                 'VFSType':{
                   'File':1,'Cloud':2,'S3':3,'WebDav':4},
@@ -68,6 +70,8 @@ class VirtualBoxReflectionInfo:
                   'MachineState':1,'MachineAndChildStates':2,'AllStates':3},
                 'CloneOptions':{
                   'Link':1,'KeepAllMACs':2,'KeepNATMACs':3,'KeepDiskNames':4},
+                'AutostopType':{
+                  'Disabled':1,'SaveState':2,'PowerOff':3,'AcpiShutdown':4},
                 'HostNetworkInterfaceMediumType':{
                   'Unknown':0,'Ethernet':1,'PPP':2,'SLIP':3},
                 'HostNetworkInterfaceStatus':{
@@ -84,28 +88,46 @@ class VirtualBoxReflectionInfo:
                   'None':0,'System':1,'Userland':2,'Desktop':3},
                 'AdditionsUpdateFlag':{
                   'None':0,'WaitForUpdateStartOnly':1},
-                'ExecuteProcessFlag':{
-                  'None':0,'WaitForProcessStartOnly':1,'IgnoreOrphanedProcesses':2,'Hidden':4,'NoProfile':8,'WaitForStdOut':16,'WaitForStdErr':32},
-                'ExecuteProcessStatus':{
-                  'Undefined':0,'Started':1,'TerminatedNormally':2,'TerminatedSignal':3,'TerminatedAbnormally':4,'TimedOutKilled':5,'TimedOutAbnormally':6,'Down':7,'Error':8},
+                'FileSeekType':{
+                  'Set':0,'Current':1},
                 'ProcessInputFlag':{
                   'None':0,'EndOfFile':1},
                 'ProcessOutputFlag':{
                   'None':0,'StdErr':1},
+                'ProcessWaitForFlag':{
+                  'None':0,'Start':1,'Terminate':2,'StdIn':4,'StdOut':8,'StdErr':16},
+                'ProcessWaitResult':{
+                  'None':0,'Start':1,'Terminate':2,'Status':3,'Error':4,'Timeout':5,'StdIn':6,'StdOut':7,'StdErr':8,'WaitFlagNotSupported':9},
                 'CopyFileFlag':{
                   'None':0,'Recursive':1,'Update':2,'FollowLinks':4},
                 'DirectoryCreateFlag':{
                   'None':0,'Parents':1},
+                'DirectoryRemoveRecFlag':{
+                  'None':0,'ContentAndDir':1,'ContentOnly':2},
+                'PathRenameFlag':{
+                  'None':0,'NoReplace':1,'Replace':2,'NoSymlinks':4},
+                'ProcessCreateFlag':{
+                  'None':0,'WaitForProcessStartOnly':1,'IgnoreOrphanedProcesses':2,'Hidden':4,'NoProfile':8,'WaitForStdOut':16,'WaitForStdErr':32,'ExpandArguments':64},
+                'ProcessPriority':{
+                  'Invalid':0,'Default':1},
+                'SymlinkType':{
+                  'Unknown':0,'Directory':1,'File':2},
+                'SymlinkReadFlag':{
+                  'None':0,'NoSymlinks':1},
+                'ProcessStatus':{
+                  'Undefined':0,'Starting':10,'Started':100,'Paused':110,'Terminating':480,'TerminatedNormally':500,'TerminatedSignal':510,'TerminatedAbnormally':511,'TimedOutKilled':512,'TimedOutAbnormally':513,'Down':600,'Error':800},
+                'FsObjType':{
+                  'Undefined':0,'FIFO':1,'DevChar':10,'DevBlock':11,'Directory':50,'File':80,'Symlink':100,'Socket':200,'Whiteout':400},
+                'DragAndDropAction':{
+                  'Ignore':0,'Copy':1,'Move':2,'Link':3},
                 'DirectoryOpenFlag':{
-                  'None':0},
-                'GuestDirEntryType':{
-                  'Unknown':0,'Directory':4,'File':10,'Symlink':12},
+                  'None':0,'NoSymlinks':1},
                 'MediumState':{
                   'NotCreated':0,'Created':1,'LockedRead':2,'LockedWrite':3,'Inaccessible':4,'Creating':5,'Deleting':6},
                 'MediumType':{
                   'Normal':0,'Immutable':1,'Writethrough':2,'Shareable':3,'Readonly':4,'MultiAttach':5},
                 'MediumVariant':{
-                  'Standard':0,'VmdkSplit2G':0x01,'VmdkStreamOptimized':0x04,'VmdkESX':0x08,'Fixed':0x10000,'Diff':0x20000,'NoCreateDir':0x40000000},
+                  'Standard':0,'VmdkSplit2G':0x01,'VmdkRawDisk':0x02,'VmdkStreamOptimized':0x04,'VmdkESX':0x08,'Fixed':0x10000,'Diff':0x20000,'NoCreateDir':0x40000000},
                 'DataType':{
                   'Int32':0,'Int8':1,'String':2},
                 'DataFlags':{
@@ -147,13 +169,13 @@ class VirtualBoxReflectionInfo:
                 'BandwidthGroupType':{
                   'Null':0,'Disk':1,'Network':2},
                 'VBoxEventType':{
-                  'Invalid':0,'Any':1,'Vetoable':2,'MachineEvent':3,'SnapshotEvent':4,'InputEvent':5,'LastWildcard':31,'OnMachineStateChanged':32,'OnMachineDataChanged':33,'OnExtraDataChanged':34,'OnExtraDataCanChange':35,'OnMediumRegistered':36,'OnMachineRegistered':37,'OnSessionStateChanged':38,'OnSnapshotTaken':39,'OnSnapshotDeleted':40,'OnSnapshotChanged':41,'OnGuestPropertyChanged':42,'OnMousePointerShapeChanged':43,'OnMouseCapabilityChanged':44,'OnKeyboardLedsChanged':45,'OnStateChanged':46,'OnAdditionsStateChanged':47,'OnNetworkAdapterChanged':48,'OnSerialPortChanged':49,'OnParallelPortChanged':50,'OnStorageControllerChanged':51,'OnMediumChanged':52,'OnVRDEServerChanged':53,'OnUSBControllerChanged':54,'OnUSBDeviceStateChanged':55,'OnSharedFolderChanged':56,'OnRuntimeError':57,'OnCanShowWindow':58,'OnShowWindow':59,'OnCPUChanged':60,'OnVRDEServerInfoChanged':61,'OnEventSourceChanged':62,'OnCPUExecutionCapChanged':63,'OnGuestKeyboard':64,'OnGuestMouse':65,'OnNATRedirect':66,'OnHostPciDevicePlug':67,'OnVBoxSVCAvailabilityChanged':68,'OnBandwidthGroupChanged':69,'OnGuestMonitorChanged':70,'OnStorageDeviceChanged':71,'Last':72},
+                  'Invalid':0,'Any':1,'Vetoable':2,'MachineEvent':3,'SnapshotEvent':4,'InputEvent':5,'LastWildcard':31,'OnMachineStateChanged':32,'OnMachineDataChanged':33,'OnExtraDataChanged':34,'OnExtraDataCanChange':35,'OnMediumRegistered':36,'OnMachineRegistered':37,'OnSessionStateChanged':38,'OnSnapshotTaken':39,'OnSnapshotDeleted':40,'OnSnapshotChanged':41,'OnGuestPropertyChanged':42,'OnMousePointerShapeChanged':43,'OnMouseCapabilityChanged':44,'OnKeyboardLedsChanged':45,'OnStateChanged':46,'OnAdditionsStateChanged':47,'OnNetworkAdapterChanged':48,'OnSerialPortChanged':49,'OnParallelPortChanged':50,'OnStorageControllerChanged':51,'OnMediumChanged':52,'OnVRDEServerChanged':53,'OnUSBControllerChanged':54,'OnUSBDeviceStateChanged':55,'OnSharedFolderChanged':56,'OnRuntimeError':57,'OnCanShowWindow':58,'OnShowWindow':59,'OnCPUChanged':60,'OnVRDEServerInfoChanged':61,'OnEventSourceChanged':62,'OnCPUExecutionCapChanged':63,'OnGuestKeyboard':64,'OnGuestMouse':65,'OnNATRedirect':66,'OnHostPCIDevicePlug':67,'OnVBoxSVCAvailabilityChanged':68,'OnBandwidthGroupChanged':69,'OnGuestMonitorChanged':70,'OnStorageDeviceChanged':71,'OnClipboardModeChanged':72,'OnDragAndDropModeChanged':73,'Last':74},
                 'GuestMonitorChangedEventType':{
                   'Enabled':0,'Disabled':1,'NewOrigin':2}}
 
    _ValuesSym = {
                 'SettingsVersion':{
-                  'Null': 'Null','v1_0': 'v1_0','v1_1': 'v1_1','v1_2': 'v1_2','v1_3pre': 'v1_3pre','v1_3': 'v1_3','v1_4': 'v1_4','v1_5': 'v1_5','v1_6': 'v1_6','v1_7': 'v1_7','v1_8': 'v1_8','v1_9': 'v1_9','v1_10': 'v1_10','v1_11': 'v1_11','v1_12': 'v1_12','Future': 'Future'},
+                  'Null': 'Null','v1_0': 'v1_0','v1_1': 'v1_1','v1_2': 'v1_2','v1_3pre': 'v1_3pre','v1_3': 'v1_3','v1_4': 'v1_4','v1_5': 'v1_5','v1_6': 'v1_6','v1_7': 'v1_7','v1_8': 'v1_8','v1_9': 'v1_9','v1_10': 'v1_10','v1_11': 'v1_11','v1_12': 'v1_12','v1_13': 'v1_13','Future': 'Future'},
                 'AccessMode':{
                   'ReadOnly': 'ReadOnly','ReadWrite': 'ReadWrite'},
                 'MachineState':{
@@ -167,7 +189,7 @@ class VirtualBoxReflectionInfo:
                 'FaultToleranceState':{
                   'Inactive': 'Inactive','Master': 'Master','Standby': 'Standby'},
                 'LockType':{
-                  'Write': 'Write','Shared': 'Shared'},
+                  'Write': 'Write','Shared': 'Shared','VM': 'VM'},
                 'SessionType':{
                   'Null': 'Null','WriteLock': 'WriteLock','Remote': 'Remote','Shared': 'Shared'},
                 'DeviceType':{
@@ -175,6 +197,8 @@ class VirtualBoxReflectionInfo:
                 'DeviceActivity':{
                   'Null': 'Null','Idle': 'Idle','Reading': 'Reading','Writing': 'Writing'},
                 'ClipboardMode':{
+                  'Disabled': 'Disabled','HostToGuest': 'HostToGuest','GuestToHost': 'GuestToHost','Bidirectional': 'Bidirectional'},
+                'DragAndDropMode':{
                   'Disabled': 'Disabled','HostToGuest': 'HostToGuest','GuestToHost': 'GuestToHost','Bidirectional': 'Bidirectional'},
                 'Scope':{
                   'Global': 'Global','Machine': 'Machine','Session': 'Session'},
@@ -184,9 +208,9 @@ class VirtualBoxReflectionInfo:
                   'HWVirtEx': 'HWVirtEx','PAE': 'PAE','LongMode': 'LongMode','NestedPaging': 'NestedPaging'},
                 'FirmwareType':{
                   'BIOS': 'BIOS','EFI': 'EFI','EFI32': 'EFI32','EFI64': 'EFI64','EFIDUAL': 'EFIDUAL'},
-                'PointingHidType':{
+                'PointingHIDType':{
                   'None': 'None','PS2Mouse': 'PS2Mouse','USBMouse': 'USBMouse','USBTablet': 'USBTablet','ComboMouse': 'ComboMouse'},
-                'KeyboardHidType':{
+                'KeyboardHIDType':{
                   'None': 'None','PS2Keyboard': 'PS2Keyboard','USBKeyboard': 'USBKeyboard','ComboKeyboard': 'ComboKeyboard'},
                 'VFSType':{
                   'File': 'File','Cloud': 'Cloud','S3': 'S3','WebDav': 'WebDav'},
@@ -204,6 +228,8 @@ class VirtualBoxReflectionInfo:
                   'MachineState': 'MachineState','MachineAndChildStates': 'MachineAndChildStates','AllStates': 'AllStates'},
                 'CloneOptions':{
                   'Link': 'Link','KeepAllMACs': 'KeepAllMACs','KeepNATMACs': 'KeepNATMACs','KeepDiskNames': 'KeepDiskNames'},
+                'AutostopType':{
+                  'Disabled': 'Disabled','SaveState': 'SaveState','PowerOff': 'PowerOff','AcpiShutdown': 'AcpiShutdown'},
                 'HostNetworkInterfaceMediumType':{
                   'Unknown': 'Unknown','Ethernet': 'Ethernet','PPP': 'PPP','SLIP': 'SLIP'},
                 'HostNetworkInterfaceStatus':{
@@ -220,28 +246,46 @@ class VirtualBoxReflectionInfo:
                   'None': 'None','System': 'System','Userland': 'Userland','Desktop': 'Desktop'},
                 'AdditionsUpdateFlag':{
                   'None': 'None','WaitForUpdateStartOnly': 'WaitForUpdateStartOnly'},
-                'ExecuteProcessFlag':{
-                  'None': 'None','WaitForProcessStartOnly': 'WaitForProcessStartOnly','IgnoreOrphanedProcesses': 'IgnoreOrphanedProcesses','Hidden': 'Hidden','NoProfile': 'NoProfile','WaitForStdOut': 'WaitForStdOut','WaitForStdErr': 'WaitForStdErr'},
-                'ExecuteProcessStatus':{
-                  'Undefined': 'Undefined','Started': 'Started','TerminatedNormally': 'TerminatedNormally','TerminatedSignal': 'TerminatedSignal','TerminatedAbnormally': 'TerminatedAbnormally','TimedOutKilled': 'TimedOutKilled','TimedOutAbnormally': 'TimedOutAbnormally','Down': 'Down','Error': 'Error'},
+                'FileSeekType':{
+                  'Set': 'Set','Current': 'Current'},
                 'ProcessInputFlag':{
                   'None': 'None','EndOfFile': 'EndOfFile'},
                 'ProcessOutputFlag':{
                   'None': 'None','StdErr': 'StdErr'},
+                'ProcessWaitForFlag':{
+                  'None': 'None','Start': 'Start','Terminate': 'Terminate','StdIn': 'StdIn','StdOut': 'StdOut','StdErr': 'StdErr'},
+                'ProcessWaitResult':{
+                  'None': 'None','Start': 'Start','Terminate': 'Terminate','Status': 'Status','Error': 'Error','Timeout': 'Timeout','StdIn': 'StdIn','StdOut': 'StdOut','StdErr': 'StdErr','WaitFlagNotSupported': 'WaitFlagNotSupported'},
                 'CopyFileFlag':{
                   'None': 'None','Recursive': 'Recursive','Update': 'Update','FollowLinks': 'FollowLinks'},
                 'DirectoryCreateFlag':{
                   'None': 'None','Parents': 'Parents'},
+                'DirectoryRemoveRecFlag':{
+                  'None': 'None','ContentAndDir': 'ContentAndDir','ContentOnly': 'ContentOnly'},
+                'PathRenameFlag':{
+                  'None': 'None','NoReplace': 'NoReplace','Replace': 'Replace','NoSymlinks': 'NoSymlinks'},
+                'ProcessCreateFlag':{
+                  'None': 'None','WaitForProcessStartOnly': 'WaitForProcessStartOnly','IgnoreOrphanedProcesses': 'IgnoreOrphanedProcesses','Hidden': 'Hidden','NoProfile': 'NoProfile','WaitForStdOut': 'WaitForStdOut','WaitForStdErr': 'WaitForStdErr','ExpandArguments': 'ExpandArguments'},
+                'ProcessPriority':{
+                  'Invalid': 'Invalid','Default': 'Default'},
+                'SymlinkType':{
+                  'Unknown': 'Unknown','Directory': 'Directory','File': 'File'},
+                'SymlinkReadFlag':{
+                  'None': 'None','NoSymlinks': 'NoSymlinks'},
+                'ProcessStatus':{
+                  'Undefined': 'Undefined','Starting': 'Starting','Started': 'Started','Paused': 'Paused','Terminating': 'Terminating','TerminatedNormally': 'TerminatedNormally','TerminatedSignal': 'TerminatedSignal','TerminatedAbnormally': 'TerminatedAbnormally','TimedOutKilled': 'TimedOutKilled','TimedOutAbnormally': 'TimedOutAbnormally','Down': 'Down','Error': 'Error'},
+                'FsObjType':{
+                  'Undefined': 'Undefined','FIFO': 'FIFO','DevChar': 'DevChar','DevBlock': 'DevBlock','Directory': 'Directory','File': 'File','Symlink': 'Symlink','Socket': 'Socket','Whiteout': 'Whiteout'},
+                'DragAndDropAction':{
+                  'Ignore': 'Ignore','Copy': 'Copy','Move': 'Move','Link': 'Link'},
                 'DirectoryOpenFlag':{
-                  'None': 'None'},
-                'GuestDirEntryType':{
-                  'Unknown': 'Unknown','Directory': 'Directory','File': 'File','Symlink': 'Symlink'},
+                  'None': 'None','NoSymlinks': 'NoSymlinks'},
                 'MediumState':{
                   'NotCreated': 'NotCreated','Created': 'Created','LockedRead': 'LockedRead','LockedWrite': 'LockedWrite','Inaccessible': 'Inaccessible','Creating': 'Creating','Deleting': 'Deleting'},
                 'MediumType':{
                   'Normal': 'Normal','Immutable': 'Immutable','Writethrough': 'Writethrough','Shareable': 'Shareable','Readonly': 'Readonly','MultiAttach': 'MultiAttach'},
                 'MediumVariant':{
-                  'Standard': 'Standard','VmdkSplit2G': 'VmdkSplit2G','VmdkStreamOptimized': 'VmdkStreamOptimized','VmdkESX': 'VmdkESX','Fixed': 'Fixed','Diff': 'Diff','NoCreateDir': 'NoCreateDir'},
+                  'Standard': 'Standard','VmdkSplit2G': 'VmdkSplit2G','VmdkRawDisk': 'VmdkRawDisk','VmdkStreamOptimized': 'VmdkStreamOptimized','VmdkESX': 'VmdkESX','Fixed': 'Fixed','Diff': 'Diff','NoCreateDir': 'NoCreateDir'},
                 'DataType':{
                   'Int32': 'Int32','Int8': 'Int8','String': 'String'},
                 'DataFlags':{
@@ -283,7 +327,7 @@ class VirtualBoxReflectionInfo:
                 'BandwidthGroupType':{
                   'Null': 'Null','Disk': 'Disk','Network': 'Network'},
                 'VBoxEventType':{
-                  'Invalid': 'Invalid','Any': 'Any','Vetoable': 'Vetoable','MachineEvent': 'MachineEvent','SnapshotEvent': 'SnapshotEvent','InputEvent': 'InputEvent','LastWildcard': 'LastWildcard','OnMachineStateChanged': 'OnMachineStateChanged','OnMachineDataChanged': 'OnMachineDataChanged','OnExtraDataChanged': 'OnExtraDataChanged','OnExtraDataCanChange': 'OnExtraDataCanChange','OnMediumRegistered': 'OnMediumRegistered','OnMachineRegistered': 'OnMachineRegistered','OnSessionStateChanged': 'OnSessionStateChanged','OnSnapshotTaken': 'OnSnapshotTaken','OnSnapshotDeleted': 'OnSnapshotDeleted','OnSnapshotChanged': 'OnSnapshotChanged','OnGuestPropertyChanged': 'OnGuestPropertyChanged','OnMousePointerShapeChanged': 'OnMousePointerShapeChanged','OnMouseCapabilityChanged': 'OnMouseCapabilityChanged','OnKeyboardLedsChanged': 'OnKeyboardLedsChanged','OnStateChanged': 'OnStateChanged','OnAdditionsStateChanged': 'OnAdditionsStateChanged','OnNetworkAdapterChanged': 'OnNetworkAdapterChanged','OnSerialPortChanged': 'OnSerialPortChanged','OnParallelPortChanged': 'OnParallelPortChanged','OnStorageControllerChanged': 'OnStorageControllerChanged','OnMediumChanged': 'OnMediumChanged','OnVRDEServerChanged': 'OnVRDEServerChanged','OnUSBControllerChanged': 'OnUSBControllerChanged','OnUSBDeviceStateChanged': 'OnUSBDeviceStateChanged','OnSharedFolderChanged': 'OnSharedFolderChanged','OnRuntimeError': 'OnRuntimeError','OnCanShowWindow': 'OnCanShowWindow','OnShowWindow': 'OnShowWindow','OnCPUChanged': 'OnCPUChanged','OnVRDEServerInfoChanged': 'OnVRDEServerInfoChanged','OnEventSourceChanged': 'OnEventSourceChanged','OnCPUExecutionCapChanged': 'OnCPUExecutionCapChanged','OnGuestKeyboard': 'OnGuestKeyboard','OnGuestMouse': 'OnGuestMouse','OnNATRedirect': 'OnNATRedirect','OnHostPciDevicePlug': 'OnHostPciDevicePlug','OnVBoxSVCAvailabilityChanged': 'OnVBoxSVCAvailabilityChanged','OnBandwidthGroupChanged': 'OnBandwidthGroupChanged','OnGuestMonitorChanged': 'OnGuestMonitorChanged','OnStorageDeviceChanged': 'OnStorageDeviceChanged','Last': 'Last'},
+                  'Invalid': 'Invalid','Any': 'Any','Vetoable': 'Vetoable','MachineEvent': 'MachineEvent','SnapshotEvent': 'SnapshotEvent','InputEvent': 'InputEvent','LastWildcard': 'LastWildcard','OnMachineStateChanged': 'OnMachineStateChanged','OnMachineDataChanged': 'OnMachineDataChanged','OnExtraDataChanged': 'OnExtraDataChanged','OnExtraDataCanChange': 'OnExtraDataCanChange','OnMediumRegistered': 'OnMediumRegistered','OnMachineRegistered': 'OnMachineRegistered','OnSessionStateChanged': 'OnSessionStateChanged','OnSnapshotTaken': 'OnSnapshotTaken','OnSnapshotDeleted': 'OnSnapshotDeleted','OnSnapshotChanged': 'OnSnapshotChanged','OnGuestPropertyChanged': 'OnGuestPropertyChanged','OnMousePointerShapeChanged': 'OnMousePointerShapeChanged','OnMouseCapabilityChanged': 'OnMouseCapabilityChanged','OnKeyboardLedsChanged': 'OnKeyboardLedsChanged','OnStateChanged': 'OnStateChanged','OnAdditionsStateChanged': 'OnAdditionsStateChanged','OnNetworkAdapterChanged': 'OnNetworkAdapterChanged','OnSerialPortChanged': 'OnSerialPortChanged','OnParallelPortChanged': 'OnParallelPortChanged','OnStorageControllerChanged': 'OnStorageControllerChanged','OnMediumChanged': 'OnMediumChanged','OnVRDEServerChanged': 'OnVRDEServerChanged','OnUSBControllerChanged': 'OnUSBControllerChanged','OnUSBDeviceStateChanged': 'OnUSBDeviceStateChanged','OnSharedFolderChanged': 'OnSharedFolderChanged','OnRuntimeError': 'OnRuntimeError','OnCanShowWindow': 'OnCanShowWindow','OnShowWindow': 'OnShowWindow','OnCPUChanged': 'OnCPUChanged','OnVRDEServerInfoChanged': 'OnVRDEServerInfoChanged','OnEventSourceChanged': 'OnEventSourceChanged','OnCPUExecutionCapChanged': 'OnCPUExecutionCapChanged','OnGuestKeyboard': 'OnGuestKeyboard','OnGuestMouse': 'OnGuestMouse','OnNATRedirect': 'OnNATRedirect','OnHostPCIDevicePlug': 'OnHostPCIDevicePlug','OnVBoxSVCAvailabilityChanged': 'OnVBoxSVCAvailabilityChanged','OnBandwidthGroupChanged': 'OnBandwidthGroupChanged','OnGuestMonitorChanged': 'OnGuestMonitorChanged','OnStorageDeviceChanged': 'OnStorageDeviceChanged','OnClipboardModeChanged': 'OnClipboardModeChanged','OnDragAndDropModeChanged': 'OnDragAndDropModeChanged','Last': 'Last'},
                 'GuestMonitorChangedEventType':{
                   'Enabled': 'Enabled','Disabled': 'Disabled','NewOrigin': 'NewOrigin'}}
 
@@ -303,6 +347,7 @@ class VirtualBoxReflectionInfo:
                         'SettingsVersion_v1_10':12,
                         'SettingsVersion_v1_11':13,
                         'SettingsVersion_v1_12':14,
+                        'SettingsVersion_v1_13':15,
                         'SettingsVersion_Future':99999,
                         'AccessMode_ReadOnly':1,
                         'AccessMode_ReadWrite':2,
@@ -352,6 +397,7 @@ class VirtualBoxReflectionInfo:
                         'FaultToleranceState_Standby':3,
                         'LockType_Write':2,
                         'LockType_Shared':1,
+                        'LockType_VM':3,
                         'SessionType_Null':0,
                         'SessionType_WriteLock':1,
                         'SessionType_Remote':2,
@@ -371,6 +417,10 @@ class VirtualBoxReflectionInfo:
                         'ClipboardMode_HostToGuest':1,
                         'ClipboardMode_GuestToHost':2,
                         'ClipboardMode_Bidirectional':3,
+                        'DragAndDropMode_Disabled':0,
+                        'DragAndDropMode_HostToGuest':1,
+                        'DragAndDropMode_GuestToHost':2,
+                        'DragAndDropMode_Bidirectional':3,
                         'Scope_Global':0,
                         'Scope_Machine':1,
                         'Scope_Session':2,
@@ -386,15 +436,15 @@ class VirtualBoxReflectionInfo:
                         'FirmwareType_EFI32':3,
                         'FirmwareType_EFI64':4,
                         'FirmwareType_EFIDUAL':5,
-                        'PointingHidType_None':1,
-                        'PointingHidType_PS2Mouse':2,
-                        'PointingHidType_USBMouse':3,
-                        'PointingHidType_USBTablet':4,
-                        'PointingHidType_ComboMouse':5,
-                        'KeyboardHidType_None':1,
-                        'KeyboardHidType_PS2Keyboard':2,
-                        'KeyboardHidType_USBKeyboard':3,
-                        'KeyboardHidType_ComboKeyboard':4,
+                        'PointingHIDType_None':1,
+                        'PointingHIDType_PS2Mouse':2,
+                        'PointingHIDType_USBMouse':3,
+                        'PointingHIDType_USBTablet':4,
+                        'PointingHIDType_ComboMouse':5,
+                        'KeyboardHIDType_None':1,
+                        'KeyboardHIDType_PS2Keyboard':2,
+                        'KeyboardHIDType_USBKeyboard':3,
+                        'KeyboardHIDType_ComboKeyboard':4,
                         'VFSType_File':1,
                         'VFSType_Cloud':2,
                         'VFSType_S3':3,
@@ -449,6 +499,10 @@ class VirtualBoxReflectionInfo:
                         'CloneOptions_KeepAllMACs':2,
                         'CloneOptions_KeepNATMACs':3,
                         'CloneOptions_KeepDiskNames':4,
+                        'AutostopType_Disabled':1,
+                        'AutostopType_SaveState':2,
+                        'AutostopType_PowerOff':3,
+                        'AutostopType_AcpiShutdown':4,
                         'HostNetworkInterfaceMediumType_Unknown':0,
                         'HostNetworkInterfaceMediumType_Ethernet':1,
                         'HostNetworkInterfaceMediumType_PPP':2,
@@ -488,37 +542,83 @@ class VirtualBoxReflectionInfo:
                         'AdditionsRunLevelType_Desktop':3,
                         'AdditionsUpdateFlag_None':0,
                         'AdditionsUpdateFlag_WaitForUpdateStartOnly':1,
-                        'ExecuteProcessFlag_None':0,
-                        'ExecuteProcessFlag_WaitForProcessStartOnly':1,
-                        'ExecuteProcessFlag_IgnoreOrphanedProcesses':2,
-                        'ExecuteProcessFlag_Hidden':4,
-                        'ExecuteProcessFlag_NoProfile':8,
-                        'ExecuteProcessFlag_WaitForStdOut':16,
-                        'ExecuteProcessFlag_WaitForStdErr':32,
-                        'ExecuteProcessStatus_Undefined':0,
-                        'ExecuteProcessStatus_Started':1,
-                        'ExecuteProcessStatus_TerminatedNormally':2,
-                        'ExecuteProcessStatus_TerminatedSignal':3,
-                        'ExecuteProcessStatus_TerminatedAbnormally':4,
-                        'ExecuteProcessStatus_TimedOutKilled':5,
-                        'ExecuteProcessStatus_TimedOutAbnormally':6,
-                        'ExecuteProcessStatus_Down':7,
-                        'ExecuteProcessStatus_Error':8,
+                        'FileSeekType_Set':0,
+                        'FileSeekType_Current':1,
                         'ProcessInputFlag_None':0,
                         'ProcessInputFlag_EndOfFile':1,
                         'ProcessOutputFlag_None':0,
                         'ProcessOutputFlag_StdErr':1,
+                        'ProcessWaitForFlag_None':0,
+                        'ProcessWaitForFlag_Start':1,
+                        'ProcessWaitForFlag_Terminate':2,
+                        'ProcessWaitForFlag_StdIn':4,
+                        'ProcessWaitForFlag_StdOut':8,
+                        'ProcessWaitForFlag_StdErr':16,
+                        'ProcessWaitResult_None':0,
+                        'ProcessWaitResult_Start':1,
+                        'ProcessWaitResult_Terminate':2,
+                        'ProcessWaitResult_Status':3,
+                        'ProcessWaitResult_Error':4,
+                        'ProcessWaitResult_Timeout':5,
+                        'ProcessWaitResult_StdIn':6,
+                        'ProcessWaitResult_StdOut':7,
+                        'ProcessWaitResult_StdErr':8,
+                        'ProcessWaitResult_WaitFlagNotSupported':9,
                         'CopyFileFlag_None':0,
                         'CopyFileFlag_Recursive':1,
                         'CopyFileFlag_Update':2,
                         'CopyFileFlag_FollowLinks':4,
                         'DirectoryCreateFlag_None':0,
                         'DirectoryCreateFlag_Parents':1,
+                        'DirectoryRemoveRecFlag_None':0,
+                        'DirectoryRemoveRecFlag_ContentAndDir':1,
+                        'DirectoryRemoveRecFlag_ContentOnly':2,
+                        'PathRenameFlag_None':0,
+                        'PathRenameFlag_NoReplace':1,
+                        'PathRenameFlag_Replace':2,
+                        'PathRenameFlag_NoSymlinks':4,
+                        'ProcessCreateFlag_None':0,
+                        'ProcessCreateFlag_WaitForProcessStartOnly':1,
+                        'ProcessCreateFlag_IgnoreOrphanedProcesses':2,
+                        'ProcessCreateFlag_Hidden':4,
+                        'ProcessCreateFlag_NoProfile':8,
+                        'ProcessCreateFlag_WaitForStdOut':16,
+                        'ProcessCreateFlag_WaitForStdErr':32,
+                        'ProcessCreateFlag_ExpandArguments':64,
+                        'ProcessPriority_Invalid':0,
+                        'ProcessPriority_Default':1,
+                        'SymlinkType_Unknown':0,
+                        'SymlinkType_Directory':1,
+                        'SymlinkType_File':2,
+                        'SymlinkReadFlag_None':0,
+                        'SymlinkReadFlag_NoSymlinks':1,
+                        'ProcessStatus_Undefined':0,
+                        'ProcessStatus_Starting':10,
+                        'ProcessStatus_Started':100,
+                        'ProcessStatus_Paused':110,
+                        'ProcessStatus_Terminating':480,
+                        'ProcessStatus_TerminatedNormally':500,
+                        'ProcessStatus_TerminatedSignal':510,
+                        'ProcessStatus_TerminatedAbnormally':511,
+                        'ProcessStatus_TimedOutKilled':512,
+                        'ProcessStatus_TimedOutAbnormally':513,
+                        'ProcessStatus_Down':600,
+                        'ProcessStatus_Error':800,
+                        'FsObjType_Undefined':0,
+                        'FsObjType_FIFO':1,
+                        'FsObjType_DevChar':10,
+                        'FsObjType_DevBlock':11,
+                        'FsObjType_Directory':50,
+                        'FsObjType_File':80,
+                        'FsObjType_Symlink':100,
+                        'FsObjType_Socket':200,
+                        'FsObjType_Whiteout':400,
+                        'DragAndDropAction_Ignore':0,
+                        'DragAndDropAction_Copy':1,
+                        'DragAndDropAction_Move':2,
+                        'DragAndDropAction_Link':3,
                         'DirectoryOpenFlag_None':0,
-                        'GuestDirEntryType_Unknown':0,
-                        'GuestDirEntryType_Directory':4,
-                        'GuestDirEntryType_File':10,
-                        'GuestDirEntryType_Symlink':12,
+                        'DirectoryOpenFlag_NoSymlinks':1,
                         'MediumState_NotCreated':0,
                         'MediumState_Created':1,
                         'MediumState_LockedRead':2,
@@ -534,6 +634,7 @@ class VirtualBoxReflectionInfo:
                         'MediumType_MultiAttach':5,
                         'MediumVariant_Standard':0,
                         'MediumVariant_VmdkSplit2G':0x01,
+                        'MediumVariant_VmdkRawDisk':0x02,
                         'MediumVariant_VmdkStreamOptimized':0x04,
                         'MediumVariant_VmdkESX':0x08,
                         'MediumVariant_Fixed':0x10000,
@@ -680,12 +781,14 @@ class VirtualBoxReflectionInfo:
                         'VBoxEventType_OnGuestKeyboard':64,
                         'VBoxEventType_OnGuestMouse':65,
                         'VBoxEventType_OnNATRedirect':66,
-                        'VBoxEventType_OnHostPciDevicePlug':67,
+                        'VBoxEventType_OnHostPCIDevicePlug':67,
                         'VBoxEventType_OnVBoxSVCAvailabilityChanged':68,
                         'VBoxEventType_OnBandwidthGroupChanged':69,
                         'VBoxEventType_OnGuestMonitorChanged':70,
                         'VBoxEventType_OnStorageDeviceChanged':71,
-                        'VBoxEventType_Last':72,
+                        'VBoxEventType_OnClipboardModeChanged':72,
+                        'VBoxEventType_OnDragAndDropModeChanged':73,
+                        'VBoxEventType_Last':74,
                         'GuestMonitorChangedEventType_Enabled':0,
                         'GuestMonitorChangedEventType_Disabled':1,
                         'GuestMonitorChangedEventType_NewOrigin':2}
@@ -706,6 +809,7 @@ class VirtualBoxReflectionInfo:
                         'SettingsVersion_v1_10': 'v1_10',
                         'SettingsVersion_v1_11': 'v1_11',
                         'SettingsVersion_v1_12': 'v1_12',
+                        'SettingsVersion_v1_13': 'v1_13',
                         'SettingsVersion_Future': 'Future',
                         'AccessMode_ReadOnly': 'ReadOnly',
                         'AccessMode_ReadWrite': 'ReadWrite',
@@ -755,6 +859,7 @@ class VirtualBoxReflectionInfo:
                         'FaultToleranceState_Standby': 'Standby',
                         'LockType_Write': 'Write',
                         'LockType_Shared': 'Shared',
+                        'LockType_VM': 'VM',
                         'SessionType_Null': 'Null',
                         'SessionType_WriteLock': 'WriteLock',
                         'SessionType_Remote': 'Remote',
@@ -774,6 +879,10 @@ class VirtualBoxReflectionInfo:
                         'ClipboardMode_HostToGuest': 'HostToGuest',
                         'ClipboardMode_GuestToHost': 'GuestToHost',
                         'ClipboardMode_Bidirectional': 'Bidirectional',
+                        'DragAndDropMode_Disabled': 'Disabled',
+                        'DragAndDropMode_HostToGuest': 'HostToGuest',
+                        'DragAndDropMode_GuestToHost': 'GuestToHost',
+                        'DragAndDropMode_Bidirectional': 'Bidirectional',
                         'Scope_Global': 'Global',
                         'Scope_Machine': 'Machine',
                         'Scope_Session': 'Session',
@@ -789,15 +898,15 @@ class VirtualBoxReflectionInfo:
                         'FirmwareType_EFI32': 'EFI32',
                         'FirmwareType_EFI64': 'EFI64',
                         'FirmwareType_EFIDUAL': 'EFIDUAL',
-                        'PointingHidType_None': 'None',
-                        'PointingHidType_PS2Mouse': 'PS2Mouse',
-                        'PointingHidType_USBMouse': 'USBMouse',
-                        'PointingHidType_USBTablet': 'USBTablet',
-                        'PointingHidType_ComboMouse': 'ComboMouse',
-                        'KeyboardHidType_None': 'None',
-                        'KeyboardHidType_PS2Keyboard': 'PS2Keyboard',
-                        'KeyboardHidType_USBKeyboard': 'USBKeyboard',
-                        'KeyboardHidType_ComboKeyboard': 'ComboKeyboard',
+                        'PointingHIDType_None': 'None',
+                        'PointingHIDType_PS2Mouse': 'PS2Mouse',
+                        'PointingHIDType_USBMouse': 'USBMouse',
+                        'PointingHIDType_USBTablet': 'USBTablet',
+                        'PointingHIDType_ComboMouse': 'ComboMouse',
+                        'KeyboardHIDType_None': 'None',
+                        'KeyboardHIDType_PS2Keyboard': 'PS2Keyboard',
+                        'KeyboardHIDType_USBKeyboard': 'USBKeyboard',
+                        'KeyboardHIDType_ComboKeyboard': 'ComboKeyboard',
                         'VFSType_File': 'File',
                         'VFSType_Cloud': 'Cloud',
                         'VFSType_S3': 'S3',
@@ -852,6 +961,10 @@ class VirtualBoxReflectionInfo:
                         'CloneOptions_KeepAllMACs': 'KeepAllMACs',
                         'CloneOptions_KeepNATMACs': 'KeepNATMACs',
                         'CloneOptions_KeepDiskNames': 'KeepDiskNames',
+                        'AutostopType_Disabled': 'Disabled',
+                        'AutostopType_SaveState': 'SaveState',
+                        'AutostopType_PowerOff': 'PowerOff',
+                        'AutostopType_AcpiShutdown': 'AcpiShutdown',
                         'HostNetworkInterfaceMediumType_Unknown': 'Unknown',
                         'HostNetworkInterfaceMediumType_Ethernet': 'Ethernet',
                         'HostNetworkInterfaceMediumType_PPP': 'PPP',
@@ -891,37 +1004,83 @@ class VirtualBoxReflectionInfo:
                         'AdditionsRunLevelType_Desktop': 'Desktop',
                         'AdditionsUpdateFlag_None': 'None',
                         'AdditionsUpdateFlag_WaitForUpdateStartOnly': 'WaitForUpdateStartOnly',
-                        'ExecuteProcessFlag_None': 'None',
-                        'ExecuteProcessFlag_WaitForProcessStartOnly': 'WaitForProcessStartOnly',
-                        'ExecuteProcessFlag_IgnoreOrphanedProcesses': 'IgnoreOrphanedProcesses',
-                        'ExecuteProcessFlag_Hidden': 'Hidden',
-                        'ExecuteProcessFlag_NoProfile': 'NoProfile',
-                        'ExecuteProcessFlag_WaitForStdOut': 'WaitForStdOut',
-                        'ExecuteProcessFlag_WaitForStdErr': 'WaitForStdErr',
-                        'ExecuteProcessStatus_Undefined': 'Undefined',
-                        'ExecuteProcessStatus_Started': 'Started',
-                        'ExecuteProcessStatus_TerminatedNormally': 'TerminatedNormally',
-                        'ExecuteProcessStatus_TerminatedSignal': 'TerminatedSignal',
-                        'ExecuteProcessStatus_TerminatedAbnormally': 'TerminatedAbnormally',
-                        'ExecuteProcessStatus_TimedOutKilled': 'TimedOutKilled',
-                        'ExecuteProcessStatus_TimedOutAbnormally': 'TimedOutAbnormally',
-                        'ExecuteProcessStatus_Down': 'Down',
-                        'ExecuteProcessStatus_Error': 'Error',
+                        'FileSeekType_Set': 'Set',
+                        'FileSeekType_Current': 'Current',
                         'ProcessInputFlag_None': 'None',
                         'ProcessInputFlag_EndOfFile': 'EndOfFile',
                         'ProcessOutputFlag_None': 'None',
                         'ProcessOutputFlag_StdErr': 'StdErr',
+                        'ProcessWaitForFlag_None': 'None',
+                        'ProcessWaitForFlag_Start': 'Start',
+                        'ProcessWaitForFlag_Terminate': 'Terminate',
+                        'ProcessWaitForFlag_StdIn': 'StdIn',
+                        'ProcessWaitForFlag_StdOut': 'StdOut',
+                        'ProcessWaitForFlag_StdErr': 'StdErr',
+                        'ProcessWaitResult_None': 'None',
+                        'ProcessWaitResult_Start': 'Start',
+                        'ProcessWaitResult_Terminate': 'Terminate',
+                        'ProcessWaitResult_Status': 'Status',
+                        'ProcessWaitResult_Error': 'Error',
+                        'ProcessWaitResult_Timeout': 'Timeout',
+                        'ProcessWaitResult_StdIn': 'StdIn',
+                        'ProcessWaitResult_StdOut': 'StdOut',
+                        'ProcessWaitResult_StdErr': 'StdErr',
+                        'ProcessWaitResult_WaitFlagNotSupported': 'WaitFlagNotSupported',
                         'CopyFileFlag_None': 'None',
                         'CopyFileFlag_Recursive': 'Recursive',
                         'CopyFileFlag_Update': 'Update',
                         'CopyFileFlag_FollowLinks': 'FollowLinks',
                         'DirectoryCreateFlag_None': 'None',
                         'DirectoryCreateFlag_Parents': 'Parents',
+                        'DirectoryRemoveRecFlag_None': 'None',
+                        'DirectoryRemoveRecFlag_ContentAndDir': 'ContentAndDir',
+                        'DirectoryRemoveRecFlag_ContentOnly': 'ContentOnly',
+                        'PathRenameFlag_None': 'None',
+                        'PathRenameFlag_NoReplace': 'NoReplace',
+                        'PathRenameFlag_Replace': 'Replace',
+                        'PathRenameFlag_NoSymlinks': 'NoSymlinks',
+                        'ProcessCreateFlag_None': 'None',
+                        'ProcessCreateFlag_WaitForProcessStartOnly': 'WaitForProcessStartOnly',
+                        'ProcessCreateFlag_IgnoreOrphanedProcesses': 'IgnoreOrphanedProcesses',
+                        'ProcessCreateFlag_Hidden': 'Hidden',
+                        'ProcessCreateFlag_NoProfile': 'NoProfile',
+                        'ProcessCreateFlag_WaitForStdOut': 'WaitForStdOut',
+                        'ProcessCreateFlag_WaitForStdErr': 'WaitForStdErr',
+                        'ProcessCreateFlag_ExpandArguments': 'ExpandArguments',
+                        'ProcessPriority_Invalid': 'Invalid',
+                        'ProcessPriority_Default': 'Default',
+                        'SymlinkType_Unknown': 'Unknown',
+                        'SymlinkType_Directory': 'Directory',
+                        'SymlinkType_File': 'File',
+                        'SymlinkReadFlag_None': 'None',
+                        'SymlinkReadFlag_NoSymlinks': 'NoSymlinks',
+                        'ProcessStatus_Undefined': 'Undefined',
+                        'ProcessStatus_Starting': 'Starting',
+                        'ProcessStatus_Started': 'Started',
+                        'ProcessStatus_Paused': 'Paused',
+                        'ProcessStatus_Terminating': 'Terminating',
+                        'ProcessStatus_TerminatedNormally': 'TerminatedNormally',
+                        'ProcessStatus_TerminatedSignal': 'TerminatedSignal',
+                        'ProcessStatus_TerminatedAbnormally': 'TerminatedAbnormally',
+                        'ProcessStatus_TimedOutKilled': 'TimedOutKilled',
+                        'ProcessStatus_TimedOutAbnormally': 'TimedOutAbnormally',
+                        'ProcessStatus_Down': 'Down',
+                        'ProcessStatus_Error': 'Error',
+                        'FsObjType_Undefined': 'Undefined',
+                        'FsObjType_FIFO': 'FIFO',
+                        'FsObjType_DevChar': 'DevChar',
+                        'FsObjType_DevBlock': 'DevBlock',
+                        'FsObjType_Directory': 'Directory',
+                        'FsObjType_File': 'File',
+                        'FsObjType_Symlink': 'Symlink',
+                        'FsObjType_Socket': 'Socket',
+                        'FsObjType_Whiteout': 'Whiteout',
+                        'DragAndDropAction_Ignore': 'Ignore',
+                        'DragAndDropAction_Copy': 'Copy',
+                        'DragAndDropAction_Move': 'Move',
+                        'DragAndDropAction_Link': 'Link',
                         'DirectoryOpenFlag_None': 'None',
-                        'GuestDirEntryType_Unknown': 'Unknown',
-                        'GuestDirEntryType_Directory': 'Directory',
-                        'GuestDirEntryType_File': 'File',
-                        'GuestDirEntryType_Symlink': 'Symlink',
+                        'DirectoryOpenFlag_NoSymlinks': 'NoSymlinks',
                         'MediumState_NotCreated': 'NotCreated',
                         'MediumState_Created': 'Created',
                         'MediumState_LockedRead': 'LockedRead',
@@ -937,6 +1096,7 @@ class VirtualBoxReflectionInfo:
                         'MediumType_MultiAttach': 'MultiAttach',
                         'MediumVariant_Standard': 'Standard',
                         'MediumVariant_VmdkSplit2G': 'VmdkSplit2G',
+                        'MediumVariant_VmdkRawDisk': 'VmdkRawDisk',
                         'MediumVariant_VmdkStreamOptimized': 'VmdkStreamOptimized',
                         'MediumVariant_VmdkESX': 'VmdkESX',
                         'MediumVariant_Fixed': 'Fixed',
@@ -1083,11 +1243,13 @@ class VirtualBoxReflectionInfo:
                         'VBoxEventType_OnGuestKeyboard': 'OnGuestKeyboard',
                         'VBoxEventType_OnGuestMouse': 'OnGuestMouse',
                         'VBoxEventType_OnNATRedirect': 'OnNATRedirect',
-                        'VBoxEventType_OnHostPciDevicePlug': 'OnHostPciDevicePlug',
+                        'VBoxEventType_OnHostPCIDevicePlug': 'OnHostPCIDevicePlug',
                         'VBoxEventType_OnVBoxSVCAvailabilityChanged': 'OnVBoxSVCAvailabilityChanged',
                         'VBoxEventType_OnBandwidthGroupChanged': 'OnBandwidthGroupChanged',
                         'VBoxEventType_OnGuestMonitorChanged': 'OnGuestMonitorChanged',
                         'VBoxEventType_OnStorageDeviceChanged': 'OnStorageDeviceChanged',
+                        'VBoxEventType_OnClipboardModeChanged': 'OnClipboardModeChanged',
+                        'VBoxEventType_OnDragAndDropModeChanged': 'OnDragAndDropModeChanged',
                         'VBoxEventType_Last': 'Last',
                         'GuestMonitorChangedEventType_Enabled': 'Enabled',
                         'GuestMonitorChangedEventType_Disabled': 'Disabled',

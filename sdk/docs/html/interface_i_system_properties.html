@@ -106,11 +106,15 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This value specifies how many old release log files are kept.  <a href="#a386ca7d25386c3f8676930ebcad1aefe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#ad10f87f11247e640ab600da02f0f0bba">AudioDriverType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_properties.html#adb187ad377e6d037b7cbcc35531793ce">defaultAudioDriver</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This value hold the default audio driver for the current system.  <a href="#adb187ad377e6d037b7cbcc35531793ce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_properties.html#af87889331f44b2f73cb589468a3afcbb">autostartDatabasePath</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The path to the autostart database.  <a href="#af87889331f44b2f73cb589468a3afcbb"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_system_properties.html#a3678dda7aa759fb07d30bef5784b2ff0">defaultAdditionsISO</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The path to the default Guest Additions ISO image.  <a href="#a3678dda7aa759fb07d30bef5784b2ff0"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>The <a class="el" href="interface_i_system_properties.html" title="The ISystemProperties interface represents global properties of the given VirtualBox installation...">ISystemProperties</a> interface represents global properties of the given VirtualBox installation. </p>
 <p>These properties define limits and default values for various attributes and parameters. Most of the properties are read-only, but some can be changed by a user.</p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{8A0AB9AB-48C1-4D04-954B-4A751413D084}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{1D7ACA29-97F0-4287-9874-A60EC4F80EA6}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="add727d139554f0fc57388570f32841ce"></a><!-- doxytag: member="ISystemProperties::getMaxNetworkAdapters" ref="add727d139554f0fc57388570f32841ce" args="(in ChipsetType chipset,[retval] out unsigned long maxNetworkAdapters)" -->
 <div class="memitem">
@@ -599,7 +603,7 @@ Public Attributes</h2></td></tr>
 <p>Starting with VirtualBox 4.0, by default, this attribute contains the full path of folder named "VirtualBox VMs" in the user's home directory, which depends on the host platform.</p>
 <p>When setting this attribute, a full path must be specified. Setting this property to <code>null</code> or an empty string or the special value "Machines" (for compatibility reasons) will restore that default value.</p>
 <p>If the folder specified herein does not exist, it will be created automatically as needed.</p>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_virtual_box.html#a15b6b59f23252430fcf2a56e8b69459b">IVirtualBox::createMachine</a><b></b>, <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_virtual_box.html#aabb76f2d305052b305ccd78d18b05ab8">IVirtualBox::createMachine</a><b></b>, <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b> </dd></dl>
 
 </div>
 </div>
@@ -791,8 +795,40 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="af87889331f44b2f73cb589468a3afcbb"></a><!-- doxytag: member="ISystemProperties::autostartDatabasePath" ref="af87889331f44b2f73cb589468a3afcbb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute wstring <a class="el" href="interface_i_system_properties.html#af87889331f44b2f73cb589468a3afcbb">ISystemProperties::autostartDatabasePath</a></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<div class="memdoc">
+
+<p>The path to the autostart database. </p>
+<p>Depending on the host this might be a filesystem path or something else. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3678dda7aa759fb07d30bef5784b2ff0"></a><!-- doxytag: member="ISystemProperties::defaultAdditionsISO" ref="a3678dda7aa759fb07d30bef5784b2ff0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute wstring <a class="el" href="interface_i_system_properties.html#a3678dda7aa759fb07d30bef5784b2ff0">ISystemProperties::defaultAdditionsISO</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The path to the default Guest Additions ISO image. </p>
+<p>Can be empty if the location is not known in this installation. </p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:49 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

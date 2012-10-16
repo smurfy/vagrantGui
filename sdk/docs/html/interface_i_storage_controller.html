@@ -28,7 +28,6 @@
 </div>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a>  </div>
   <div class="headertitle">
 <h1>IStorageController Interface Reference</h1>  </div>
@@ -40,12 +39,6 @@
 
 <p><a href="interface_i_storage_controller-members.html">List of all members.</a></p>
 <table class="memberdecls">
-<tr><td colspan="2"><h2><a name="pub-methods"></a>
-Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_storage_controller.html#a27862d4492cfec0c119542e21d2f28ca">getIDEEmulationPort</a> (in long devicePosition,[retval] out long portNumber)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gets the corresponding port number which is emulated as an IDE device.  <a href="#a27862d4492cfec0c119542e21d2f28ca"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_storage_controller.html#a905893ae31e1f76e018e327b11d7f8c4">setIDEEmulationPort</a> (in long devicePosition, in long portNumber)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the port number which is emulated as an IDE device.  <a href="#a905893ae31e1f76e018e327b11d7f8c4"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_storage_controller.html#a9a62bacec61b5ee02b4e796c6651f381">name</a></td></tr>
@@ -75,81 +68,6 @@ Public Attributes</h2></td></tr>
 <p>As opposed to physical hardware, VirtualBox has a very generic concept of a storage controller, and for purposes of the Main API, all virtual storage is attached to virtual machines via instances of this interface. There are five types of such virtual storage controllers: IDE, SCSI, SATA, SAS and Floppy (see <a class="el" href="interface_i_storage_controller.html#a608d5b636e78c4b07af2dd07d9ef11a2">bus</a><b></b>). Depending on which of these four is used, certain sub-types may be available and can be selected in <a class="el" href="interface_i_storage_controller.html#ae1bd486ff9df74163e79d63dae96bd8c">controllerType</a><b></b>.</p>
 <p>Depending on these settings, the guest operating system might see significantly different virtual hardware.</p>
 <dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{A1556333-09B6-46D9-BFB7-FC239B7FBE1E}</code> </dd></dl>
-<hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a27862d4492cfec0c119542e21d2f28ca"></a><!-- doxytag: member="IStorageController::getIDEEmulationPort" ref="a27862d4492cfec0c119542e21d2f28ca" args="(in long devicePosition,[retval] out long portNumber)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IStorageController::getIDEEmulationPort </td>
-          <td>(</td>
-          <td class="paramtype">in long&nbsp;</td>
-          <td class="paramname"> <em>devicePosition</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">[retval] out long&nbsp;</td>
-          <td class="paramname"> <em>portNumber</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Gets the corresponding port number which is emulated as an IDE device. </p>
-<p>Works only with SATA controllers.</p>
-<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
-<tr>
-<td>E_INVALIDARG </td><td>The <em>devicePosition</em> is not in the range 0 to 3.   </td></tr>
-<tr>
-<td>E_NOTIMPL </td><td>The storage controller type is not SATAIntelAhci.   </td></tr>
-</table>
-</dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a905893ae31e1f76e018e327b11d7f8c4"></a><!-- doxytag: member="IStorageController::setIDEEmulationPort" ref="a905893ae31e1f76e018e327b11d7f8c4" args="(in long devicePosition, in long portNumber)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void IStorageController::setIDEEmulationPort </td>
-          <td>(</td>
-          <td class="paramtype">in long&nbsp;</td>
-          <td class="paramname"> <em>devicePosition</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">in long&nbsp;</td>
-          <td class="paramname"> <em>portNumber</em></td><td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td><td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Sets the port number which is emulated as an IDE device. </p>
-<p>Works only with SATA controllers.</p>
-<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
-<tr>
-<td>E_INVALIDARG </td><td>The <em>devicePosition</em> is not in the range 0 to 3 or the <em>portNumber</em> is not in the range 0 to 29.   </td></tr>
-<tr>
-<td>E_NOTIMPL </td><td>The storage controller type is not SATAIntelAhci.   </td></tr>
-</table>
-</dd></dl>
-
-</div>
-</div>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="a9a62bacec61b5ee02b4e796c6651f381"></a><!-- doxytag: member="IStorageController::name" ref="a9a62bacec61b5ee02b4e796c6651f381" args="" -->
 <div class="memitem">
@@ -308,7 +226,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:49 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

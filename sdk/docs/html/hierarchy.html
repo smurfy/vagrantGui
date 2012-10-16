@@ -40,12 +40,18 @@ This inheritance list is sorted roughly, but not completely, alphabetically:<ul>
 <li><a class="el" href="interface_i_b_i_o_s_settings.html">IBIOSSettings</a></li>
 <li><a class="el" href="interface_i_console.html">IConsole</a></li>
 <li><a class="el" href="interface_i_d_h_c_p_server.html">IDHCPServer</a></li>
+<li><a class="el" href="interface_i_directory.html">IDirectory</a><ul>
+<li><a class="el" href="interface_i_guest_directory.html">IGuestDirectory</a></li>
+</ul>
+</li>
 <li><a class="el" href="interface_i_display.html">IDisplay</a></li>
 <li><a class="el" href="interface_i_event.html">IEvent</a><ul>
 <li><a class="el" href="interface_i_additions_state_changed_event.html">IAdditionsStateChangedEvent</a></li>
 <li><a class="el" href="interface_i_bandwidth_group_changed_event.html">IBandwidthGroupChangedEvent</a></li>
+<li><a class="el" href="interface_i_clipboard_mode_changed_event.html">IClipboardModeChangedEvent</a></li>
 <li><a class="el" href="interface_i_c_p_u_changed_event.html">ICPUChangedEvent</a></li>
 <li><a class="el" href="interface_i_c_p_u_execution_cap_changed_event.html">ICPUExecutionCapChangedEvent</a></li>
+<li><a class="el" href="interface_i_drag_and_drop_mode_changed_event.html">IDragAndDropModeChangedEvent</a></li>
 <li><a class="el" href="interface_i_event_source_changed_event.html">IEventSourceChangedEvent</a></li>
 <li><a class="el" href="interface_i_extra_data_changed_event.html">IExtraDataChangedEvent</a></li>
 <li><a class="el" href="interface_i_guest_keyboard_event.html">IGuestKeyboardEvent</a></li>
@@ -53,7 +59,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:<ul>
 <li><a class="el" href="interface_i_keyboard_leds_changed_event.html">IKeyboardLedsChangedEvent</a></li>
 <li><a class="el" href="interface_i_machine_event.html">IMachineEvent</a><ul>
 <li><a class="el" href="interface_i_guest_property_changed_event.html">IGuestPropertyChangedEvent</a></li>
-<li><a class="el" href="interface_i_host_pci_device_plug_event.html">IHostPciDevicePlugEvent</a></li>
+<li><a class="el" href="interface_i_host_p_c_i_device_plug_event.html">IHostPCIDevicePlugEvent</a></li>
 <li><a class="el" href="interface_i_machine_data_changed_event.html">IMachineDataChangedEvent</a></li>
 <li><a class="el" href="interface_i_machine_registered_event.html">IMachineRegisteredEvent</a></li>
 <li><a class="el" href="interface_i_machine_state_changed_event.html">IMachineStateChangedEvent</a></li>
@@ -105,13 +111,21 @@ This inheritance list is sorted roughly, but not completely, alphabetically:<ul>
 </li>
 <li><a class="el" href="interface_i_ext_pack_manager.html">IExtPackManager</a></li>
 <li><a class="el" href="interface_i_ext_pack_plug_in.html">IExtPackPlugIn</a></li>
+<li><a class="el" href="interface_i_file.html">IFile</a><ul>
+<li><a class="el" href="interface_i_guest_file.html">IGuestFile</a></li>
+</ul>
+</li>
 <li><a class="el" href="interface_i_framebuffer.html">IFramebuffer</a><ul>
 <li><a class="el" href="interface_i_framebuffer_overlay.html">IFramebufferOverlay</a></li>
 </ul>
 </li>
+<li><a class="el" href="interface_i_fs_obj_info.html">IFsObjInfo</a><ul>
+<li><a class="el" href="interface_i_guest_fs_obj_info.html">IGuestFsObjInfo</a></li>
+</ul>
+</li>
 <li><a class="el" href="interface_i_guest.html">IGuest</a></li>
-<li><a class="el" href="interface_i_guest_dir_entry.html">IGuestDirEntry</a></li>
 <li><a class="el" href="interface_i_guest_o_s_type.html">IGuestOSType</a></li>
+<li><a class="el" href="interface_i_guest_session.html">IGuestSession</a></li>
 <li><a class="el" href="interface_i_host.html">IHost</a></li>
 <li><a class="el" href="interface_i_host_network_interface.html">IHostNetworkInterface</a></li>
 <li><a class="el" href="interface_i_internal_machine_control.html">IInternalMachineControl</a></li>
@@ -127,10 +141,14 @@ This inheritance list is sorted roughly, but not completely, alphabetically:<ul>
 <li><a class="el" href="interface_i_n_a_t_engine.html">INATEngine</a></li>
 <li><a class="el" href="interface_i_network_adapter.html">INetworkAdapter</a></li>
 <li><a class="el" href="interface_i_parallel_port.html">IParallelPort</a></li>
-<li><a class="el" href="interface_i_pci_address.html">IPciAddress</a></li>
-<li><a class="el" href="interface_i_pci_device_attachment.html">IPciDeviceAttachment</a></li>
+<li><a class="el" href="interface_i_p_c_i_address.html">IPCIAddress</a></li>
+<li><a class="el" href="interface_i_p_c_i_device_attachment.html">IPCIDeviceAttachment</a></li>
 <li><a class="el" href="interface_i_performance_collector.html">IPerformanceCollector</a></li>
 <li><a class="el" href="interface_i_performance_metric.html">IPerformanceMetric</a></li>
+<li><a class="el" href="interface_i_process.html">IProcess</a><ul>
+<li><a class="el" href="interface_i_guest_process.html">IGuestProcess</a></li>
+</ul>
+</li>
 <li><a class="el" href="interface_i_progress.html">IProgress</a></li>
 <li><a class="el" href="interface_i_serial_port.html">ISerialPort</a></li>
 <li><a class="el" href="interface_i_session.html">ISession</a></li>
@@ -157,7 +175,7 @@ This inheritance list is sorted roughly, but not completely, alphabetically:<ul>
 <li><a class="el" href="interface_i_websession_manager.html">IWebsessionManager</a></li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

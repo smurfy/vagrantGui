@@ -93,8 +93,11 @@
 <li>session
 : <a class="el" href="interface_i_virtual_box_client.html#ac96240a4d71f386385b58f0eb0299b39">IVirtualBoxClient</a>
 </li>
-<li>sessionPid
-: <a class="el" href="interface_i_machine.html#ac1fbf27ec86d5529787088410eaaf073">IMachine</a>
+<li>sessionPID
+: <a class="el" href="interface_i_machine.html#a7380f79a10f9813dbced54f51004c6b5">IMachine</a>
+</li>
+<li>sessions
+: <a class="el" href="interface_i_guest.html#ace5635124343b6345a905297f727bbb9">IGuest</a>
 </li>
 <li>sessionState
 : <a class="el" href="interface_i_machine.html#aecc00e3c014d4548a025e4eafff7056e">IMachine</a>
@@ -103,8 +106,8 @@
 : <a class="el" href="interface_i_machine.html#a7f8692397b0743822a9be4dd81be9019">IMachine</a>
 </li>
 <li>settingsFilePath
-: <a class="el" href="interface_i_virtual_box.html#a09523d34404a96ffec3b12db5c55f201">IVirtualBox</a>
-, <a class="el" href="interface_i_machine.html#a7e7b7939c050afa7475e249e06961e75">IMachine</a>
+: <a class="el" href="interface_i_machine.html#a7e7b7939c050afa7475e249e06961e75">IMachine</a>
+, <a class="el" href="interface_i_virtual_box.html#a09523d34404a96ffec3b12db5c55f201">IVirtualBox</a>
 </li>
 <li>settingsModified
 : <a class="el" href="interface_i_machine.html#a7fa04613f860573400ba570fcf80f3ef">IMachine</a>
@@ -120,17 +123,17 @@
 <li>showLicense
 : <a class="el" href="interface_i_ext_pack_base.html#a26d560b34edc2acddb543c0fe2892237">IExtPackBase</a>
 </li>
-<li>singlestep
-: <a class="el" href="interface_i_machine_debugger.html#ac669033f7cb9417e957e1e69b8459fc5">IMachineDebugger</a>
+<li>singleStep
+: <a class="el" href="interface_i_machine_debugger.html#abf989736b7a4e6d1102ec9c30f3a8049">IMachineDebugger</a>
 </li>
 <li>size
 : <a class="el" href="interface_i_medium.html#aed8a9c1cb0779b5482322d96b9da600b">IMedium</a>
 </li>
 <li>slot
-: <a class="el" href="interface_i_n_a_t_redirect_event.html#af00276a208747717be7b1a3c3d0582f7">INATRedirectEvent</a>
-, <a class="el" href="interface_i_network_adapter.html#aff2522a0782457caa9071fdb2035fb10">INetworkAdapter</a>
+: <a class="el" href="interface_i_network_adapter.html#aff2522a0782457caa9071fdb2035fb10">INetworkAdapter</a>
 , <a class="el" href="interface_i_serial_port.html#af1ab24b7888b4c85e5a1f3e71b4482f8">ISerialPort</a>
 , <a class="el" href="interface_i_parallel_port.html#abbfebec6867356824979bd9e0088160d">IParallelPort</a>
+, <a class="el" href="interface_i_n_a_t_redirect_event.html#af00276a208747717be7b1a3c3d0582f7">INATRedirectEvent</a>
 </li>
 <li>snapshotCount
 : <a class="el" href="interface_i_machine.html#a1946d487a58f17cf4ee78a28c64a50da">IMachine</a>
@@ -145,14 +148,14 @@
 : <a class="el" href="interface_i_event.html#a8ce56b1841f4756a9f8b77837e267ed1">IEvent</a>
 </li>
 <li>state
-: <a class="el" href="interface_i_host_u_s_b_device.html#a95cfe6b78a8636a2b038d08ea2722bb4">IHostUSBDevice</a>
+: <a class="el" href="interface_i_medium.html#ac250d2252217354b21b272b9387c94d4">IMedium</a>
+, <a class="el" href="interface_i_machine_state_changed_event.html#a93482489926a6f639af533353fb7a5c2">IMachineStateChangedEvent</a>
 , <a class="el" href="interface_i_machine.html#a9653e9d996d60fc54e8bed22179d92b2">IMachine</a>
 , <a class="el" href="interface_i_console.html#a884bd1bd3f302b09d36076fce629b9f9">IConsole</a>
-, <a class="el" href="interface_i_medium.html#ac250d2252217354b21b272b9387c94d4">IMedium</a>
-, <a class="el" href="interface_i_session.html#aac4763cc59a693a81170ed9d1118d571">ISession</a>
-, <a class="el" href="interface_i_machine_state_changed_event.html#a93482489926a6f639af533353fb7a5c2">IMachineStateChangedEvent</a>
-, <a class="el" href="interface_i_session_state_changed_event.html#a426a533f5ca4ca7629d881edac5c0dbf">ISessionStateChangedEvent</a>
+, <a class="el" href="interface_i_host_u_s_b_device.html#a95cfe6b78a8636a2b038d08ea2722bb4">IHostUSBDevice</a>
 , <a class="el" href="interface_i_state_changed_event.html#a3ef96dde1a453fd4c27e6d7dcd4b05e3">IStateChangedEvent</a>
+, <a class="el" href="interface_i_session.html#aac4763cc59a693a81170ed9d1118d571">ISession</a>
+, <a class="el" href="interface_i_session_state_changed_event.html#a426a533f5ca4ca7629d881edac5c0dbf">ISessionStateChangedEvent</a>
 </li>
 <li>stateFilePath
 : <a class="el" href="interface_i_machine.html#a6bf84094ff47ad0f8f2517ee513eed02">IMachine</a>
@@ -161,7 +164,8 @@
 : <a class="el" href="interface_i_guest.html#aa1b7827f9228e604ed5112495e967f7f">IGuest</a>
 </li>
 <li>status
-: <a class="el" href="interface_i_additions_facility.html#af3fabbfc4642b40c58ae3d8c84bfc58f">IAdditionsFacility</a>
+: <a class="el" href="interface_i_process.html#a38e5212e7bebf2a0d6164a108a5779c9">IProcess</a>
+, <a class="el" href="interface_i_additions_facility.html#af3fabbfc4642b40c58ae3d8c84bfc58f">IAdditionsFacility</a>
 , <a class="el" href="interface_i_host_network_interface.html#a8f0a2950efa45b2928778c77e8855bb9">IHostNetworkInterface</a>
 </li>
 <li>storageControllers
@@ -171,7 +175,7 @@
 : <a class="el" href="interface_i_storage_device_changed_event.html#abb4e65456e01b1023b09e5a1d7f7ce94">IStorageDeviceChangedEvent</a>
 </li>
 <li>success
-: <a class="el" href="interface_i_host_pci_device_plug_event.html#ab07acc628c263e8dea50c20bb30a010b">IHostPciDevicePlugEvent</a>
+: <a class="el" href="interface_i_host_p_c_i_device_plug_event.html#abd3718103bd3b9b01baabcd8c7dd45cd">IHostPCIDevicePlugEvent</a>
 </li>
 <li>supportsAbsolute
 : <a class="el" href="interface_i_mouse_capability_changed_event.html#a490de3eb359814f5e75c1635c5519e96">IMouseCapabilityChangedEvent</a>
@@ -184,7 +188,7 @@
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -280,7 +280,7 @@ Finally, call <a class="el" href="interface_i_appliance.html#aa21a52d7591c0bf614
 <p>Since exporting the appliance will most probably involve copying and converting disk images, which can take a long time, this method operates asynchronously and returns an <a class="el" href="interface_i_progress.html" title="The IProgress interface is used to track and control asynchronous tasks within VirtualBox.">IProgress</a> object to allow the caller to monitor the progress.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
-    <tr><td valign="top"></td><td valign="top"><em>format</em>&nbsp;</td><td>Output format, as a string. Currently supported formats are "ovf-0.9" and "ovf-1.0"; future versions of VirtualBox may support additional formats.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>format</em>&nbsp;</td><td>Output format, as a string. Currently supported formats are "ovf-0.9", "ovf-1.0" and "ovf-2.0"; future versions of VirtualBox may support additional formats.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>manifest</em>&nbsp;</td><td>Indicate if the optional manifest file (.mf) should be written. The manifest file is used for integrity checks prior import.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>path</em>&nbsp;</td><td>Name of appliance file to open (either with an <code>.ovf</code> or <code>.ova</code> extension, depending on whether the appliance is distributed as a set of files or as a single file, respectively).</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>progress</em>&nbsp;</td><td>Progress object to track the operation completion. </td></tr>
@@ -402,7 +402,7 @@ Compression (optional string equalling "gzip" if the image is gzip-compressed) <
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

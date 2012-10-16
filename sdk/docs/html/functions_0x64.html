@@ -69,6 +69,9 @@ Here is a list of all class members with links to the classes they belong to:
 <li>debugger
 : <a class="el" href="interface_i_console.html#a78731237c572ecccf10614fbff2e13c5">IConsole</a>
 </li>
+<li>defaultAdditionsISO
+: <a class="el" href="interface_i_system_properties.html#a3678dda7aa759fb07d30bef5784b2ff0">ISystemProperties</a>
+</li>
 <li>defaultAudioDriver
 : <a class="el" href="interface_i_system_properties.html#adb187ad377e6d037b7cbcc35531793ce">ISystemProperties</a>
 </li>
@@ -86,6 +89,9 @@ Here is a list of all class members with links to the classes they belong to:
 </li>
 <li>deleteBandwidthGroup()
 : <a class="el" href="interface_i_bandwidth_control.html#a965b5d7413dfcbacbcd9c76dbed36a0c">IBandwidthControl</a>
+</li>
+<li>deleteGuestProperty()
+: <a class="el" href="interface_i_machine.html#a2b5bc248ab2a58bdab899dd0ab0b6b10">IMachine</a>
 </li>
 <li>deleteSnapshot()
 : <a class="el" href="interface_i_internal_machine_control.html#a1e0241ac54e66b17f2506a192c048989">IInternalMachineControl</a>
@@ -107,14 +113,14 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="interface_i_medium_format.html#a686c3313706bc192cd83280ebe70ec2d">IMediumFormat</a>
 </li>
 <li>description
-: <a class="el" href="interface_i_guest_o_s_type.html#a75e870dd07f85568c0652276130ed6de">IGuestOSType</a>
+: <a class="el" href="interface_i_machine.html#af19c3adad1315ceb9bdac881e545e602">IMachine</a>
+, <a class="el" href="interface_i_guest_o_s_type.html#a75e870dd07f85568c0652276130ed6de">IGuestOSType</a>
 , <a class="el" href="interface_i_progress.html#ab80988e878e26f092f65e1b792bd2b59">IProgress</a>
 , <a class="el" href="interface_i_snapshot.html#a395201b3a0b2fbb1f1d95a7362e9a30e">ISnapshot</a>
 , <a class="el" href="interface_i_medium.html#a4de9bedf9d7d612838598903a1e4c300">IMedium</a>
 , <a class="el" href="interface_i_performance_metric.html#a901f727fc51f63179dfaf457859296b4">IPerformanceMetric</a>
 , <a class="el" href="interface_i_ext_pack_plug_in.html#a0f5f8f347318129d67005c7fe728e582">IExtPackPlugIn</a>
 , <a class="el" href="interface_i_ext_pack_base.html#a6e88271dc97d33cc01f7f564f1142a23">IExtPackBase</a>
-, <a class="el" href="interface_i_machine.html#af19c3adad1315ceb9bdac881e545e602">IMachine</a>
 </li>
 <li>detachAllUSBDevices()
 : <a class="el" href="interface_i_internal_machine_control.html#a1c62c56932965b30decb3525011d8606">IInternalMachineControl</a>
@@ -122,8 +128,8 @@ Here is a list of all class members with links to the classes they belong to:
 <li>detachDevice()
 : <a class="el" href="interface_i_machine.html#a59a8e406027e901cc260488f8617fb22">IMachine</a>
 </li>
-<li>detachHostPciDevice()
-: <a class="el" href="interface_i_machine.html#ac7c33d85adb6c14b9d99976a8d408e2f">IMachine</a>
+<li>detachHostPCIDevice()
+: <a class="el" href="interface_i_machine.html#a6b94280b4763b7522c4003b095a463d2">IMachine</a>
 </li>
 <li>detachUSBDevice()
 : <a class="el" href="interface_i_internal_machine_control.html#a8abc6dce9460bf423b19b4ed21990bd6">IInternalMachineControl</a>
@@ -133,42 +139,69 @@ Here is a list of all class members with links to the classes they belong to:
 : <a class="el" href="interface_i_machine_debugger.html#afea9067d2c76d9ccf834ea078e99271a">IMachineDebugger</a>
 </li>
 <li>devFunction
-: <a class="el" href="interface_i_pci_address.html#a894de01bd066a33c80369c6eafd1b112">IPciAddress</a>
+: <a class="el" href="interface_i_p_c_i_address.html#a3dfcc82e8ff9ed3c2d500840b99d07b6">IPCIAddress</a>
 </li>
 <li>device
-: <a class="el" href="interface_i_u_s_b_device_state_changed_event.html#af85841504f9e2549753a277a9a114eb4">IUSBDeviceStateChangedEvent</a>
+: <a class="el" href="interface_i_p_c_i_address.html#acf4a631ff1e2830a5651965266c1e1c3">IPCIAddress</a>
 , <a class="el" href="interface_i_medium_attachment.html#ab0873173392102c7a4cca1c9cbabc7db">IMediumAttachment</a>
-, <a class="el" href="interface_i_pci_address.html#a0780ff7906c7da4dc2d753031f0e6198">IPciAddress</a>
+, <a class="el" href="interface_i_u_s_b_device_state_changed_event.html#af85841504f9e2549753a277a9a114eb4">IUSBDeviceStateChangedEvent</a>
 </li>
 <li>deviceFilters
 : <a class="el" href="interface_i_u_s_b_controller.html#aa2e4e746c883f806660f3c86d849805c">IUSBController</a>
 </li>
+<li>deviceNumber
+: <a class="el" href="interface_i_fs_obj_info.html#ad7ecad9e25b74afafb3e7e00cad68e3b">IFsObjInfo</a>
+</li>
 <li>deviceType
 : <a class="el" href="interface_i_medium.html#a01b3d1aa474671a6f6efc7d768e02603">IMedium</a>
 </li>
-<li>dhcpEnabled
-: <a class="el" href="interface_i_host_network_interface.html#add1b3feab5c50105dac522ed83312a6f">IHostNetworkInterface</a>
+<li>DHCPEnabled
+: <a class="el" href="interface_i_host_network_interface.html#a667c4275f9be9c1fc9c4a877924e5b76">IHostNetworkInterface</a>
 </li>
-<li>dhcpRediscover()
-: <a class="el" href="interface_i_host_network_interface.html#a045f508bdb1a109d91bcd02485666d98">IHostNetworkInterface</a>
+<li>DHCPRediscover()
+: <a class="el" href="interface_i_host_network_interface.html#a36f9f2fc1fc1c9d60286dde19e350c3e">IHostNetworkInterface</a>
 </li>
 <li>DHCPServers
 : <a class="el" href="interface_i_virtual_box.html#ac003a66fe623f95c010d0c7039bd0916">IVirtualBox</a>
 </li>
-<li>directoryClose()
-: <a class="el" href="interface_i_guest.html#a41a6bb1ce7a547552896a3dea43777b4">IGuest</a>
+<li>directories
+: <a class="el" href="interface_i_guest_session.html#a3d8fae1be04f8b663fa25e0d88ee2705">IGuestSession</a>
 </li>
 <li>directoryCreate()
-: <a class="el" href="interface_i_guest.html#ab210ed114e54f5f91c999700caca80a5">IGuest</a>
+: <a class="el" href="interface_i_guest_session.html#aa52f1ec6ffce47c156a8e58d643262e5">IGuestSession</a>
+</li>
+<li>directoryCreateTemp()
+: <a class="el" href="interface_i_guest_session.html#aa0e6fa0266eb11ae89ddfdadb33a0a23">IGuestSession</a>
+</li>
+<li>directoryExists()
+: <a class="el" href="interface_i_guest_session.html#a97a09bdadda959da4a1ebf702188799f">IGuestSession</a>
+</li>
+<li>directoryName
+: <a class="el" href="interface_i_directory.html#a0beb609991b89847f12a3d4e88b1509c">IDirectory</a>
 </li>
 <li>directoryOpen()
-: <a class="el" href="interface_i_guest.html#a1df87e4502414a74058ffdd12c38c8d3">IGuest</a>
+: <a class="el" href="interface_i_guest_session.html#a9a9f95fd8c3bf69c02b1d5393f8500e8">IGuestSession</a>
 </li>
-<li>directoryRead()
-: <a class="el" href="interface_i_guest.html#aa91329bd4e8fd0fd332acda2e2fc1fb3">IGuest</a>
+<li>directoryQueryInfo()
+: <a class="el" href="interface_i_guest_session.html#ac9940565160b456d28defcb3432b18c7">IGuestSession</a>
+</li>
+<li>directoryRemove()
+: <a class="el" href="interface_i_guest_session.html#ac6048f58ef38e4dd59d8877a16f6d7fb">IGuestSession</a>
+</li>
+<li>directoryRemoveRecursive()
+: <a class="el" href="interface_i_guest_session.html#a16a1e8e1b468a6641c3df9726d3b38ed">IGuestSession</a>
+</li>
+<li>directoryRename()
+: <a class="el" href="interface_i_guest_session.html#abec3b6bc5e2b0b7e513c0792e5a0f7e5">IGuestSession</a>
+</li>
+<li>directorySetACL()
+: <a class="el" href="interface_i_guest_session.html#af42919bba22c6056e87f4b4fe90d6174">IGuestSession</a>
 </li>
 <li>disableMetrics()
 : <a class="el" href="interface_i_performance_collector.html#a0b5501196fd5f736cab8ee3a8672a1a8">IPerformanceCollector</a>
+</li>
+<li>discard
+: <a class="el" href="interface_i_medium_attachment.html#a331c0def1fa2fd7818f148e4545863a1">IMediumAttachment</a>
 </li>
 <li>discardSavedState()
 : <a class="el" href="interface_i_console.html#a7184fa4c04039bc51ee299f9d9085443">IConsole</a>
@@ -182,17 +215,49 @@ Here is a list of all class members with links to the classes they belong to:
 <li>display
 : <a class="el" href="interface_i_console.html#a57b6e398132075bfc31a14f291c9535b">IConsole</a>
 </li>
-<li>dnsPassDomain
-: <a class="el" href="interface_i_n_a_t_engine.html#a69f57926ee3d2650a8a9dea20140a77c">INATEngine</a>
+<li>disposition
+: <a class="el" href="interface_i_file.html#a56fe4dc61bdbdda5b26da960f9389d52">IFile</a>
 </li>
-<li>dnsProxy
-: <a class="el" href="interface_i_n_a_t_engine.html#a06a95f391addc38b4957726cf9f45349">INATEngine</a>
+<li>DNSPassDomain
+: <a class="el" href="interface_i_n_a_t_engine.html#a342139e68b175c708ebbcc542c2eb091">INATEngine</a>
 </li>
-<li>dnsUseHostResolver
-: <a class="el" href="interface_i_n_a_t_engine.html#a70eb997f60957b501ab34897bbb4622e">INATEngine</a>
+<li>DNSProxy
+: <a class="el" href="interface_i_n_a_t_engine.html#a443e76dfb1e8c392814d5d643453e870">INATEngine</a>
+</li>
+<li>DNSUseHostResolver
+: <a class="el" href="interface_i_n_a_t_engine.html#a0b2f8f80f274b8085c2a0629f3a53035">INATEngine</a>
 </li>
 <li>domain
 : <a class="el" href="interface_i_v_r_d_e_server_info.html#a076a6b1b30551705a9c258e04dac2ec4">IVRDEServerInfo</a>
+, <a class="el" href="interface_i_guest_session.html#a36612460dd4c5a9d98b8125817988d8f">IGuestSession</a>
+</li>
+<li>dragAndDropMode
+: <a class="el" href="interface_i_machine.html#ab72d980217139256ae5601d2e6350d2a">IMachine</a>
+, <a class="el" href="interface_i_drag_and_drop_mode_changed_event.html#a4dd038c57113b29acb678db942b3f4f1">IDragAndDropModeChangedEvent</a>
+</li>
+<li>dragGHDropped()
+: <a class="el" href="interface_i_guest.html#af13bf28038f31a7f656a531a333ee3f1">IGuest</a>
+</li>
+<li>dragGHGetData()
+: <a class="el" href="interface_i_guest.html#a7b62f32bb502183bad4066de068b3d96">IGuest</a>
+</li>
+<li>dragGHPending()
+: <a class="el" href="interface_i_guest.html#a19769a42fc408cc1949e22532cea1dbe">IGuest</a>
+</li>
+<li>dragHGDrop()
+: <a class="el" href="interface_i_guest.html#abab02db491b3ace56ff05744d0f8a3fe">IGuest</a>
+</li>
+<li>dragHGEnter()
+: <a class="el" href="interface_i_guest.html#a75daa4e184503b6ce93d3cb83f0d5e11">IGuest</a>
+</li>
+<li>dragHGLeave()
+: <a class="el" href="interface_i_guest.html#a2e3bb638a83ff2fdab685de0d3935381">IGuest</a>
+</li>
+<li>dragHGMove()
+: <a class="el" href="interface_i_guest.html#a11fb414f5025859025c6769bdf5bd0d3">IGuest</a>
+</li>
+<li>dragHGPutData()
+: <a class="el" href="interface_i_guest.html#a9caee6441b77e91cd3c0a5428d0e9119">IGuest</a>
 </li>
 <li>drawToScreen()
 : <a class="el" href="interface_i_display.html#aa5934c90eed929362425f9397f7a2541">IDisplay</a>
@@ -217,7 +282,7 @@ Here is a list of all class members with links to the classes they belong to:
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

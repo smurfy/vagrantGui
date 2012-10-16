@@ -81,8 +81,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flag whether network traffic from/to the network card should be traced.  <a href="#a0cfe515e2f87cf53635f6c0a623617d9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_network_adapter.html#a7fbc06cae00495b554b097413328c1f1">traceFile</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Filename where a network trace will be stored.  <a href="#a7fbc06cae00495b554b097413328c1f1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="interface_i_n_a_t_engine.html">INATEngine</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_network_adapter.html#ae3a47988c0192a40de69d6e5a432e70b">natDriver</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Points to the NAT engine which handles the network address translation for this interface.  <a href="#ae3a47988c0192a40de69d6e5a432e70b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="interface_i_n_a_t_engine.html">INATEngine</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_network_adapter.html#a71d8adf0108cdcf4928e62ce02a6dd69">NATEngine</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Points to the NAT engine which handles the network address translation for this interface.  <a href="#a71d8adf0108cdcf4928e62ce02a6dd69"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_network_adapter.html#a2148929cbea5213fc018818058134dbd">bootPriority</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Network boot priority of the adapter.  <a href="#a2148929cbea5213fc018818058134dbd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="interface_i_bandwidth_group.html">IBandwidthGroup</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_network_adapter.html#a198a3db8408ba6bc57e21f82ae374773">bandwidthGroup</a></td></tr>
@@ -92,7 +92,7 @@ Public Attributes</h2></td></tr>
 <p>Represents a virtual network adapter that is attached to a virtual machine. </p>
 <p>Each virtual machine has a fixed number of network adapter slots with one instance of this attached to each of them. Call <a class="el" href="interface_i_machine.html#a8b3bd5ed7b0eb7ceda6339dfa27d379e">IMachine::getNetworkAdapter</a><b></b> to get the network adapter that is attached to a given slot in a given machine.</p>
 <p>Each network adapter can be in one of five attachment modes, which are represented by the <a class="el" href="_virtual_box_8idl.html#a5e0261fb8bc96c6bb83cfa9480a64fd2">NetworkAttachmentType</a><b></b> enumeration; see the <a class="el" href="interface_i_network_adapter.html#a98391a5ab20a1e96d26cfb69bd1b9ad2">attachmentType</a><b></b> attribute.</p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{8B2E705C-0547-4008-B7BC-788757346092}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{EFA0F965-63C7-4C60-AFDF-B1CC9943B9C0}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="aba416f3142bb23243b692370b1d2e565"></a><!-- doxytag: member="INetworkAdapter::getProperty" ref="aba416f3142bb23243b692370b1d2e565" args="(in wstring key,[retval] out wstring value)" -->
 <div class="memitem">
@@ -457,12 +457,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae3a47988c0192a40de69d6e5a432e70b"></a><!-- doxytag: member="INetworkAdapter::natDriver" ref="ae3a47988c0192a40de69d6e5a432e70b" args="" -->
+<a class="anchor" id="a71d8adf0108cdcf4928e62ce02a6dd69"></a><!-- doxytag: member="INetworkAdapter::NATEngine" ref="a71d8adf0108cdcf4928e62ce02a6dd69" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute <a class="el" href="interface_i_n_a_t_engine.html">INATEngine</a> <a class="el" href="interface_i_network_adapter.html#ae3a47988c0192a40de69d6e5a432e70b">INetworkAdapter::natDriver</a></td>
+          <td class="memname">readonly attribute <a class="el" href="interface_i_n_a_t_engine.html">INATEngine</a> <a class="el" href="interface_i_network_adapter.html#a71d8adf0108cdcf4928e62ce02a6dd69">INetworkAdapter::NATEngine</a></td>
         </tr>
       </table>
 </div>
@@ -505,7 +505,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

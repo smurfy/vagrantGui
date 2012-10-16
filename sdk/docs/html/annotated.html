@@ -41,11 +41,14 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<ta
   <tr><td class="indexkey"><a class="el" href="interface_i_bandwidth_group_changed_event.html">IBandwidthGroupChangedEvent</a></td><td class="indexvalue">Notification when one of the bandwidth groups changed </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_b_i_o_s_settings.html">IBIOSSettings</a></td><td class="indexvalue">BIOS settings of the virtual machine </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_can_show_window_event.html">ICanShowWindowEvent</a></td><td class="indexvalue">Notification when a call to <a class="el" href="interface_i_machine.html#aebbda0c226bb18cd02f01e8492bbe3a1">IMachine::canShowConsoleWindow</a><b></b> is made by a front-end to check if a subsequent call to <a class="el" href="interface_i_machine.html#ada877c47a8efa8a62967f8cb0387bfbc">IMachine::showConsoleWindow</a><b></b> can succeed </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_clipboard_mode_changed_event.html">IClipboardModeChangedEvent</a></td><td class="indexvalue">Notification when the shared clipboard mode changes </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_console.html">IConsole</a></td><td class="indexvalue">Interface to control virtual machine execution </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_c_p_u_changed_event.html">ICPUChangedEvent</a></td><td class="indexvalue">Notification when a CPU changes </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_c_p_u_execution_cap_changed_event.html">ICPUExecutionCapChangedEvent</a></td><td class="indexvalue">Notification when the CPU execution cap changes </td></tr>
-  <tr><td class="indexkey"><a class="el" href="interface_i_d_h_c_p_server.html">IDHCPServer</a></td><td class="indexvalue">Vbox dhcp server configuration </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_d_h_c_p_server.html">IDHCPServer</a></td><td class="indexvalue">Vbox DHCP server configuration </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_directory.html">IDirectory</a></td><td class="indexvalue">Abstract parent interface for directories handled by VirtualBox </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_display.html">IDisplay</a></td><td class="indexvalue">Virtual machine's display </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_drag_and_drop_mode_changed_event.html">IDragAndDropModeChangedEvent</a></td><td class="indexvalue">Notification when the drag'n'drop mode changes </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_event.html">IEvent</a></td><td class="indexvalue">Abstract parent interface for VirtualBox events </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_event_listener.html">IEventListener</a></td><td class="indexvalue">Event listener </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_event_source.html">IEventSource</a></td><td class="indexvalue">Event source </td></tr>
@@ -57,18 +60,24 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<ta
   <tr><td class="indexkey"><a class="el" href="interface_i_ext_pack_plug_in.html">IExtPackPlugIn</a></td><td class="indexvalue">Interface for keeping information about a plug-in that ships with an extension pack </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_extra_data_can_change_event.html">IExtraDataCanChangeEvent</a></td><td class="indexvalue">Notification when someone tries to change extra data for either the given machine or (if <code>null</code>) global extra data </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_extra_data_changed_event.html">IExtraDataChangedEvent</a></td><td class="indexvalue">Notification when machine specific or global extra data has changed </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_file.html">IFile</a></td><td class="indexvalue">Abstract parent interface for files handled by VirtualBox </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_framebuffer.html">IFramebuffer</a></td><td class="indexvalue"></td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_framebuffer_overlay.html">IFramebufferOverlay</a></td><td class="indexvalue">Alpha blended overlay for displaying status icons above an <a class="el" href="interface_i_framebuffer.html">IFramebuffer</a> </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_fs_obj_info.html">IFsObjInfo</a></td><td class="indexvalue">Abstract parent interface for VirtualBox file system object information </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_guest.html">IGuest</a></td><td class="indexvalue">Information about the operating system running inside the virtual machine </td></tr>
-  <tr><td class="indexkey"><a class="el" href="interface_i_guest_dir_entry.html">IGuestDirEntry</a></td><td class="indexvalue">Structure representing a directory entry on the guest OS </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_guest_directory.html">IGuestDirectory</a></td><td class="indexvalue">Implementation of the <a class="el" href="interface_i_directory.html">IDirectory</a><b></b> object for directories on the guest </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_guest_file.html">IGuestFile</a></td><td class="indexvalue">Implementation of the <a class="el" href="interface_i_file.html">IFile</a><b></b> object for files on the guest </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_guest_fs_obj_info.html">IGuestFsObjInfo</a></td><td class="indexvalue">Represents the guest implementation of the <a class="el" href="interface_i_fs_obj_info.html">IFsObjInfo</a><b></b> object </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_guest_keyboard_event.html">IGuestKeyboardEvent</a></td><td class="indexvalue">Notification when guest keyboard event happens </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_guest_monitor_changed_event.html">IGuestMonitorChangedEvent</a></td><td class="indexvalue">Notification when the guest enables one of its monitors </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_guest_mouse_event.html">IGuestMouseEvent</a></td><td class="indexvalue">Notification when guest mouse event happens </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_guest_o_s_type.html">IGuestOSType</a></td><td class="indexvalue"></td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_guest_process.html">IGuestProcess</a></td><td class="indexvalue">Implementation of the <a class="el" href="interface_i_process.html">IProcess</a><b></b> object for processes on the guest </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_guest_property_changed_event.html">IGuestPropertyChangedEvent</a></td><td class="indexvalue">Notification when a guest property has changed </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_guest_session.html">IGuestSession</a></td><td class="indexvalue">A guest session represents one impersonated user account on the guest, so every operation will use the same credentials specified when creating the session object via <a class="el" href="interface_i_guest.html#ad01dc4d81f1f0be4b9097977ddf2dc19">IGuest::createSession</a><b></b> </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_host.html">IHost</a></td><td class="indexvalue">Physical machine that this VirtualBox installation runs on </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_host_network_interface.html">IHostNetworkInterface</a></td><td class="indexvalue">Represents one of host's network interfaces </td></tr>
-  <tr><td class="indexkey"><a class="el" href="interface_i_host_pci_device_plug_event.html">IHostPciDevicePlugEvent</a></td><td class="indexvalue">Notification when host PCI device is plugged/unplugged </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_host_p_c_i_device_plug_event.html">IHostPCIDevicePlugEvent</a></td><td class="indexvalue">Notification when host PCI device is plugged/unplugged </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_host_u_s_b_device.html">IHostUSBDevice</a></td><td class="indexvalue">Physical USB device attached to the host computer </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_host_u_s_b_device_filter.html">IHostUSBDeviceFilter</a></td><td class="indexvalue">Global filter for a physical USB device used by the host computer </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_internal_machine_control.html">IInternalMachineControl</a></td><td class="indexvalue"></td></tr>
@@ -96,10 +105,11 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<ta
   <tr><td class="indexkey"><a class="el" href="interface_i_network_adapter_changed_event.html">INetworkAdapterChangedEvent</a></td><td class="indexvalue">Notification when a property of one of the virtual <a class="el" href="interface_i_machine.html#a8b3bd5ed7b0eb7ceda6339dfa27d379e">network adapters</a><b></b> changes </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_parallel_port.html">IParallelPort</a></td><td class="indexvalue">Virtual parallel port device </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_parallel_port_changed_event.html">IParallelPortChangedEvent</a></td><td class="indexvalue">Notification when a property of one of the virtual <a class="el" href="interface_i_machine.html#a4182d2cf6c281b63e1112f5e9f327950">parallel ports</a><b></b> changes </td></tr>
-  <tr><td class="indexkey"><a class="el" href="interface_i_pci_address.html">IPciAddress</a></td><td class="indexvalue">Address on the PCI bus </td></tr>
-  <tr><td class="indexkey"><a class="el" href="interface_i_pci_device_attachment.html">IPciDeviceAttachment</a></td><td class="indexvalue">Information about PCI attachments </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_p_c_i_address.html">IPCIAddress</a></td><td class="indexvalue">Address on the PCI bus </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_p_c_i_device_attachment.html">IPCIDeviceAttachment</a></td><td class="indexvalue">Information about PCI attachments </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_performance_collector.html">IPerformanceCollector</a></td><td class="indexvalue">Service that collects and stores performance metrics data </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_performance_metric.html">IPerformanceMetric</a></td><td class="indexvalue">Parameters of the given performance metric </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_i_process.html">IProcess</a></td><td class="indexvalue">Abstract parent interface for processes handled by VirtualBox </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_progress.html">IProgress</a></td><td class="indexvalue">Used to track and control asynchronous tasks within VirtualBox </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_reusable_event.html">IReusableEvent</a></td><td class="indexvalue">Base abstract interface for all reusable events </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_i_runtime_error_event.html">IRuntimeErrorEvent</a></td><td class="indexvalue">Notification when an error happens during the virtual machine execution </td></tr>
@@ -139,7 +149,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<ta
   <tr><td class="indexkey"><a class="el" href="interface_i_websession_manager.html">IWebsessionManager</a></td><td class="indexvalue">Websession manager </td></tr>
 </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

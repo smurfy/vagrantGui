@@ -72,6 +72,9 @@ Here is a list of all class members with links to the classes they belong to:
 <li>generation
 : <a class="el" href="interface_i_reusable_event.html#a2a65771bb137b90c35f0bd779ed2efef">IReusableEvent</a>
 </li>
+<li>generationId
+: <a class="el" href="interface_i_fs_obj_info.html#a4efad0c57895847e8b4bd80e1cc75f48">IFsObjInfo</a>
+</li>
 <li>genericDriver
 : <a class="el" href="interface_i_network_adapter.html#a83d97cd121c593dc4eee246006c77d20">INetworkAdapter</a>
 </li>
@@ -152,14 +155,17 @@ Here is a list of all class members with links to the classes they belong to:
 <li>getHWVirtExProperty()
 : <a class="el" href="interface_i_machine.html#a00b69a5e62700f57b2204c7649e59efb">IMachine</a>
 </li>
-<li>getIDEEmulationPort()
-: <a class="el" href="interface_i_storage_controller.html#a27862d4492cfec0c119542e21d2f28ca">IStorageController</a>
-</li>
 <li>getInterfaceName()
 : <a class="el" href="interface_i_managed_object_ref.html#aa97c28124c447ee49658da13f16135b4">IManagedObjectRef</a>
 </li>
 <li>getIPCId()
 : <a class="el" href="interface_i_internal_machine_control.html#a7da0608d7347e8439a9abbb900034bc4">IInternalMachineControl</a>
+</li>
+<li>getMachinesByGroups()
+: <a class="el" href="interface_i_virtual_box.html#adc79e26b600759e87e3bfe2fa242d71c">IVirtualBox</a>
+</li>
+<li>getMachineStates()
+: <a class="el" href="interface_i_virtual_box.html#af42a96fdaa6380c47c0d0cf5520e0f4b">IVirtualBox</a>
 </li>
 <li>getMaxDevicesPerPortForStorageBus()
 : <a class="el" href="interface_i_system_properties.html#a753b827830474a9890fcf36f59bf04f6">ISystemProperties</a>
@@ -218,15 +224,9 @@ Here is a list of all class members with links to the classes they belong to:
 <li>getProcessorSpeed()
 : <a class="el" href="interface_i_host.html#a7e2287c6a8227597fa634423e53d3395">IHost</a>
 </li>
-<li>getProcessOutput()
-: <a class="el" href="interface_i_guest.html#aa65581f4405640d0a2874927737c0b8b">IGuest</a>
-</li>
-<li>getProcessStatus()
-: <a class="el" href="interface_i_guest.html#ab93f13afc06a722c29532226f830ef98">IGuest</a>
-</li>
 <li>getProperties()
-: <a class="el" href="interface_i_medium.html#a1b7e7f37f9cabbbebb2ee364023bb27b">IMedium</a>
-, <a class="el" href="interface_i_network_adapter.html#ad8deed3a84f800b24f2aac9b175534d7">INetworkAdapter</a>
+: <a class="el" href="interface_i_network_adapter.html#ad8deed3a84f800b24f2aac9b175534d7">INetworkAdapter</a>
+, <a class="el" href="interface_i_medium.html#a1b7e7f37f9cabbbebb2ee364023bb27b">IMedium</a>
 </li>
 <li>getProperty()
 : <a class="el" href="interface_i_network_adapter.html#aba416f3142bb23243b692370b1d2e565">INetworkAdapter</a>
@@ -277,14 +277,23 @@ Here is a list of all class members with links to the classes they belong to:
 <li>getWarnings()
 : <a class="el" href="interface_i_appliance.html#a456d08f729708c9b1be1d6a267e3903e">IAppliance</a>
 </li>
+<li>GID
+: <a class="el" href="interface_i_fs_obj_info.html#a5aab2a945c48cd13ee386641fad339cf">IFsObjInfo</a>
+</li>
+<li>groupName
+: <a class="el" href="interface_i_fs_obj_info.html#a2ad79e6fb347d750f88d74b143f02cad">IFsObjInfo</a>
+</li>
+<li>groups
+: <a class="el" href="interface_i_machine.html#a27536e99a6b64ac628a9098037ab5d7c">IMachine</a>
+</li>
 <li>guest
 : <a class="el" href="interface_i_console.html#a6c6d64908daef7fd950a27276be2126a">IConsole</a>
 </li>
 <li>guestAddress
-: <a class="el" href="interface_i_pci_device_attachment.html#a798b205e6f591881cdd9b286edb24ce5">IPciDeviceAttachment</a>
+: <a class="el" href="interface_i_p_c_i_device_attachment.html#a88f51bbd7062a8b096b1d54b12348a7a">IPCIDeviceAttachment</a>
 </li>
-<li>guestIp
-: <a class="el" href="interface_i_n_a_t_redirect_event.html#a8d4e276833ac7aec53511554e4bf2b3c">INATRedirectEvent</a>
+<li>guestIP
+: <a class="el" href="interface_i_n_a_t_redirect_event.html#a52e5b42111a4d888de934be99ae55073">INATRedirectEvent</a>
 </li>
 <li>guestOSTypes
 : <a class="el" href="interface_i_virtual_box.html#a8b8a63c015cf54efd1ea331824374f25">IVirtualBox</a>
@@ -297,7 +306,7 @@ Here is a list of all class members with links to the classes they belong to:
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

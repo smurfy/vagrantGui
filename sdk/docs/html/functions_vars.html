@@ -77,8 +77,8 @@
 <li>accelerate3DEnabled
 : <a class="el" href="interface_i_machine.html#a29f8081e07baba47014d0aa1661a6de8">IMachine</a>
 </li>
-<li>Acceleration3DAvailable
-: <a class="el" href="interface_i_host.html#a77fe19ee78464df74544aa5e4f9a34bd">IHost</a>
+<li>acceleration3DAvailable
+: <a class="el" href="interface_i_host.html#a6074762deb6e691206ba6be5d9dc16eb">IHost</a>
 </li>
 <li>accessError
 : <a class="el" href="interface_i_machine.html#a81cdf161d5d9f8e3e1491802768e533a">IMachine</a>
@@ -86,6 +86,9 @@
 <li>accessible
 : <a class="el" href="interface_i_shared_folder.html#a711c5665318abe1426dbcafd1a5a8ff5">ISharedFolder</a>
 , <a class="el" href="interface_i_machine.html#a2b6c9cc91c11db18c5b6b870556355f2">IMachine</a>
+</li>
+<li>accessTime
+: <a class="el" href="interface_i_fs_obj_info.html#ade8fe166fb3cddabad534c8ecdb98bfa">IFsObjInfo</a>
 </li>
 <li>ACPIEnabled
 : <a class="el" href="interface_i_b_i_o_s_settings.html#a7e824197b794be930442a4d15e1ccda0">IBIOSSettings</a>
@@ -102,8 +105,11 @@
 , <a class="el" href="interface_i_network_adapter.html#a4e8f5975124c830ecfd9582c72df764f">INetworkAdapter</a>
 </li>
 <li>add
-: <a class="el" href="interface_i_event_source_changed_event.html#af6d612559a13f0b360a60c8b894f954a">IEventSourceChangedEvent</a>
-, <a class="el" href="interface_i_c_p_u_changed_event.html#a7f9057a150e16b469ca8dcf606c2f414">ICPUChangedEvent</a>
+: <a class="el" href="interface_i_c_p_u_changed_event.html#a7f9057a150e16b469ca8dcf606c2f414">ICPUChangedEvent</a>
+, <a class="el" href="interface_i_event_source_changed_event.html#af6d612559a13f0b360a60c8b894f954a">IEventSourceChangedEvent</a>
+</li>
+<li>additionsRevision
+: <a class="el" href="interface_i_guest.html#a58206da74b7e15fbdb6d9863da5c49ee">IGuest</a>
 </li>
 <li>additionsRunLevel
 : <a class="el" href="interface_i_guest.html#aa948ff08dfedcfd29fd0d10d68eeda6d">IGuest</a>
@@ -118,11 +124,17 @@
 <li>aliasMode
 : <a class="el" href="interface_i_n_a_t_engine.html#ae2b85d5fa5a9017edefa952404dc43c3">INATEngine</a>
 </li>
+<li>allocatedSize
+: <a class="el" href="interface_i_fs_obj_info.html#a2c6ecff2cd06a492ec2dd9db240a0068">IFsObjInfo</a>
+</li>
 <li>allowedTypes
 : <a class="el" href="interface_i_medium.html#a65819170db76163c0d7c0903815f9d94">IMedium</a>
 </li>
 <li>allowMultiConnection
 : <a class="el" href="interface_i_v_r_d_e_server.html#a499eee1cc06659d57dd7413e499c67be">IVRDEServer</a>
+</li>
+<li>allowTracingToAccessVM
+: <a class="el" href="interface_i_machine.html#acfa33f6952f420c0163dd2eefccc62ed">IMachine</a>
 </li>
 <li>alpha
 : <a class="el" href="interface_i_framebuffer_overlay.html#ac251eedc30cd0580c73209af0138bbb1">IFramebufferOverlay</a>
@@ -131,14 +143,17 @@
 <li>APIVersion
 : <a class="el" href="interface_i_virtual_box.html#a992e7f9b7d103b4302ddb69f2228cef4">IVirtualBox</a>
 </li>
+<li>arguments
+: <a class="el" href="interface_i_process.html#a7f962add718dc5f62ebbe7303957264c">IProcess</a>
+</li>
 <li>attached
 : <a class="el" href="interface_i_u_s_b_device_state_changed_event.html#a12674375ebde21f89589274dc88859d2">IUSBDeviceStateChangedEvent</a>
 </li>
-<li>attachedPciDevices
-: <a class="el" href="interface_i_console.html#af219e20abfa2b2405572491e44975f23">IConsole</a>
+<li>attachedPCIDevices
+: <a class="el" href="interface_i_console.html#a6d41c200e67a37cdbc9c270317831774">IConsole</a>
 </li>
 <li>attachment
-: <a class="el" href="interface_i_host_pci_device_plug_event.html#a5aad1a7ed08d1da66b2c6e8a2c59f22b">IHostPciDevicePlugEvent</a>
+: <a class="el" href="interface_i_host_p_c_i_device_plug_event.html#ac3d9ccae2f859476d143ba2b424b6245">IHostPCIDevicePlugEvent</a>
 </li>
 <li>attachmentType
 : <a class="el" href="interface_i_network_adapter.html#a98391a5ab20a1e96d26cfb69bd1b9ad2">INetworkAdapter</a>
@@ -167,12 +182,24 @@
 <li>autoReset
 : <a class="el" href="interface_i_medium.html#accc83be4542142dfa1aee8238b1c42ec">IMedium</a>
 </li>
+<li>autostartDatabasePath
+: <a class="el" href="interface_i_system_properties.html#af87889331f44b2f73cb589468a3afcbb">ISystemProperties</a>
+</li>
+<li>autostartDelay
+: <a class="el" href="interface_i_machine.html#a9d371d975c607f0d3f81ab57459149df">IMachine</a>
+</li>
+<li>autostartEnabled
+: <a class="el" href="interface_i_machine.html#aca5154cad0ba95af8d3ce358571222bc">IMachine</a>
+</li>
+<li>autostopType
+: <a class="el" href="interface_i_machine.html#a724adf774f12d25744bbac488c7fe26e">IMachine</a>
+</li>
 <li>available
 : <a class="el" href="interface_i_v_box_s_v_c_availability_changed_event.html#a6ce6ab837fa348cccef3b56ecfda3bd7">IVBoxSVCAvailabilityChangedEvent</a>
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

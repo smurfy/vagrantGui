@@ -1,5 +1,5 @@
 /*
- * DO NOT EDIT.  THIS FILE IS GENERATED FROM /home/vbox/tinderbox/4.1-sdk/src/libs/xpcom18a4/ipc/ipcd/client/public/ipcIService.idl
+ * DO NOT EDIT.  THIS FILE IS GENERATED FROM /home/vbox/tinderbox/sdk/src/libs/xpcom18a4/ipc/ipcd/client/public/ipcIService.idl
  */
 
 #ifndef __gen_ipcIService_h__

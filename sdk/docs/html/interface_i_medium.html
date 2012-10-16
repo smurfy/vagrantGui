@@ -42,8 +42,8 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#ac8b65ec862de84d76d9097b79bbca5e7">setIDs</a> (in boolean setImageId, in wstringUUID imageId, in boolean setParentId, in wstringUUID parentId)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Changes the UUID and parent UUID for a hard disk medium.  <a href="#ac8b65ec862de84d76d9097b79bbca5e7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#ae80cb8c0dd6ce11b6c16a00871980f57">setIds</a> (in boolean setImageId, in wstringUUID imageId, in boolean setParentId, in wstringUUID parentId)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Changes the UUID and parent UUID for a hard disk medium.  <a href="#ae80cb8c0dd6ce11b6c16a00871980f57"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#a67c4d153a846d2633736c0ec90dc7714">refreshState</a> ([retval] out <a class="el" href="_virtual_box_8idl.html#aeae80db6bda22be0b79ab1da82528a57">MediumState</a> <a class="el" href="interface_i_medium.html#ac250d2252217354b21b272b9387c94d4">state</a>)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">If the current medium state (see <a class="el" href="_virtual_box_8idl.html#aeae80db6bda22be0b79ab1da82528a57">MediumState</a><b></b>) is one of "Created", "Inaccessible" or "LockedRead", then this performs an accessibility check on the medium and sets the value of the <a class="el" href="interface_i_medium.html#ac250d2252217354b21b272b9387c94d4">state</a><b></b> attribute accordingly; that value is also returned for convenience.  <a href="#a67c4d153a846d2633736c0ec90dc7714"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#a7cfe993112605057132bc6f4b3c8cd36">getSnapshotIds</a> (in wstringUUID machineId,[retval] out wstringUUID[] snapshotIds)</td></tr>
@@ -76,6 +76,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Starts merging the contents of this medium and all intermediate differencing media in the chain to the given target medium.  <a href="#aaed7038739c454873f596a56b30389dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#aba5cce811ecd8523c9eb5f6b120f83cd">cloneTo</a> (in <a class="el" href="interface_i_medium.html">IMedium</a> target, in unsigned long <a class="el" href="interface_i_medium.html#a283ba8413e9423f43f63088e94efa516">variant</a>, in <a class="el" href="interface_i_medium.html">IMedium</a> <a class="el" href="interface_i_medium.html#aff2eb5e354570fc966561ba2e3fdb557">parent</a>,[retval] out <a class="el" href="interface_i_progress.html">IProgress</a> progress)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Starts creating a clone of this medium in the format and at the location defined by the <em>target</em> argument.  <a href="#aba5cce811ecd8523c9eb5f6b120f83cd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#ab88bae122d0b0e54fae88317ec6e758e">cloneToBase</a> (in <a class="el" href="interface_i_medium.html">IMedium</a> target, in unsigned long <a class="el" href="interface_i_medium.html#a283ba8413e9423f43f63088e94efa516">variant</a>,[retval] out <a class="el" href="interface_i_progress.html">IProgress</a> progress)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Starts creating a clone of this medium in the format and at the location defined by the <em>target</em> argument.  <a href="#ab88bae122d0b0e54fae88317ec6e758e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#a81373bdd26302231218e447f1de48d36">compact</a> ([retval] out <a class="el" href="interface_i_progress.html">IProgress</a> progress)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Starts compacting of this medium.  <a href="#a81373bdd26302231218e447f1de48d36"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_medium.html#a56c37cab1fe89cb11dc84d42ce591267">resize</a> (in long long <a class="el" href="interface_i_medium.html#aa36e4be53f0b493acb063287c8649ca3">logicalSize</a>,[retval] out <a class="el" href="interface_i_progress.html">IProgress</a> progress)</td></tr>
@@ -144,7 +146,7 @@ Each <a class="el" href="interface_i_medium.html" title="The IMedium interface r
 <p>Existing media are opened using <a class="el" href="interface_i_virtual_box.html#ae67fffa98f9a73b7f6b4365978658d9e">IVirtualBox::openMedium</a><b></b>; new hard disk media can be created with the VirtualBox API using the <a class="el" href="interface_i_virtual_box.html#a63e62507782c9e0a6fda05d14cfbd40d">IVirtualBox::createHardDisk</a><b></b> method. Differencing hard disks (see below) are usually implicitly created by VirtualBox as needed, but may also be created explicitly using <a class="el" href="interface_i_medium.html#a28068fe41c21e32a78268cdc64144e7b">createDiffStorage</a><b></b>. VirtualBox cannot create CD/DVD or floppy images (ISO and RAW files); these should be created with external tools and then opened from within VirtualBox.</p>
 <p>Only for CD/DVDs and floppies, an <a class="el" href="interface_i_medium.html" title="The IMedium interface represents virtual storage for a machine&#39;s hard disks, CD/DVD or floppy dri...">IMedium</a> instance can also represent a host drive. In that case the <a class="el" href="interface_i_medium.html#a302234bd835a0a0cb70293bbb2e9355b">id</a><b></b> attribute contains the UUID of one of the drives in <a class="el" href="interface_i_host.html#a285b1b89c35b67a0bb52b547f5d3ebb3">IHost::DVDDrives</a><b></b> or <a class="el" href="interface_i_host.html#ade0e3923823c0c8d96e7eac39748122c">IHost::floppyDrives</a><b></b>.</p>
 <h3>Media registries</h3>
-<p>When a medium has been opened or created using one of the aforementioned APIs, it becomes "known" to VirtualBox. Known media can be attached to virtual machines and accessed through <a class="el" href="interface_i_virtual_box.html#aaff85793c82602d719701e835104b33a">IVirtualBox::findMedium</a><b></b>. They also appear in the global <a class="el" href="interface_i_virtual_box.html#a795457eb6321e42afb495064ee06213d">IVirtualBox::hardDisks</a><b></b>, <a class="el" href="interface_i_virtual_box.html#a840614ca6ed7428c755380f0b21f1f1e">IVirtualBox::DVDImages</a><b></b> and <a class="el" href="interface_i_virtual_box.html#aa120d6c1c83a80d98cfc6fc92d464c49">IVirtualBox::floppyImages</a><b></b> arrays.</p>
+<p>When a medium has been opened or created using one of the aforementioned APIs, it becomes "known" to VirtualBox. Known media can be attached to virtual machines and re-found through <a class="el" href="interface_i_virtual_box.html#ae67fffa98f9a73b7f6b4365978658d9e">IVirtualBox::openMedium</a><b></b>. They also appear in the global <a class="el" href="interface_i_virtual_box.html#a795457eb6321e42afb495064ee06213d">IVirtualBox::hardDisks</a><b></b>, <a class="el" href="interface_i_virtual_box.html#a840614ca6ed7428c755380f0b21f1f1e">IVirtualBox::DVDImages</a><b></b> and <a class="el" href="interface_i_virtual_box.html#aa120d6c1c83a80d98cfc6fc92d464c49">IVirtualBox::floppyImages</a><b></b> arrays.</p>
 <p>Prior to VirtualBox 4.0, opening a medium added it to a global media registry in the VirtualBox.xml file, which was shared between all machines and made transporting machines and their media from one host to another difficult.</p>
 <p>Starting with VirtualBox 4.0, media are only added to a registry when they are <em>attached</em> to a machine using <a class="el" href="interface_i_machine.html#a8e51fafec7442a48a86a59edec5ec217">IMachine::attachDevice</a><b></b>. For backwards compatibility, which registry a medium is added to depends on which VirtualBox version created a machine:</p>
 <ul>
@@ -169,14 +171,14 @@ For older media attachments (i.e. if the medium was first attached to a machine 
 <pre>
         &lt;path&gt;/{&lt;uuid&gt;}.&lt;ext&gt;
       </pre><p> where <code>&lt;path&gt;</code> is the supplied path specification, <code>&lt;uuid&gt;</code> is the newly generated UUID and <code>&lt;ext&gt;</code> is the default extension for the storage format of this hard disk. After that, you may call any of the methods that create a new hard disk storage unit and they will use the generated UUID and file name.</p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{53F9CC0C-E0FD-40A5-A404-A7A5272082CD}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{29989373-B111-4654-8493-2E1176CBA890}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="ac8b65ec862de84d76d9097b79bbca5e7"></a><!-- doxytag: member="IMedium::setIDs" ref="ac8b65ec862de84d76d9097b79bbca5e7" args="(in boolean setImageId, in wstringUUID imageId, in boolean setParentId, in wstringUUID parentId)" -->
+<a class="anchor" id="ae80cb8c0dd6ce11b6c16a00871980f57"></a><!-- doxytag: member="IMedium::setIds" ref="ae80cb8c0dd6ce11b6c16a00871980f57" args="(in boolean setImageId, in wstringUUID imageId, in boolean setParentId, in wstringUUID parentId)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IMedium::setIDs </td>
+          <td class="memname">void IMedium::setIds </td>
           <td>(</td>
           <td class="paramtype">in boolean&nbsp;</td>
           <td class="paramname"> <em>setImageId</em>, </td>
@@ -896,6 +898,58 @@ None of the involved media are in <a class="el" href="_virtual_box_8idl.html#aea
 
 </div>
 </div>
+<a class="anchor" id="ab88bae122d0b0e54fae88317ec6e758e"></a><!-- doxytag: member="IMedium::cloneToBase" ref="ab88bae122d0b0e54fae88317ec6e758e" args="(in IMedium target, in unsigned long variant,[retval] out IProgress progress)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IMedium::cloneToBase </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="interface_i_medium.html">IMedium</a>&nbsp;</td>
+          <td class="paramname"> <em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in unsigned long&nbsp;</td>
+          <td class="paramname"> <em>variant</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[retval] out <a class="el" href="interface_i_progress.html">IProgress</a>&nbsp;</td>
+          <td class="paramname"> <em>progress</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Starts creating a clone of this medium in the format and at the location defined by the <em>target</em> argument. </p>
+<p>The target medium must be either in <a class="el" href="_virtual_box_8idl.html#aeae80db6bda22be0b79ab1da82528a57ab237c061c87ac12294c3af8f8871494d">MediumState_NotCreated</a><b></b> state (i.e. must not have an existing storage unit) or in <a class="el" href="_virtual_box_8idl.html#aeae80db6bda22be0b79ab1da82528a57a5aea3d2015c9cfc944f4e83f49c28d5c">MediumState_Created</a><b></b> state (i.e. created and not locked, and big enough to hold the data or else the copy will be partial). Upon successful completion, the cloned medium will contain exactly the same sector data as the medium being cloned, except that in the first case a new UUID for the clone will be randomly generated, and in the second case the UUID will remain unchanged.</p>
+<p>The <em>parent</em> argument defines which medium will be the parent of the clone. In this case the clone will be a base image, i.e. completely independent. It is possible to specify an arbitrary medium for this parameter, including the parent of the medium which is being cloned. Even cloning to a child of the source medium is possible. Note that when cloning to an existing image, the <em>parent</em> argument is ignored.</p>
+<p>After the returned progress object reports that the operation is successfully complete, the target medium gets remembered by this VirtualBox installation and may be attached to virtual machines.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>target</em>&nbsp;</td><td>Target medium.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>variant</em>&nbsp;</td><td>Exact image variant which should be created (as a combination of <a class="el" href="_virtual_box_8idl.html#adedcbf1a6e5e35fe7a0ca0c4b3447154">MediumVariant</a><b></b> flags).</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>progress</em>&nbsp;</td><td>Progress object to track the operation completion.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
+<tr>
+<td>E_NOTIMPL </td><td>The specified cloning variant is not supported at the moment.  </td></tr>
+</table>
+</dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>This medium will be placed to <a class="el" href="_virtual_box_8idl.html#aeae80db6bda22be0b79ab1da82528a57a6496c551b7ef8980d63e31784af3e500">MediumState_LockedRead</a><b></b> state for the duration of this operation. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a81373bdd26302231218e447f1de48d36"></a><!-- doxytag: member="IMedium::compact" ref="a81373bdd26302231218e447f1de48d36" args="([retval] out IProgress progress)" -->
 <div class="memitem">
 <div class="memproto">
@@ -1383,7 +1437,7 @@ For media whose state is <a class="el" href="interface_i_medium.html#ac250d22522
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

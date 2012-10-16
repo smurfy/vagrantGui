@@ -52,6 +52,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the device type that occupies the specified position in the boot order.  <a href="#a22d5030cb11670776845fe78ed13691e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a8e51fafec7442a48a86a59edec5ec217">attachDevice</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in <a class="el" href="_virtual_box_8idl.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> type, in <a class="el" href="interface_i_medium.html">IMedium</a> medium)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Attaches a device and optionally mounts a medium to the given storage controller (<a class="el" href="interface_i_storage_controller.html">IStorageController</a><b></b>, identified by <em>name</em>), at the indicated port and device.  <a href="#a8e51fafec7442a48a86a59edec5ec217"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ad4f8c3614866c1fe78c30357d6e70146">attachDeviceWithoutMedium</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in <a class="el" href="_virtual_box_8idl.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a> type)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Attaches a device and optionally mounts a medium to the given storage controller (<a class="el" href="interface_i_storage_controller.html">IStorageController</a><b></b>, identified by <em>name</em>), at the indicated port and device.  <a href="#ad4f8c3614866c1fe78c30357d6e70146"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a59a8e406027e901cc260488f8617fb22">detachDevice</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Detaches the device attached to a device slot of the specified bus.  <a href="#a59a8e406027e901cc260488f8617fb22"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#af0e34af9e99e5884bf0b2eb297344c92">passthroughDevice</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in boolean passthrough)</td></tr>
@@ -60,8 +62,14 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the behavior for guest-triggered medium eject.  <a href="#ab2883fc2f65c753bdc1d0ba22cd773c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#aa31ab8471f5076792487779533a26df0">nonRotationalDevice</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in boolean nonRotational)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets a flag in the device information which indicates that the medium is not based on rotational technology, i.e.  <a href="#aa31ab8471f5076792487779533a26df0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#aa02655252429d66d75188bcc56e41e7d">setAutoDiscardForDevice</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in boolean discard)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets a flag in the device information which indicates that the medium supports discarding unsused blocks (called trimming for SATA or unmap for SCSI devices) .This may or may not be supported by a particular drive, and is silently ignored in the latter case.  <a href="#aa02655252429d66d75188bcc56e41e7d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#aa8ed8a03befa534d4df3c5342bf7fcf8">setBandwidthGroupForDevice</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in <a class="el" href="interface_i_bandwidth_group.html">IBandwidthGroup</a> bandwidthGroup)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the bandwidth group of an existing storage device.  <a href="#aa8ed8a03befa534d4df3c5342bf7fcf8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a94c2637db1f0f0fe4a687a4c2c245218">setNoBandwidthGroupForDevice</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets no bandwidth group for an existing storage device.  <a href="#a94c2637db1f0f0fe4a687a4c2c245218"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a1f3da9c7f26b4c630f3989f98b58515a">unmountMedium</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in boolean force)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Unmounts any currently mounted medium (<a class="el" href="interface_i_medium.html">IMedium</a><b></b>, identified by the given UUID <em>id</em>) to the given storage controller (<a class="el" href="interface_i_storage_controller.html">IStorageController</a><b></b>, identified by <em>name</em>), at the indicated port and device.  <a href="#a1f3da9c7f26b4c630f3989f98b58515a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a1c82306d3603e3bb40f6ab7467d4ff18">mountMedium</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device, in <a class="el" href="interface_i_medium.html">IMedium</a> medium, in boolean force)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Mounts a medium (<a class="el" href="interface_i_medium.html">IMedium</a><b></b>, identified by the given UUID <em>id</em>) to the given storage controller (<a class="el" href="interface_i_storage_controller.html">IStorageController</a><b></b>, identified by <em>name</em>), at the indicated port and device.  <a href="#a1c82306d3603e3bb40f6ab7467d4ff18"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a23f94c1e7ed8dcd36cf38ae5c7eec9ed">getMedium</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device,[retval] out <a class="el" href="interface_i_medium.html">IMedium</a> medium)</td></tr>
@@ -70,10 +78,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns an array of medium attachments which are attached to the the controller with the given name.  <a href="#adc6e0fd49e384552fc00f26ffc8f9e17"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ac4ac5f0f020063c3d238d9536c56064f">getMediumAttachment</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in long controllerPort, in long device,[retval] out <a class="el" href="interface_i_medium_attachment.html">IMediumAttachment</a> attachment)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns a medium attachment which corresponds to the controller with the given name, on the given port and device slot.  <a href="#ac4ac5f0f020063c3d238d9536c56064f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#aac0abee269e495a4665f5b2d4956e9cd">attachHostPciDevice</a> (in long hostAddress, in long desiredGuestAddress, in boolean tryToUnbind)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Attaches host PCI device with the given (host) PCI address to the PCI bus of the virtual machine.  <a href="#aac0abee269e495a4665f5b2d4956e9cd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ac7c33d85adb6c14b9d99976a8d408e2f">detachHostPciDevice</a> (in long hostAddress)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Detach host PCI device from the virtual machine.  <a href="#ac7c33d85adb6c14b9d99976a8d408e2f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a2640706ef6d61ac1d430199d162035ae">attachHostPCIDevice</a> (in long hostAddress, in long desiredGuestAddress, in boolean tryToUnbind)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Attaches host PCI device with the given (host) PCI address to the PCI bus of the virtual machine.  <a href="#a2640706ef6d61ac1d430199d162035ae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a6b94280b4763b7522c4003b095a463d2">detachHostPCIDevice</a> (in long hostAddress)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Detach host PCI device from the virtual machine.  <a href="#a6b94280b4763b7522c4003b095a463d2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a8b3bd5ed7b0eb7ceda6339dfa27d379e">getNetworkAdapter</a> (in unsigned long slot,[retval] out <a class="el" href="interface_i_network_adapter.html">INetworkAdapter</a> adapter)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the network adapter associated with the given slot.  <a href="#a8b3bd5ed7b0eb7ceda6339dfa27d379e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#adb3aeb9186d64c6d06118daae8302dbd">addStorageController</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a> connectionType,[retval] out <a class="el" href="interface_i_storage_controller.html">IStorageController</a> controller)</td></tr>
@@ -83,7 +91,7 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a8bf23af3c199e1c63fbbd62354c041f3">getStorageControllerByInstance</a> (in unsigned long instance,[retval] out <a class="el" href="interface_i_storage_controller.html">IStorageController</a> storageController)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns a storage controller with the given instance number.  <a href="#a8bf23af3c199e1c63fbbd62354c041f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#af6cb6937da2196d9bc13d9670c6f6eaf">removeStorageController</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Removes a storage controller from the machine.  <a href="#af6cb6937da2196d9bc13d9670c6f6eaf"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Removes a storage controller from the machine with all devices attached to it.  <a href="#af6cb6937da2196d9bc13d9670c6f6eaf"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a5d4d1c7791274f8baaef6e341f029cd2">setStorageControllerBootable</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, in boolean bootable)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets the bootable flag of the storage controller with the given name.  <a href="#a5d4d1c7791274f8baaef6e341f029cd2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ad69923a471cec43bb32a9e8ad54cfcd2">getSerialPort</a> (in unsigned long slot,[retval] out <a class="el" href="interface_i_serial_port.html">ISerialPort</a> port)</td></tr>
@@ -142,10 +150,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets, changes or deletes an entry in the machine's guest property store.  <a href="#a526521a6479eeaf3067550417a7bb888"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a86db68f492c701d4fd323cf6aab633b9">setGuestPropertyValue</a> (in wstring property, in wstring value)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets, changes or deletes a value in the machine's guest property store.  <a href="#a86db68f492c701d4fd323cf6aab633b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a2b5bc248ab2a58bdab899dd0ab0b6b10">deleteGuestProperty</a> (in wstring <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deletes an entry from the machine's guest property store.  <a href="#a2b5bc248ab2a58bdab899dd0ab0b6b10"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a4ca2935cbe0568ead81e6c12bb04ef27">enumerateGuestProperties</a> (in wstring patterns, out wstring[] <a class="el" href="interface_i_machine.html#a0f8041e0562be7a0b32be686384285f5">name</a>, out wstring[] value, out long long[] timestamp, out wstring[] flags)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return a list of the guest properties matching a set of patterns along with their values, time stamps and flags.  <a href="#a4ca2935cbe0568ead81e6c12bb04ef27"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a10fac937f650c92c1877b00bf81f52d5">querySavedGuestSize</a> (in unsigned long screenId, out unsigned long width, out unsigned long height)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the guest dimensions from the saved state.  <a href="#a10fac937f650c92c1877b00bf81f52d5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a854f70590d1680516cfd2e3ff0e2d7b6">querySavedGuestScreenInfo</a> (in unsigned long screenId, out unsigned long originX, out unsigned long originY, out unsigned long width, out unsigned long height, out boolean enabled)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the guest dimensions from the saved state.  <a href="#a854f70590d1680516cfd2e3ff0e2d7b6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a7cb9b422207206f4c1918427cc33304c">querySavedThumbnailSize</a> (in unsigned long screenId, out unsigned long size, out unsigned long width, out unsigned long height)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns size in bytes and dimensions in pixels of a saved thumbnail bitmap from saved state.  <a href="#a7cb9b422207206f4c1918427cc33304c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a64040195c2b42178b7288d8bc48761c4">readSavedThumbnailToArray</a> (in unsigned long screenId, in boolean BGR, out unsigned long width, out unsigned long height,[retval] out octet[] data)</td></tr>
@@ -183,6 +193,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Description of the virtual machine.  <a href="#af19c3adad1315ceb9bdac881e545e602"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstringUUID&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a8c2872f28654d4cee4e8029bf6eaec60">id</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">UUID of the virtual machine.  <a href="#a8c2872f28654d4cee4e8029bf6eaec60"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a27536e99a6b64ac628a9098037ab5d7c">groups</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Array of machine group names of which this machine is a member.  <a href="#a27536e99a6b64ac628a9098037ab5d7c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a8b78acadfe037c9153080fb055f46a7d">OSTypeId</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">User-defined identifier of the Guest OS type.  <a href="#a8b78acadfe037c9153080fb055f46a7d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a40e9ec512ab94e9878a1f848c51c8832">hardwareVersion</a></td></tr>
@@ -209,16 +221,24 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This setting determines whether VirtualBox allows this machine to make use of the 2D video acceleration support available on the host.  <a href="#a0bbb876d9ad8dbd1b312bc6d2d235d52"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#af0ffb20e866dfb40df1464def112f778">monitorCount</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Number of virtual monitors.  <a href="#af0ffb20e866dfb40df1464def112f778"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a6c074dd14205c40258cabe8371d7cf38">VideoCaptureEnabled</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This setting determines whether VirtualBox uses video recording to record VM session.  <a href="#a6c074dd14205c40258cabe8371d7cf38"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a2a27190c7ff1a7c1f904b63755405291">VideoCaptureFile</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This setting determines what filename VirtualBox uses to save the recorded content.  <a href="#a2a27190c7ff1a7c1f904b63755405291"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ae040b6ed6411f583298902d6f312f558">VideoCaptureWidth</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This setting determines what should be the horizontal resolution of recorded video.  <a href="#ae040b6ed6411f583298902d6f312f558"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a03fed1419ff7c4fa8194a28bfb87fbf8">VideoCaptureHeight</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This setting determines what should be the vertical resolution of recorded video.  <a href="#a03fed1419ff7c4fa8194a28bfb87fbf8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="interface_i_b_i_o_s_settings.html">IBIOSSettings</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a72dd7fe9c6a11670842c43d3e4b5736b">BIOSSettings</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Object containing all BIOS settings.  <a href="#a72dd7fe9c6a11670842c43d3e4b5736b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#afddb85483810aea160a6bf2c90259b55">FirmwareType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#adc5c21a35eabc1db1d3157878a6d9ec6">firmwareType</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Type of firmware (such as legacy BIOS or EFI), used for initial bootstrap in this VM.  <a href="#adc5c21a35eabc1db1d3157878a6d9ec6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#a42cd5a4ffc015ed2b9bf4814763192d7">PointingHidType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a8202a4b62434c672cf548b77289c1327">pointingHidType</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Type of pointing HID (such as mouse or tablet) used in this VM.  <a href="#a8202a4b62434c672cf548b77289c1327"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#ab9faee7c2278c67c9349f3e51fa2a48f">KeyboardHidType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#aa2c94828e8f26050204d786c91d67ff3">keyboardHidType</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Type of keyboard HID used in this VM.  <a href="#aa2c94828e8f26050204d786c91d67ff3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#af6f383879a66eb4f1c350f5dd5b3eac2">hpetEnabled</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This attribute controls if High Precision Event Timer (HPET) is enabled in this VM.  <a href="#af6f383879a66eb4f1c350f5dd5b3eac2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#ae904ea9e2892b3cb117b076fdf4c8897">PointingHIDType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a169cccf5417aa6c90b4515f45b919d2e">pointingHIDType</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Type of pointing HID (such as mouse or tablet) used in this VM.  <a href="#a169cccf5417aa6c90b4515f45b919d2e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#af8b91ad2ad35847326c7d9d4c9587142">KeyboardHIDType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a837c6f223122e587ff00027346a9f148">keyboardHIDType</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Type of keyboard HID used in this VM.  <a href="#a837c6f223122e587ff00027346a9f148"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a80240bbec6fb99a78aa903c5e4047287">HPETEnabled</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">This attribute controls if High Precision Event Timer (HPET) is enabled in this VM.  <a href="#a80240bbec6fb99a78aa903c5e4047287"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#a0c8eff86d82f71a0a7f2e99a4a702ffa">ChipsetType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ad027bca4612b7bec68db5eb591230e9e">chipsetType</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Chipset type used in this VM.  <a href="#ad027bca4612b7bec68db5eb591230e9e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#adfcf2b4359a54f318fa9f17ee521fd50">snapshotFolder</a></td></tr>
@@ -245,8 +265,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Current session state for this machine.  <a href="#aecc00e3c014d4548a025e4eafff7056e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a7f8692397b0743822a9be4dd81be9019">sessionType</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Type of the session.  <a href="#a7f8692397b0743822a9be4dd81be9019"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ac1fbf27ec86d5529787088410eaaf073">sessionPid</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Identifier of the session process.  <a href="#ac1fbf27ec86d5529787088410eaaf073"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a7380f79a10f9813dbced54f51004c6b5">sessionPID</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Identifier of the session process.  <a href="#a7380f79a10f9813dbced54f51004c6b5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a9653e9d996d60fc54e8bed22179d92b2">state</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Current execution state of this machine.  <a href="#a9653e9d996d60fc54e8bed22179d92b2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute long long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a3a96e177095b0f13c2fc43f425d9a45d">lastStateChange</a></td></tr>
@@ -265,6 +285,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Collection of shared folders for this machine (permanent shared folders).  <a href="#ab9d48e83d2a8b245afa00116b1e7ca37"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#a096d8cfa9dea55360b7d50c70176a222">ClipboardMode</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ab21aa593375c45dcd5a7b4c3a2a73b5f">clipboardMode</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Synchronization mode between the host OS clipboard and the guest OS clipboard.  <a href="#ab21aa593375c45dcd5a7b4c3a2a73b5f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#a37d006b98a1330f12bc97f781d87b346">DragAndDropMode</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ab72d980217139256ae5601d2e6350d2a">dragAndDropMode</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Which mode is allowed for drag'n'drop.  <a href="#ab72d980217139256ae5601d2e6350d2a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ae173701527dc449099b9681da27999ff">guestPropertyNotificationPatterns</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">A comma-separated list of simple glob patterns.  <a href="#ae173701527dc449099b9681da27999ff"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a662d92a1c47ac75f15a4660ae5247d22">teleporterEnabled</a></td></tr>
@@ -287,16 +309,28 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The interval in ms used for syncing the state between source and target.  <a href="#acf5c1a4cdeb81e28f33b92efad526f58"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#ae1ec62f64a126aa9645ba55e78089f6e">RTCUseUTC</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">When set to <em>true</em>, the RTC device of the virtual machine will run in UTC time, otherwise in local time.  <a href="#ae1ec62f64a126aa9645ba55e78089f6e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a66ee00362201c2fcd83d1b3adfd803cd">ioCacheEnabled</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">When set to <em>true</em>, the builtin I/O cache of the virtual machine will be enabled.  <a href="#a66ee00362201c2fcd83d1b3adfd803cd"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#adda38f852b714c494790142ccb180689">ioCacheSize</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum size of the I/O cache in MB.  <a href="#adda38f852b714c494790142ccb180689"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a9999c5c9eb8eecac98a45bde62fc3bce">IOCacheEnabled</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">When set to <em>true</em>, the builtin I/O cache of the virtual machine will be enabled.  <a href="#a9999c5c9eb8eecac98a45bde62fc3bce"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a596ae3cdd7eea9f92c79dddd4c738f6f">IOCacheSize</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Maximum size of the I/O cache in MB.  <a href="#a596ae3cdd7eea9f92c79dddd4c738f6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
+<a class="el" href="interface_i_p_c_i_device_attachment.html">IPCIDeviceAttachment</a>[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a38a5c9476de084724b89fda4ea26ae12">PCIDeviceAssignments</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Array of PCI devices assigned to this machine, to get list of all PCI devices attached to the machine use <a class="el" href="interface_i_console.html#a6d41c200e67a37cdbc9c270317831774">IConsole::attachedPCIDevices</a><b></b> attribute, as this attribute is intended to list only devices additional to what described in virtual hardware config.  <a href="#a38a5c9476de084724b89fda4ea26ae12"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
 <a class="el" href="interface_i_bandwidth_control.html">IBandwidthControl</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a15c8725d2d0bf1bc99d3fc2048dfe98a">bandwidthControl</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Bandwidth control manager.  <a href="#a15c8725d2d0bf1bc99d3fc2048dfe98a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
-<a class="el" href="interface_i_pci_device_attachment.html">IPciDeviceAttachment</a>[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a8f7afa64e0c829ca8ff10410bb2b0078">pciDeviceAssignments</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Array of PCI devices assigned to this machine, to get list of all PCI devices attached to the machine use <a class="el" href="interface_i_console.html#af219e20abfa2b2405572491e44975f23">IConsole::attachedPciDevices</a><b></b> attribute, as this attribute is intended to list only devices additional to what described in virtual hardware config.  <a href="#a8f7afa64e0c829ca8ff10410bb2b0078"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a08618a97a181c10f9113b3844d6ae577">tracingEnabled</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables the tracing facility in the VMM (including PDM devices + drivers).  <a href="#a08618a97a181c10f9113b3844d6ae577"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a2f4ec9af3f5705deed580ccba5a2e142">tracingConfig</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Tracepoint configuration to apply at startup when <a class="el" href="interface_i_machine.html#a08618a97a181c10f9113b3844d6ae577">IMachine::tracingEnabled</a><b></b> is true.  <a href="#a2f4ec9af3f5705deed580ccba5a2e142"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#acfa33f6952f420c0163dd2eefccc62ed">allowTracingToAccessVM</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables tracepoints in PDM devices and drivers to use the VMCPU or VM structures when firing off trace points.  <a href="#acfa33f6952f420c0163dd2eefccc62ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#aca5154cad0ba95af8d3ce358571222bc">autostartEnabled</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Enables autostart of the VM during system boot.  <a href="#aca5154cad0ba95af8d3ce358571222bc"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a9d371d975c607f0d3f81ab57459149df">autostartDelay</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Number of seconds to wait until the VM should be started during system boot.  <a href="#a9d371d975c607f0d3f81ab57459149df"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute <a class="el" href="_virtual_box_8idl.html#a03ad7f2af3ceb813a15cdc614db93c73">AutostopType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine.html#a724adf774f12d25744bbac488c7fe26e">autostopType</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Action type to do when the system is shutting down.  <a href="#a724adf774f12d25744bbac488c7fe26e"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>The <a class="el" href="interface_i_machine.html" title="The IMachine interface represents a virtual machine, or guest, created in VirtualBox.">IMachine</a> interface represents a virtual machine, or guest, created in VirtualBox. </p>
@@ -305,7 +339,7 @@ Public Attributes</h2></td></tr>
 <p>In order to change a machine setting, a session for this machine must be opened using one of the <a class="el" href="interface_i_machine.html#af28da645b00a821547d9cb8e92f8b7b0">IMachine::lockMachine</a><b></b> or <a class="el" href="interface_i_machine.html#a5f6e112de89f7e1d300738c9a055d5c9">IMachine::launchVMProcess</a><b></b> methods. After the machine has been successfully locked for a session, a mutable machine object needs to be queried from the session object and then the desired settings changes can be applied to the returned object using <a class="el" href="interface_i_machine.html" title="The IMachine interface represents a virtual machine, or guest, created in VirtualBox.">IMachine</a> attributes and methods. See the <a class="el" href="interface_i_session.html">ISession</a><b></b> interface description for more information about sessions.</p>
 <p>Note that <a class="el" href="interface_i_machine.html" title="The IMachine interface represents a virtual machine, or guest, created in VirtualBox.">IMachine</a> does not provide methods to control virtual machine execution (such as start the machine, or power it down) -- these methods are grouped in a separate interface called <a class="el" href="interface_i_console.html">IConsole</a><b></b>.</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_session.html">ISession</a><b></b>, <a class="el" href="interface_i_console.html">IConsole</a><b></b></dd></dl>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{5EAA9319-62FC-4B0A-843C-0CB1940F8A91}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{22781AF3-1C96-4126-9EDF-67A020E0E858}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="af28da645b00a821547d9cb8e92f8b7b0"></a><!-- doxytag: member="IMachine::lockMachine" ref="af28da645b00a821547d9cb8e92f8b7b0" args="(in ISession session, in LockType lockType)" -->
 <div class="memitem">
@@ -446,7 +480,7 @@ Release the write lock by calling <a class="el" href="interface_i_session.html#a
 <li>
 <code>"sdl"</code>: VirtualBox SDL front-end </li>
 <li>
-<code>"emergencystop"</code>: reserved value, used for aborting the currently running VM or session owner. In this case the <em>session</em> parameter may be <code>NULL</code> (if it is non-null it isn't used in any way), and the <em>progress</em> return value will be always NULL. The operation completes immediately. </li>
+<code>"emergencystop"</code>: reserved value, used for aborting the currently running VM or session owner. In this case the <em>session</em> parameter may be <code>null</code> (if it is non-null it isn't used in any way), and the <em>progress</em> return value will be always <code>null</code>. The operation completes immediately. </li>
 </ul>
 </td></tr>
     <tr><td valign="top"></td><td valign="top"><em>environment</em>&nbsp;</td><td>Environment to pass to the VM process.</td></tr>
@@ -622,7 +656,81 @@ Only for storage devices supporting removable media (such as DVDs and floppies),
     <tr><td valign="top"></td><td valign="top"><em>controllerPort</em>&nbsp;</td><td>Port to attach the device to. For an IDE controller, 0 specifies the primary controller and 1 specifies the secondary controller. For a SCSI controller, this must range from 0 to 15; for a SATA controller, from 0 to 29; for an SAS controller, from 0 to 7.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>device</em>&nbsp;</td><td>Device slot in the given port to attach the device to. This is only relevant for IDE controllers, for which 0 specifies the master device and 1 specifies the slave device. For all other controller types, this must be 0.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Device type of the attached device. For media opened by <a class="el" href="interface_i_virtual_box.html#ae67fffa98f9a73b7f6b4365978658d9e">IVirtualBox::openMedium</a><b></b>, this must match the device type specified there.</td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>medium</em>&nbsp;</td><td>Medium to mount or NULL for an empty drive.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>medium</em>&nbsp;</td><td>Medium to mount or <code>null</code> for an empty drive.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
+<tr>
+<td>E_INVALIDARG </td><td>SATA device, SATA port, IDE port or IDE slot out of range, or file or UUID not found.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga6660966bcbac1dcdedef5358eaf85e31">VBOX_E_INVALID_OBJECT_STATE </a> </td><td>Machine must be registered before media can be attached.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga299db1dfa415a02742a11db2a544e364">VBOX_E_INVALID_VM_STATE </a> </td><td>Invalid machine state.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga81aa5d056e6fdac2d4f2fc4089957253">VBOX_E_OBJECT_IN_USE </a> </td><td>A medium is already attached to this or another virtual machine.   </td></tr>
+</table>
+</dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>You cannot attach a device to a newly created machine until this machine's settings are saved to disk using <a class="el" href="interface_i_machine.html#a2eb47e1d878566569b26893cc12bd8e1">saveSettings</a><b></b>.</dd>
+<dd>
+If the medium is being attached indirectly, a new differencing medium will implicitly be created for it and attached instead. If the changes made to the machine settings (including this indirect attachment) are later cancelled using <a class="el" href="interface_i_machine.html#a341ac035501a0c168ad9571bbe86eb02">discardSettings</a><b></b>, this implicitly created differencing medium will implicitly be deleted. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad4f8c3614866c1fe78c30357d6e70146"></a><!-- doxytag: member="IMachine::attachDeviceWithoutMedium" ref="ad4f8c3614866c1fe78c30357d6e70146" args="(in wstring name, in long controllerPort, in long device, in DeviceType type)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IMachine::attachDeviceWithoutMedium </td>
+          <td>(</td>
+          <td class="paramtype">in wstring&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>controllerPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in <a class="el" href="_virtual_box_8idl.html#ad258d4c51629346fceac4679b3209ad9">DeviceType</a>&nbsp;</td>
+          <td class="paramname"> <em>type</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Attaches a device and optionally mounts a medium to the given storage controller (<a class="el" href="interface_i_storage_controller.html">IStorageController</a><b></b>, identified by <em>name</em>), at the indicated port and device. </p>
+<p>This method is intended for managing storage devices in general while a machine is powered off. It can be used to attach and detach fixed and removable media. The following kind of media can be attached to a machine: </p>
+<ul>
+<li>
+For fixed and removable media, you can pass in a medium that was previously opened using <a class="el" href="interface_i_virtual_box.html#ae67fffa98f9a73b7f6b4365978658d9e">IVirtualBox::openMedium</a><b></b>.  </li>
+<li>
+Only for storage devices supporting removable media (such as DVDs and floppies) with an empty drive or one of the medium objects listed in the <a class="el" href="interface_i_host.html#a285b1b89c35b67a0bb52b547f5d3ebb3">IHost::DVDDrives</a><b></b> and <a class="el" href="interface_i_host.html#ade0e3923823c0c8d96e7eac39748122c">IHost::floppyDrives</a><b></b> arrays to indicate a host drive. For removable devices, you can also use <a class="el" href="interface_i_machine.html#a1c82306d3603e3bb40f6ab7467d4ff18">IMachine::mountMedium</a><b></b> to change the media while the machine is running.  </li>
+</ul>
+<p>In a VM's default configuration of virtual machines, the secondary master of the IDE controller is used for a CD/DVD drive. <a class="el" href="interface_i_medium_attachment.html">IMediumAttachment</a><b></b> will appear in the machine's list of medium attachments (see <a class="el" href="interface_i_machine.html#aef972b7f8785c3a3f98a592a246ca4b4">IMachine::mediumAttachments</a><b></b>).</p>
+<p>See <a class="el" href="interface_i_medium.html">IMedium</a><b></b> and <a class="el" href="interface_i_medium_attachment.html">IMediumAttachment</a><b></b> for more information about attaching media.</p>
+<p>The specified device slot must not have a device attached to it, or this method will fail.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Name of the storage controller to attach the device to.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>controllerPort</em>&nbsp;</td><td>Port to attach the device to. For an IDE controller, 0 specifies the primary controller and 1 specifies the secondary controller. For a SCSI controller, this must range from 0 to 15; for a SATA controller, from 0 to 29; for an SAS controller, from 0 to 7.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>device</em>&nbsp;</td><td>Device slot in the given port to attach the device to. This is only relevant for IDE controllers, for which 0 specifies the master device and 1 specifies the slave device. For all other controller types, this must be 0.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>type</em>&nbsp;</td><td>Device type of the attached device. For media opened by <a class="el" href="interface_i_virtual_box.html#ae67fffa98f9a73b7f6b4365978658d9e">IVirtualBox::openMedium</a><b></b>, this must match the device type specified there.</td></tr>
   </table>
   </dd>
 </dl>
@@ -690,7 +798,7 @@ If the medium is being attached indirectly, a new differencing medium will impli
 <tr>
 <td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga80982f93e26785a807034131de6cfba5">VBOX_E_OBJECT_NOT_FOUND </a> </td><td>No medium attached to given slot/bus.   </td></tr>
 <tr>
-<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#gaa4ba5e3fab3fe318c790d9d0b500c102">VBOX_E_NOT_SUPPORTED </a> </td><td>Medium format does not support storage deletion.   </td></tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#gaa4ba5e3fab3fe318c790d9d0b500c102">VBOX_E_NOT_SUPPORTED </a> </td><td>Medium format does not support storage deletion (only for implicitly created differencing media, should not happen).   </td></tr>
 </table>
 </dd></dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>You cannot detach a device from a running machine.</dd>
@@ -882,6 +990,67 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 
 </div>
 </div>
+<a class="anchor" id="aa02655252429d66d75188bcc56e41e7d"></a><!-- doxytag: member="IMachine::setAutoDiscardForDevice" ref="aa02655252429d66d75188bcc56e41e7d" args="(in wstring name, in long controllerPort, in long device, in boolean discard)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IMachine::setAutoDiscardForDevice </td>
+          <td>(</td>
+          <td class="paramtype">in wstring&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>controllerPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in boolean&nbsp;</td>
+          <td class="paramname"> <em>discard</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sets a flag in the device information which indicates that the medium supports discarding unsused blocks (called trimming for SATA or unmap for SCSI devices) .This may or may not be supported by a particular drive, and is silently ignored in the latter case. </p>
+<p>At the moment only hard disks (which is a misnomer in this context) accept this setting. Changing the setting while the VM is running is forbidden. The device must already exist; see <a class="el" href="interface_i_machine.html#a8e51fafec7442a48a86a59edec5ec217">IMachine::attachDevice</a><b></b> for how to attach a new device.</p>
+<p>The <em>controllerPort</em> and <em>device</em> parameters specify the device slot and have have the same meaning as with <a class="el" href="interface_i_machine.html#a8e51fafec7442a48a86a59edec5ec217">IMachine::attachDevice</a><b></b>.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Name of the storage controller.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>controllerPort</em>&nbsp;</td><td>Storage controller port.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>device</em>&nbsp;</td><td>Device slot in the given port.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>discard</em>&nbsp;</td><td>New value for the discard device flag.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
+<tr>
+<td>E_INVALIDARG </td><td>SATA device, SATA port, SCSI port out of range.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga6660966bcbac1dcdedef5358eaf85e31">VBOX_E_INVALID_OBJECT_STATE </a> </td><td>Attempt to modify an unregistered virtual machine.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga299db1dfa415a02742a11db2a544e364">VBOX_E_INVALID_VM_STATE </a> </td><td>Invalid machine state.   </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa8ed8a03befa534d4df3c5342bf7fcf8"></a><!-- doxytag: member="IMachine::setBandwidthGroupForDevice" ref="aa8ed8a03befa534d4df3c5342bf7fcf8" args="(in wstring name, in long controllerPort, in long device, in IBandwidthGroup bandwidthGroup)" -->
 <div class="memitem">
 <div class="memproto">
@@ -927,7 +1096,7 @@ Detaching differencing media implicitly created by <a class="el" href="interface
     <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Name of the storage controller.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>controllerPort</em>&nbsp;</td><td>Storage controller port.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>device</em>&nbsp;</td><td>Device slot in the given port.</td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>bandwidthGroup</em>&nbsp;</td><td>New value for the bandwidth group or NULL for no group.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>bandwidthGroup</em>&nbsp;</td><td>New value for the bandwidth group or <code>null</code> for no group.</td></tr>
   </table>
   </dd>
 </dl>
@@ -938,6 +1107,126 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 <td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga6660966bcbac1dcdedef5358eaf85e31">VBOX_E_INVALID_OBJECT_STATE </a> </td><td>Attempt to modify an unregistered virtual machine.   </td></tr>
 <tr>
 <td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga299db1dfa415a02742a11db2a544e364">VBOX_E_INVALID_VM_STATE </a> </td><td>Invalid machine state.   </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a94c2637db1f0f0fe4a687a4c2c245218"></a><!-- doxytag: member="IMachine::setNoBandwidthGroupForDevice" ref="a94c2637db1f0f0fe4a687a4c2c245218" args="(in wstring name, in long controllerPort, in long device)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IMachine::setNoBandwidthGroupForDevice </td>
+          <td>(</td>
+          <td class="paramtype">in wstring&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>controllerPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>device</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sets no bandwidth group for an existing storage device. </p>
+<p>The device must already exist; see <a class="el" href="interface_i_machine.html#a8e51fafec7442a48a86a59edec5ec217">IMachine::attachDevice</a><b></b> for how to attach a new device. The <em>controllerPort</em> and <em>device</em> parameters specify the device slot and have have the same meaning as with <a class="el" href="interface_i_machine.html#a8e51fafec7442a48a86a59edec5ec217">IMachine::attachDevice</a><b></b>.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Name of the storage controller.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>controllerPort</em>&nbsp;</td><td>Storage controller port.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>device</em>&nbsp;</td><td>Device slot in the given port.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
+<tr>
+<td>E_INVALIDARG </td><td>SATA device, SATA port, IDE port or IDE slot out of range.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga6660966bcbac1dcdedef5358eaf85e31">VBOX_E_INVALID_OBJECT_STATE </a> </td><td>Attempt to modify an unregistered virtual machine.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga299db1dfa415a02742a11db2a544e364">VBOX_E_INVALID_VM_STATE </a> </td><td>Invalid machine state.   </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a1f3da9c7f26b4c630f3989f98b58515a"></a><!-- doxytag: member="IMachine::unmountMedium" ref="a1f3da9c7f26b4c630f3989f98b58515a" args="(in wstring name, in long controllerPort, in long device, in boolean force)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IMachine::unmountMedium </td>
+          <td>(</td>
+          <td class="paramtype">in wstring&nbsp;</td>
+          <td class="paramname"> <em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>controllerPort</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in long&nbsp;</td>
+          <td class="paramname"> <em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">in boolean&nbsp;</td>
+          <td class="paramname"> <em>force</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Unmounts any currently mounted medium (<a class="el" href="interface_i_medium.html">IMedium</a><b></b>, identified by the given UUID <em>id</em>) to the given storage controller (<a class="el" href="interface_i_storage_controller.html">IStorageController</a><b></b>, identified by <em>name</em>), at the indicated port and device. </p>
+<p>The device must already exist;</p>
+<p>This method is intended only for managing removable media, where the device is fixed but media is changeable at runtime (such as DVDs and floppies). It cannot be used for fixed media such as hard disks.</p>
+<p>The <em>controllerPort</em> and <em>device</em> parameters specify the device slot and have have the same meaning as with <a class="el" href="interface_i_machine.html#a8e51fafec7442a48a86a59edec5ec217">IMachine::attachDevice</a><b></b>.</p>
+<p>The specified device slot must have a medium mounted, which will be unmounted. If there is no mounted medium it will do nothing. See <a class="el" href="interface_i_medium.html">IMedium</a><b></b> for more detailed information about attaching/unmounting media.</p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Name of the storage controller to unmount the medium from.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>controllerPort</em>&nbsp;</td><td>Port to unmount the medium from.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>device</em>&nbsp;</td><td>Device slot in the given port to unmount the medium from.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>force</em>&nbsp;</td><td>Allows to force unmount of a medium which is locked by the device slot in the given port medium is attached to.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
+<tr>
+<td>E_INVALIDARG </td><td>SATA device, SATA port, IDE port or IDE slot out of range.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga6660966bcbac1dcdedef5358eaf85e31">VBOX_E_INVALID_OBJECT_STATE </a> </td><td>Attempt to unmount medium that is not removeable - not dvd or floppy.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga299db1dfa415a02742a11db2a544e364">VBOX_E_INVALID_VM_STATE </a> </td><td>Invalid machine state.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga81aa5d056e6fdac2d4f2fc4089957253">VBOX_E_OBJECT_IN_USE </a> </td><td>Medium already attached to this or another virtual machine.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga80982f93e26785a807034131de6cfba5">VBOX_E_OBJECT_NOT_FOUND </a> </td><td>Medium not attached to specified port, device, controller.   </td></tr>
 </table>
 </dd></dl>
 
@@ -997,7 +1286,7 @@ Detaching differencing media implicitly created by <a class="el" href="interface
     <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>Name of the storage controller to attach the medium to.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>controllerPort</em>&nbsp;</td><td>Port to attach the medium to.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>device</em>&nbsp;</td><td>Device slot in the given port to attach the medium to.</td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>medium</em>&nbsp;</td><td>Medium to mount or NULL for an empty drive.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>medium</em>&nbsp;</td><td>Medium to mount or <code>null</code> for an empty drive.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>force</em>&nbsp;</td><td>Allows to force unmount/mount of a medium which is locked by the device slot in the given port to attach the medium to.</td></tr>
   </table>
   </dd>
@@ -1152,12 +1441,12 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 
 </div>
 </div>
-<a class="anchor" id="aac0abee269e495a4665f5b2d4956e9cd"></a><!-- doxytag: member="IMachine::attachHostPciDevice" ref="aac0abee269e495a4665f5b2d4956e9cd" args="(in long hostAddress, in long desiredGuestAddress, in boolean tryToUnbind)" -->
+<a class="anchor" id="a2640706ef6d61ac1d430199d162035ae"></a><!-- doxytag: member="IMachine::attachHostPCIDevice" ref="a2640706ef6d61ac1d430199d162035ae" args="(in long hostAddress, in long desiredGuestAddress, in boolean tryToUnbind)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IMachine::attachHostPciDevice </td>
+          <td class="memname">void IMachine::attachHostPCIDevice </td>
           <td>(</td>
           <td class="paramtype">in long&nbsp;</td>
           <td class="paramname"> <em>hostAddress</em>, </td>
@@ -1184,7 +1473,7 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 <div class="memdoc">
 
 <p>Attaches host PCI device with the given (host) PCI address to the PCI bus of the virtual machine. </p>
-<p>Please note, that this operation is two phase, as real attachment will happen when VM will start, and most information will be delivered as <a class="el" href="interface_i_host_pci_device_plug_event.html" title="Notification when host PCI device is plugged/unplugged.">IHostPciDevicePlugEvent</a> on <a class="el" href="interface_i_virtual_box.html" title="The IVirtualBox interface represents the main interface exposed by the product that provides virtual ...">IVirtualBox</a> event source.</p>
+<p>Please note, that this operation is two phase, as real attachment will happen when VM will start, and most information will be delivered as <a class="el" href="interface_i_host_p_c_i_device_plug_event.html" title="Notification when host PCI device is plugged/unplugged.">IHostPCIDevicePlugEvent</a> on <a class="el" href="interface_i_virtual_box.html" title="The IVirtualBox interface represents the main interface exposed by the product that provides virtual ...">IVirtualBox</a> event source.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>hostAddress</em>&nbsp;</td><td>Address of the host PCI device.</td></tr>
@@ -1202,16 +1491,16 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 <td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#gaa4ba5e3fab3fe318c790d9d0b500c102">VBOX_E_NOT_SUPPORTED </a> </td><td>Hardware or host OS doesn't allow PCI device passthrought.   </td></tr>
 </table>
 </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_host_pci_device_plug_event.html">IHostPciDevicePlugEvent</a><b></b> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_host_p_c_i_device_plug_event.html">IHostPCIDevicePlugEvent</a><b></b> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ac7c33d85adb6c14b9d99976a8d408e2f"></a><!-- doxytag: member="IMachine::detachHostPciDevice" ref="ac7c33d85adb6c14b9d99976a8d408e2f" args="(in long hostAddress)" -->
+<a class="anchor" id="a6b94280b4763b7522c4003b095a463d2"></a><!-- doxytag: member="IMachine::detachHostPCIDevice" ref="a6b94280b4763b7522c4003b095a463d2" args="(in long hostAddress)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IMachine::detachHostPciDevice </td>
+          <td class="memname">void IMachine::detachHostPCIDevice </td>
           <td>(</td>
           <td class="paramtype">in long&nbsp;</td>
           <td class="paramname"> <em>hostAddress</em></td>
@@ -1223,7 +1512,7 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 <div class="memdoc">
 
 <p>Detach host PCI device from the virtual machine. </p>
-<p>Also HostPciDevicePlugEvent on <a class="el" href="interface_i_virtual_box.html" title="The IVirtualBox interface represents the main interface exposed by the product that provides virtual ...">IVirtualBox</a> event source will be delivered. As currently we don't support hot device unplug, <a class="el" href="interface_i_host_pci_device_plug_event.html" title="Notification when host PCI device is plugged/unplugged.">IHostPciDevicePlugEvent</a> event is delivered immediately.</p>
+<p>Also HostPCIDevicePlugEvent on <a class="el" href="interface_i_virtual_box.html" title="The IVirtualBox interface represents the main interface exposed by the product that provides virtual ...">IVirtualBox</a> event source will be delivered. As currently we don't support hot device unplug, <a class="el" href="interface_i_host_p_c_i_device_plug_event.html" title="Notification when host PCI device is plugged/unplugged.">IHostPCIDevicePlugEvent</a> event is delivered immediately.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>hostAddress</em>&nbsp;</td><td>Address of the host PCI device.</td></tr>
@@ -1241,7 +1530,7 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 <td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#gaa4ba5e3fab3fe318c790d9d0b500c102">VBOX_E_NOT_SUPPORTED </a> </td><td>Hardware or host OS doesn't allow PCI device passthrought.   </td></tr>
 </table>
 </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_host_pci_device_plug_event.html">IHostPciDevicePlugEvent</a><b></b> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_i_host_p_c_i_device_plug_event.html">IHostPCIDevicePlugEvent</a><b></b> </dd></dl>
 
 </div>
 </div>
@@ -1408,10 +1697,12 @@ Detaching differencing media implicitly created by <a class="el" href="interface
 </div>
 <div class="memdoc">
 
-<p>Removes a storage controller from the machine. </p>
+<p>Removes a storage controller from the machine with all devices attached to it. </p>
 <dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
 <tr>
-<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga80982f93e26785a807034131de6cfba5">VBOX_E_OBJECT_NOT_FOUND </a> </td><td>A storage controller with given name doesn't exist.  </td></tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga80982f93e26785a807034131de6cfba5">VBOX_E_OBJECT_NOT_FOUND </a> </td><td>A storage controller with given name doesn't exist.   </td></tr>
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#gaa4ba5e3fab3fe318c790d9d0b500c102">VBOX_E_NOT_SUPPORTED </a> </td><td>Medium format does not support storage deletion (only for implicitly created differencing media, should not happen).   </td></tr>
 </table>
 </dd></dl>
 
@@ -2014,7 +2305,7 @@ This method can be called outside the machine session and therefore it's a calle
 </dd></dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>The method sends <a class="el" href="interface_i_machine_data_changed_event.html">IMachineDataChangedEvent</a><b></b> notification event after the configuration has been successfully saved (only for registered machines).</dd>
 <dd>
-Calling this method is only valid on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b> and on new machines created by <a class="el" href="interface_i_virtual_box.html#a15b6b59f23252430fcf2a56e8b69459b">IVirtualBox::createMachine</a><b></b> but not yet registered, or on unregistered machines after calling <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">IMachine::unregister</a><b></b>. </dd></dl>
+Calling this method is only valid on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b> and on new machines created by <a class="el" href="interface_i_virtual_box.html#aabb76f2d305052b305ccd78d18b05ab8">IVirtualBox::createMachine</a><b></b> but not yet registered, or on unregistered machines after calling <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">IMachine::unregister</a><b></b>. </dd></dl>
 
 </div>
 </div>
@@ -2039,7 +2330,7 @@ Calling this method is only valid on instances returned by <a class="el" href="i
 <td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga299db1dfa415a02742a11db2a544e364">VBOX_E_INVALID_VM_STATE </a> </td><td>Virtual machine is not mutable.  </td></tr>
 </table>
 </dd></dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>Calling this method is only valid on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b> and on new machines created by <a class="el" href="interface_i_virtual_box.html#a15b6b59f23252430fcf2a56e8b69459b">IVirtualBox::createMachine</a><b></b> or opened by <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b> but not yet registered, or on unregistered machines after calling <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">IMachine::unregister</a><b></b>. </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>Calling this method is only valid on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b> and on new machines created by <a class="el" href="interface_i_virtual_box.html#aabb76f2d305052b305ccd78d18b05ab8">IVirtualBox::createMachine</a><b></b> or opened by <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b> but not yet registered, or on unregistered machines after calling <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">IMachine::unregister</a><b></b>. </dd></dl>
 
 </div>
 </div>
@@ -2130,7 +2421,7 @@ With "Full", the call will behave like with "DetachAllReturnHardDisksOnly", exce
 
 <p>Deletes the files associated with this machine from disk. </p>
 <p>If medium objects are passed in with the <em>aMedia</em> argument, they are closed and, if closing was successful, their storage files are deleted as well. For convenience, this array of media files can be the same as the one returned from a previous <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">unregister</a><b></b> call.</p>
-<p>This method must only be called on machines which are either write-locked (i.e. on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b>) or on unregistered machines (i.e. not yet registered machines created by <a class="el" href="interface_i_virtual_box.html#a15b6b59f23252430fcf2a56e8b69459b">IVirtualBox::createMachine</a><b></b> or opened by <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b>, or after having called <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">unregister</a><b></b>).</p>
+<p>This method must only be called on machines which are either write-locked (i.e. on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b>) or on unregistered machines (i.e. not yet registered machines created by <a class="el" href="interface_i_virtual_box.html#aabb76f2d305052b305ccd78d18b05ab8">IVirtualBox::createMachine</a><b></b> or opened by <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b>, or after having called <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">unregister</a><b></b>).</p>
 <p>The following files will be deleted by this method: </p>
 <ul>
 <li>
@@ -2638,6 +2929,37 @@ Finally, the machine's own XML file will be deleted. </li>
 
 </div>
 </div>
+<a class="anchor" id="a2b5bc248ab2a58bdab899dd0ab0b6b10"></a><!-- doxytag: member="IMachine::deleteGuestProperty" ref="a2b5bc248ab2a58bdab899dd0ab0b6b10" args="(in wstring name)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IMachine::deleteGuestProperty </td>
+          <td>(</td>
+          <td class="paramtype">in wstring&nbsp;</td>
+          <td class="paramname"> <em>name</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Deletes an entry from the machine's guest property store. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>The name of the property to delete.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="user"><dt><b>Expected result codes:</b></dt><dd><table class="doxtable">
+<tr>
+<td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga299db1dfa415a02742a11db2a544e364">VBOX_E_INVALID_VM_STATE </a> </td><td>Machine session is not open.  </td></tr>
+</table>
+</dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a4ca2935cbe0568ead81e6c12bb04ef27"></a><!-- doxytag: member="IMachine::enumerateGuestProperties" ref="a4ca2935cbe0568ead81e6c12bb04ef27" args="(in wstring patterns, out wstring[] name, out wstring[] value, out long long[] timestamp, out wstring[] flags)" -->
 <div class="memitem">
 <div class="memproto">
@@ -2695,15 +3017,27 @@ Finally, the machine's own XML file will be deleted. </li>
 
 </div>
 </div>
-<a class="anchor" id="a10fac937f650c92c1877b00bf81f52d5"></a><!-- doxytag: member="IMachine::querySavedGuestSize" ref="a10fac937f650c92c1877b00bf81f52d5" args="(in unsigned long screenId, out unsigned long width, out unsigned long height)" -->
+<a class="anchor" id="a854f70590d1680516cfd2e3ff0e2d7b6"></a><!-- doxytag: member="IMachine::querySavedGuestScreenInfo" ref="a854f70590d1680516cfd2e3ff0e2d7b6" args="(in unsigned long screenId, out unsigned long originX, out unsigned long originY, out unsigned long width, out unsigned long height, out boolean enabled)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IMachine::querySavedGuestSize </td>
+          <td class="memname">void IMachine::querySavedGuestScreenInfo </td>
           <td>(</td>
           <td class="paramtype">in unsigned long&nbsp;</td>
           <td class="paramname"> <em>screenId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out unsigned long&nbsp;</td>
+          <td class="paramname"> <em>originX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out unsigned long&nbsp;</td>
+          <td class="paramname"> <em>originY</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -2715,7 +3049,13 @@ Finally, the machine's own XML file will be deleted. </li>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">out unsigned long&nbsp;</td>
-          <td class="paramname"> <em>height</em></td><td>&nbsp;</td>
+          <td class="paramname"> <em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out boolean&nbsp;</td>
+          <td class="paramname"> <em>enabled</em></td><td>&nbsp;</td>
         </tr>
         <tr>
           <td></td>
@@ -2730,8 +3070,11 @@ Finally, the machine's own XML file will be deleted. </li>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>screenId</em>&nbsp;</td><td>Saved guest screen to query info from.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>originX</em>&nbsp;</td><td>The X position of the guest monitor top left corner.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>originY</em>&nbsp;</td><td>The Y position of the guest monitor top left corner.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>width</em>&nbsp;</td><td>Guest width at the time of the saved state was taken.</td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>height</em>&nbsp;</td><td>Guest height at the time of the saved state was taken. </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>height</em>&nbsp;</td><td>Guest height at the time of the saved state was taken.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>enabled</em>&nbsp;</td><td>Whether the monitor is enabled in the guest. </td></tr>
   </table>
   </dd>
 </dl>
@@ -3209,7 +3552,7 @@ Finally, the machine's own XML file will be deleted. </li>
 <div class="memdoc">
 
 <p>Creates a clone of this machine, either as a full clone (which means creating independent copies of the hard disk media, save states and so on), or as a linked clone (which uses its own differencing media, sharing the parent media with the source machine). </p>
-<p>The target machine object must have been created previously with <a class="el" href="interface_i_virtual_box.html#a15b6b59f23252430fcf2a56e8b69459b">IVirtualBox::createMachine</a><b></b>, and all the settings will be transferred except the VM name and the hardware UUID. You can set the VM name and the new hardware UUID when creating the target machine. The network MAC addresses are newly created for all newtwork adapters. You can change that behaviour with the options parameter. The operation is performed asynchronously, so the machine object will be not be usable until the <em>progress</em> object signals completion.</p>
+<p>The target machine object must have been created previously with <a class="el" href="interface_i_virtual_box.html#aabb76f2d305052b305ccd78d18b05ab8">IVirtualBox::createMachine</a><b></b>, and all the settings will be transferred except the VM name and the hardware UUID. You can set the VM name and the new hardware UUID when creating the target machine. The network MAC addresses are newly created for all newtwork adapters. You can change that behaviour with the options parameter. The operation is performed asynchronously, so the machine object will be not be usable until the <em>progress</em> object signals completion.</p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>target</em>&nbsp;</td><td>Target machine object.</td></tr>
@@ -3351,6 +3694,22 @@ You cannot change the name of the machine if it is running, or if any file in th
 
 </div>
 </div>
+<a class="anchor" id="a27536e99a6b64ac628a9098037ab5d7c"></a><!-- doxytag: member="IMachine::groups" ref="a27536e99a6b64ac628a9098037ab5d7c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute wstring [] <a class="el" href="interface_i_machine.html#a27536e99a6b64ac628a9098037ab5d7c">IMachine::groups</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Array of machine group names of which this machine is a member. </p>
+<p><code>""</code> and <code>"/"</code> are synonyms for the toplevel group. Each group is only listed once, however they are listed in no particular order and there is no guarantee that there are no gaps in the group hierarchy (i.e. <code>"/group"</code>, <code>"/group/subgroup/subsubgroup"</code> is a valid result). </p>
+
+</div>
+</div>
 <a class="anchor" id="a8b78acadfe037c9153080fb055f46a7d"></a><!-- doxytag: member="IMachine::OSTypeId" ref="a8b78acadfe037c9153080fb055f46a7d" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -3396,7 +3755,7 @@ You cannot change the name of the machine if it is running, or if any file in th
 <div class="memdoc">
 
 <p>The UUID presented to the guest via memory tables, hardware and guest properties. </p>
-<p>For most VMs this is the same as the <em>id</em>, but for VMs which have been cloned or teleported it may be the same as the source VM. This latter is because the guest shouldn't notice that it was cloned or teleported. </p>
+<p>For most VMs this is the same as the <em>id</em>, but for VMs which have been cloned or teleported it may be the same as the source VM. The latter is because the guest shouldn't notice that it was cloned or teleported. </p>
 
 </div>
 </div>
@@ -3552,6 +3911,66 @@ You cannot change the name of the machine if it is running, or if any file in th
 
 </div>
 </div>
+<a class="anchor" id="a6c074dd14205c40258cabe8371d7cf38"></a><!-- doxytag: member="IMachine::VideoCaptureEnabled" ref="a6c074dd14205c40258cabe8371d7cf38" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#a6c074dd14205c40258cabe8371d7cf38">IMachine::VideoCaptureEnabled</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This setting determines whether VirtualBox uses video recording to record VM session. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2a27190c7ff1a7c1f904b63755405291"></a><!-- doxytag: member="IMachine::VideoCaptureFile" ref="a2a27190c7ff1a7c1f904b63755405291" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute wstring <a class="el" href="interface_i_machine.html#a2a27190c7ff1a7c1f904b63755405291">IMachine::VideoCaptureFile</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This setting determines what filename VirtualBox uses to save the recorded content. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae040b6ed6411f583298902d6f312f558"></a><!-- doxytag: member="IMachine::VideoCaptureWidth" ref="ae040b6ed6411f583298902d6f312f558" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute unsigned long <a class="el" href="interface_i_machine.html#ae040b6ed6411f583298902d6f312f558">IMachine::VideoCaptureWidth</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This setting determines what should be the horizontal resolution of recorded video. </p>
+
+</div>
+</div>
+<a class="anchor" id="a03fed1419ff7c4fa8194a28bfb87fbf8"></a><!-- doxytag: member="IMachine::VideoCaptureHeight" ref="a03fed1419ff7c4fa8194a28bfb87fbf8" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute unsigned long <a class="el" href="interface_i_machine.html#a03fed1419ff7c4fa8194a28bfb87fbf8">IMachine::VideoCaptureHeight</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This setting determines what should be the vertical resolution of recorded video. </p>
+
+</div>
+</div>
 <a class="anchor" id="a72dd7fe9c6a11670842c43d3e4b5736b"></a><!-- doxytag: member="IMachine::BIOSSettings" ref="a72dd7fe9c6a11670842c43d3e4b5736b" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -3582,12 +4001,12 @@ You cannot change the name of the machine if it is running, or if any file in th
 
 </div>
 </div>
-<a class="anchor" id="a8202a4b62434c672cf548b77289c1327"></a><!-- doxytag: member="IMachine::pointingHidType" ref="a8202a4b62434c672cf548b77289c1327" args="" -->
+<a class="anchor" id="a169cccf5417aa6c90b4515f45b919d2e"></a><!-- doxytag: member="IMachine::pointingHIDType" ref="a169cccf5417aa6c90b4515f45b919d2e" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute <a class="el" href="_virtual_box_8idl.html#a42cd5a4ffc015ed2b9bf4814763192d7">PointingHidType</a> <a class="el" href="interface_i_machine.html#a8202a4b62434c672cf548b77289c1327">IMachine::pointingHidType</a></td>
+          <td class="memname">attribute <a class="el" href="_virtual_box_8idl.html#ae904ea9e2892b3cb117b076fdf4c8897">PointingHIDType</a> <a class="el" href="interface_i_machine.html#a169cccf5417aa6c90b4515f45b919d2e">IMachine::pointingHIDType</a></td>
         </tr>
       </table>
 </div>
@@ -3598,12 +4017,12 @@ You cannot change the name of the machine if it is running, or if any file in th
 
 </div>
 </div>
-<a class="anchor" id="aa2c94828e8f26050204d786c91d67ff3"></a><!-- doxytag: member="IMachine::keyboardHidType" ref="aa2c94828e8f26050204d786c91d67ff3" args="" -->
+<a class="anchor" id="a837c6f223122e587ff00027346a9f148"></a><!-- doxytag: member="IMachine::keyboardHIDType" ref="a837c6f223122e587ff00027346a9f148" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute <a class="el" href="_virtual_box_8idl.html#ab9faee7c2278c67c9349f3e51fa2a48f">KeyboardHidType</a> <a class="el" href="interface_i_machine.html#aa2c94828e8f26050204d786c91d67ff3">IMachine::keyboardHidType</a></td>
+          <td class="memname">attribute <a class="el" href="_virtual_box_8idl.html#af8b91ad2ad35847326c7d9d4c9587142">KeyboardHIDType</a> <a class="el" href="interface_i_machine.html#a837c6f223122e587ff00027346a9f148">IMachine::keyboardHIDType</a></td>
         </tr>
       </table>
 </div>
@@ -3614,12 +4033,12 @@ You cannot change the name of the machine if it is running, or if any file in th
 
 </div>
 </div>
-<a class="anchor" id="af6f383879a66eb4f1c350f5dd5b3eac2"></a><!-- doxytag: member="IMachine::hpetEnabled" ref="af6f383879a66eb4f1c350f5dd5b3eac2" args="" -->
+<a class="anchor" id="a80240bbec6fb99a78aa903c5e4047287"></a><!-- doxytag: member="IMachine::HPETEnabled" ref="a80240bbec6fb99a78aa903c5e4047287" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#af6f383879a66eb4f1c350f5dd5b3eac2">IMachine::hpetEnabled</a></td>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#a80240bbec6fb99a78aa903c5e4047287">IMachine::HPETEnabled</a></td>
         </tr>
       </table>
 </div>
@@ -3796,7 +4215,7 @@ The specified path may not exist, it will be created when necessary. </dd></dl>
 <div class="memdoc">
 
 <p>Whether the settings of this machine have been modified (but neither yet saved nor discarded). </p>
-<dl class="note"><dt><b>Note:</b></dt><dd>Reading this property is only valid on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b> and on new machines created by <a class="el" href="interface_i_virtual_box.html#a15b6b59f23252430fcf2a56e8b69459b">IVirtualBox::createMachine</a><b></b> or opened by <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b> but not yet registered, or on unregistered machines after calling <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">IMachine::unregister</a><b></b>. For all other cases, the settings can never be modified.</dd>
+<dl class="note"><dt><b>Note:</b></dt><dd>Reading this property is only valid on instances returned by <a class="el" href="interface_i_session.html#a83d8f53d35e522599b192cac168c3495">ISession::machine</a><b></b> and on new machines created by <a class="el" href="interface_i_virtual_box.html#aabb76f2d305052b305ccd78d18b05ab8">IVirtualBox::createMachine</a><b></b> or opened by <a class="el" href="interface_i_virtual_box.html#a4b44e306db59ce580ae54d9f50a0686a">IVirtualBox::openMachine</a><b></b> but not yet registered, or on unregistered machines after calling <a class="el" href="interface_i_machine.html#accfecb34e04b20108c7bf8b469c32d5a">IMachine::unregister</a><b></b>. For all other cases, the settings can never be modified.</dd>
 <dd>
 For newly created unregistered machines, the value of this property is always <code>true</code> until <a class="el" href="interface_i_machine.html#a2eb47e1d878566569b26893cc12bd8e1">saveSettings</a><b></b> is called (no matter if any machine settings have been changed after the creation or not). For opened machines the value is set to <code>false</code> (and then follows to normal rules). </dd></dl>
 
@@ -3833,12 +4252,12 @@ For newly created unregistered machines, the value of this property is always <c
 
 </div>
 </div>
-<a class="anchor" id="ac1fbf27ec86d5529787088410eaaf073"></a><!-- doxytag: member="IMachine::sessionPid" ref="ac1fbf27ec86d5529787088410eaaf073" args="" -->
+<a class="anchor" id="a7380f79a10f9813dbced54f51004c6b5"></a><!-- doxytag: member="IMachine::sessionPID" ref="a7380f79a10f9813dbced54f51004c6b5" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute unsigned long <a class="el" href="interface_i_machine.html#ac1fbf27ec86d5529787088410eaaf073">IMachine::sessionPid</a></td>
+          <td class="memname">readonly attribute unsigned long <a class="el" href="interface_i_machine.html#a7380f79a10f9813dbced54f51004c6b5">IMachine::sessionPID</a></td>
         </tr>
       </table>
 </div>
@@ -4009,6 +4428,21 @@ an attempt to execute the machine is made </li>
 
 </div>
 </div>
+<a class="anchor" id="ab72d980217139256ae5601d2e6350d2a"></a><!-- doxytag: member="IMachine::dragAndDropMode" ref="ab72d980217139256ae5601d2e6350d2a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute <a class="el" href="_virtual_box_8idl.html#a37d006b98a1330f12bc97f781d87b346">DragAndDropMode</a> <a class="el" href="interface_i_machine.html#ab72d980217139256ae5601d2e6350d2a">IMachine::dragAndDropMode</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Which mode is allowed for drag'n'drop. </p>
+
+</div>
+</div>
 <a class="anchor" id="ae173701527dc449099b9681da27999ff"></a><!-- doxytag: member="IMachine::guestPropertyNotificationPatterns" ref="ae173701527dc449099b9681da27999ff" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -4085,7 +4519,8 @@ an attempt to execute the machine is made </li>
 <div class="memdoc">
 
 <p>The password to check for on the target teleporter. </p>
-<p>This is just a very basic measure to prevent simple hacks and operators accidentally beaming a virtual machine to the wrong place. </p>
+<p>This is just a very basic measure to prevent simple hacks and operators accidentally beaming a virtual machine to the wrong place.</p>
+<p>Note that you SET a plain text password while reading back a HASHED password. Setting a hashed password is currently not supported. </p>
 
 </div>
 </div>
@@ -4182,12 +4617,12 @@ an attempt to execute the machine is made </li>
 
 </div>
 </div>
-<a class="anchor" id="a66ee00362201c2fcd83d1b3adfd803cd"></a><!-- doxytag: member="IMachine::ioCacheEnabled" ref="a66ee00362201c2fcd83d1b3adfd803cd" args="" -->
+<a class="anchor" id="a9999c5c9eb8eecac98a45bde62fc3bce"></a><!-- doxytag: member="IMachine::IOCacheEnabled" ref="a9999c5c9eb8eecac98a45bde62fc3bce" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#a66ee00362201c2fcd83d1b3adfd803cd">IMachine::ioCacheEnabled</a></td>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#a9999c5c9eb8eecac98a45bde62fc3bce">IMachine::IOCacheEnabled</a></td>
         </tr>
       </table>
 </div>
@@ -4197,18 +4632,34 @@ an attempt to execute the machine is made </li>
 
 </div>
 </div>
-<a class="anchor" id="adda38f852b714c494790142ccb180689"></a><!-- doxytag: member="IMachine::ioCacheSize" ref="adda38f852b714c494790142ccb180689" args="" -->
+<a class="anchor" id="a596ae3cdd7eea9f92c79dddd4c738f6f"></a><!-- doxytag: member="IMachine::IOCacheSize" ref="a596ae3cdd7eea9f92c79dddd4c738f6f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute unsigned long <a class="el" href="interface_i_machine.html#adda38f852b714c494790142ccb180689">IMachine::ioCacheSize</a></td>
+          <td class="memname">attribute unsigned long <a class="el" href="interface_i_machine.html#a596ae3cdd7eea9f92c79dddd4c738f6f">IMachine::IOCacheSize</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>Maximum size of the I/O cache in MB. </p>
+
+</div>
+</div>
+<a class="anchor" id="a38a5c9476de084724b89fda4ea26ae12"></a><!-- doxytag: member="IMachine::PCIDeviceAssignments" ref="a38a5c9476de084724b89fda4ea26ae12" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute <a class="el" href="interface_i_p_c_i_device_attachment.html">IPCIDeviceAttachment</a> [] <a class="el" href="interface_i_machine.html#a38a5c9476de084724b89fda4ea26ae12">IMachine::PCIDeviceAssignments</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Array of PCI devices assigned to this machine, to get list of all PCI devices attached to the machine use <a class="el" href="interface_i_console.html#a6d41c200e67a37cdbc9c270317831774">IConsole::attachedPCIDevices</a><b></b> attribute, as this attribute is intended to list only devices additional to what described in virtual hardware config. </p>
+<p>Usually, this list keeps host's physical devices assigned to the particular machine. </p>
 
 </div>
 </div>
@@ -4227,24 +4678,103 @@ an attempt to execute the machine is made </li>
 
 </div>
 </div>
-<a class="anchor" id="a8f7afa64e0c829ca8ff10410bb2b0078"></a><!-- doxytag: member="IMachine::pciDeviceAssignments" ref="a8f7afa64e0c829ca8ff10410bb2b0078" args="" -->
+<a class="anchor" id="a08618a97a181c10f9113b3844d6ae577"></a><!-- doxytag: member="IMachine::tracingEnabled" ref="a08618a97a181c10f9113b3844d6ae577" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute <a class="el" href="interface_i_pci_device_attachment.html">IPciDeviceAttachment</a> [] <a class="el" href="interface_i_machine.html#a8f7afa64e0c829ca8ff10410bb2b0078">IMachine::pciDeviceAssignments</a></td>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#a08618a97a181c10f9113b3844d6ae577">IMachine::tracingEnabled</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Array of PCI devices assigned to this machine, to get list of all PCI devices attached to the machine use <a class="el" href="interface_i_console.html#af219e20abfa2b2405572491e44975f23">IConsole::attachedPciDevices</a><b></b> attribute, as this attribute is intended to list only devices additional to what described in virtual hardware config. </p>
-<p>Usually, this list keeps host's physical devices assigned to the particular machine. </p>
+<p>Enables the tracing facility in the VMM (including PDM devices + drivers). </p>
+<p>The VMM will consume about 0.5MB of more memory when enabled and there may be some extra overhead from tracepoints that are always enabled. </p>
+
+</div>
+</div>
+<a class="anchor" id="a2f4ec9af3f5705deed580ccba5a2e142"></a><!-- doxytag: member="IMachine::tracingConfig" ref="a2f4ec9af3f5705deed580ccba5a2e142" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute wstring <a class="el" href="interface_i_machine.html#a2f4ec9af3f5705deed580ccba5a2e142">IMachine::tracingConfig</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Tracepoint configuration to apply at startup when <a class="el" href="interface_i_machine.html#a08618a97a181c10f9113b3844d6ae577">IMachine::tracingEnabled</a><b></b> is true. </p>
+<p>The string specifies a space separated of tracepoint group names to enable. The special group 'all' enables all tracepoints. Check DBGFR3TracingConfig for more details on available tracepoint groups and such.</p>
+<p>Note that on hosts supporting DTrace (or similar), a lot of the tracepoints may be implemented exclusivly as DTrace probes. So, the effect of the same config may differ between Solaris and Windows for example. </p>
+
+</div>
+</div>
+<a class="anchor" id="acfa33f6952f420c0163dd2eefccc62ed"></a><!-- doxytag: member="IMachine::allowTracingToAccessVM" ref="acfa33f6952f420c0163dd2eefccc62ed" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#acfa33f6952f420c0163dd2eefccc62ed">IMachine::allowTracingToAccessVM</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enables tracepoints in PDM devices and drivers to use the VMCPU or VM structures when firing off trace points. </p>
+<p>This is especially useful with DTrace tracepoints, as it allows you to use the VMCPU or VM pointer to obtain useful information such as guest register state.</p>
+<p>This is disabled by default because devices and drivers normally has no business accessing the VMCPU or VM structures, and are therefore unable to get any pointers to these. </p>
+
+</div>
+</div>
+<a class="anchor" id="aca5154cad0ba95af8d3ce358571222bc"></a><!-- doxytag: member="IMachine::autostartEnabled" ref="aca5154cad0ba95af8d3ce358571222bc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_machine.html#aca5154cad0ba95af8d3ce358571222bc">IMachine::autostartEnabled</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Enables autostart of the VM during system boot. </p>
+
+</div>
+</div>
+<a class="anchor" id="a9d371d975c607f0d3f81ab57459149df"></a><!-- doxytag: member="IMachine::autostartDelay" ref="a9d371d975c607f0d3f81ab57459149df" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute unsigned long <a class="el" href="interface_i_machine.html#a9d371d975c607f0d3f81ab57459149df">IMachine::autostartDelay</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Number of seconds to wait until the VM should be started during system boot. </p>
+
+</div>
+</div>
+<a class="anchor" id="a724adf774f12d25744bbac488c7fe26e"></a><!-- doxytag: member="IMachine::autostopType" ref="a724adf774f12d25744bbac488c7fe26e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">attribute <a class="el" href="_virtual_box_8idl.html#a03ad7f2af3ceb813a15cdc614db93c73">AutostopType</a> <a class="el" href="interface_i_machine.html#a724adf774f12d25744bbac488c7fe26e">IMachine::autostopType</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Action type to do when the system is shutting down. </p>
 
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

@@ -46,8 +46,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Sets network configuration of the NAT engine.  <a href="#afdf3bfaa7d7fcaabca37434b084beaba"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#ab844d59120f485a7ed166cd2b9d7f1a1">getNetworkSettings</a> (out unsigned long mtu, out unsigned long sockSnd, out unsigned long sockRcv, out unsigned long TcpWndSnd, out unsigned long TcpWndRcv)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns network configuration of NAT engine.  <a href="#ab844d59120f485a7ed166cd2b9d7f1a1"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a34f691c531e24c3765812afdde7ff153">addRedirect</a> (in wstring name, in <a class="el" href="_virtual_box_8idl.html#a52ce78bb8340c168f0ae376543edc982">NATProtocol</a> proto, in wstring hostIp, in unsigned short hostPort, in wstring guestIp, in unsigned short guestPort)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adds a new NAT port-forwarding rule.  <a href="#a34f691c531e24c3765812afdde7ff153"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a88caf25441a01d61ceb755a96edb8fb4">addRedirect</a> (in wstring name, in <a class="el" href="_virtual_box_8idl.html#a52ce78bb8340c168f0ae376543edc982">NATProtocol</a> proto, in wstring <a class="el" href="interface_i_n_a_t_engine.html#a3e84c972acb2f97e1d9c84f43954afc4">hostIP</a>, in unsigned short hostPort, in wstring guestIP, in unsigned short guestPort)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Adds a new NAT port-forwarding rule.  <a href="#a88caf25441a01d61ceb755a96edb8fb4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#aea1e2de08a3bfc5288d4c2423ad78860">removeRedirect</a> (in wstring name)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Removes a port-forwarding rule that was previously registered.  <a href="#aea1e2de08a3bfc5288d4c2423ad78860"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
@@ -56,26 +56,26 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The network attribute of the NAT engine (the same value is used with built-in DHCP server to fill corresponding fields of DHCP leases).  <a href="#a17b8860569c40b6fd369f21eb539c7b1"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a3e84c972acb2f97e1d9c84f43954afc4">hostIP</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">IP of host interface to bind all opened sockets to.  <a href="#a3e84c972acb2f97e1d9c84f43954afc4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#ae96798be41f57536c0b1d80b86c42a8d">tftpPrefix</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">TFTP prefix attribute which is used with the built-in DHCP server to fill the corresponding fields of DHCP leases.  <a href="#ae96798be41f57536c0b1d80b86c42a8d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a918b311b98561d63529328803c51927b">tftpBootFile</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">TFTP boot file attribute which is used with the built-in DHCP server to fill the corresponding fields of DHCP leases.  <a href="#a918b311b98561d63529328803c51927b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a6ca78fbcf6110dc5b244f5cbd68a4541">tftpNextServer</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">TFTP server attribute which is used with the built-in DHCP server to fill the corresponding fields of DHCP leases.  <a href="#a6ca78fbcf6110dc5b244f5cbd68a4541"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a4983d7bb80ba770cdb50a0082e0bcab2">TFTPPrefix</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">TFTP prefix attribute which is used with the built-in DHCP server to fill the corresponding fields of DHCP leases.  <a href="#a4983d7bb80ba770cdb50a0082e0bcab2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a18dca49ddc5ed064f8aca01c4bbcb0d4">TFTPBootFile</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">TFTP boot file attribute which is used with the built-in DHCP server to fill the corresponding fields of DHCP leases.  <a href="#a18dca49ddc5ed064f8aca01c4bbcb0d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a77cd8385d8fbf1157344616f08c410c6">TFTPNextServer</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">TFTP server attribute which is used with the built-in DHCP server to fill the corresponding fields of DHCP leases.  <a href="#a77cd8385d8fbf1157344616f08c410c6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#ae2b85d5fa5a9017edefa952404dc43c3">aliasMode</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a69f57926ee3d2650a8a9dea20140a77c">dnsPassDomain</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the DHCP server should pass the DNS domain used by the host.  <a href="#a69f57926ee3d2650a8a9dea20140a77c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a06a95f391addc38b4957726cf9f45349">dnsProxy</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the DHCP server (and the DNS traffic by NAT) should pass the address of the DNS proxy and process traffic using DNS servers registered on the host.  <a href="#a06a95f391addc38b4957726cf9f45349"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a70eb997f60957b501ab34897bbb4622e">dnsUseHostResolver</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the DHCP server (and the DNS traffic by NAT) should pass the address of the DNS proxy and process traffic using the host resolver mechanism.  <a href="#a70eb997f60957b501ab34897bbb4622e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a342139e68b175c708ebbcc542c2eb091">DNSPassDomain</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the DHCP server should pass the DNS domain used by the host.  <a href="#a342139e68b175c708ebbcc542c2eb091"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a443e76dfb1e8c392814d5d643453e870">DNSProxy</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the DHCP server (and the DNS traffic by NAT) should pass the address of the DNS proxy and process traffic using DNS servers registered on the host.  <a href="#a443e76dfb1e8c392814d5d643453e870"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a0b2f8f80f274b8085c2a0629f3a53035">DNSUseHostResolver</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Whether the DHCP server (and the DNS traffic by NAT) should pass the address of the DNS proxy and process traffic using the host resolver mechanism.  <a href="#a0b2f8f80f274b8085c2a0629f3a53035"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_n_a_t_engine.html#a957156fb2ef30d4913a69eeb59338d8c">redirects</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Array of NAT port-forwarding rules in string representation, in the following format: "name,protocol id,host ip,host port,guest ip,guest port".  <a href="#a957156fb2ef30d4913a69eeb59338d8c"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Interface for managing a NAT engine which is used with a virtual machine. </p>
-<p>This allows for changing NAT behavior such as port-forwarding rules. This interface is used in the <a class="el" href="interface_i_network_adapter.html#ae3a47988c0192a40de69d6e5a432e70b">INetworkAdapter::natDriver</a><b></b> attribute. </p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{4B286616-EB03-11DE-B0FB-1701ECA42246}</code> </dd></dl>
+<p>This allows for changing NAT behavior such as port-forwarding rules. This interface is used in the <a class="el" href="interface_i_network_adapter.html#a71d8adf0108cdcf4928e62ce02a6dd69">INetworkAdapter::NATEngine</a><b></b> attribute. </p>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{26451B99-3B2D-4DCB-8E4B-D63654218175}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="afdf3bfaa7d7fcaabca37434b084beaba"></a><!-- doxytag: member="INATEngine::setNetworkSettings" ref="afdf3bfaa7d7fcaabca37434b084beaba" args="(in unsigned long mtu, in unsigned long sockSnd, in unsigned long sockRcv, in unsigned long TcpWndSnd, in unsigned long TcpWndRcv)" -->
 <div class="memitem">
@@ -182,7 +182,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a34f691c531e24c3765812afdde7ff153"></a><!-- doxytag: member="INATEngine::addRedirect" ref="a34f691c531e24c3765812afdde7ff153" args="(in wstring name, in NATProtocol proto, in wstring hostIp, in unsigned short hostPort, in wstring guestIp, in unsigned short guestPort)" -->
+<a class="anchor" id="a88caf25441a01d61ceb755a96edb8fb4"></a><!-- doxytag: member="INATEngine::addRedirect" ref="a88caf25441a01d61ceb755a96edb8fb4" args="(in wstring name, in NATProtocol proto, in wstring hostIP, in unsigned short hostPort, in wstring guestIP, in unsigned short guestPort)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -202,7 +202,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in wstring&nbsp;</td>
-          <td class="paramname"> <em>hostIp</em>, </td>
+          <td class="paramname"> <em>hostIP</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -214,7 +214,7 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">in wstring&nbsp;</td>
-          <td class="paramname"> <em>guestIp</em>, </td>
+          <td class="paramname"> <em>guestIP</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -236,9 +236,9 @@ Public Attributes</h2></td></tr>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"></td><td valign="top"><em>name</em>&nbsp;</td><td>The name of the rule. An empty name is acceptable, in which case the NAT engine auto-generates one using the other parameters.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>proto</em>&nbsp;</td><td>Protocol handled with the rule.</td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>hostIp</em>&nbsp;</td><td>IP of the host interface to which the rule should apply. An empty ip address is acceptable, in which case the NAT engine binds the handling socket to any interface.</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>hostIP</em>&nbsp;</td><td>IP of the host interface to which the rule should apply. An empty ip address is acceptable, in which case the NAT engine binds the handling socket to any interface.</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>hostPort</em>&nbsp;</td><td>The port number to listen on.</td></tr>
-    <tr><td valign="top"></td><td valign="top"><em>guestIp</em>&nbsp;</td><td>The IP address of the guest which the NAT engine will forward matching packets to. An empty IP address is acceptable, in which case the NAT engine will forward packets to the first DHCP lease (x.x.x.15).</td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>guestIP</em>&nbsp;</td><td>The IP address of the guest which the NAT engine will forward matching packets to. An empty IP address is acceptable, in which case the NAT engine will forward packets to the first DHCP lease (x.x.x.15).</td></tr>
     <tr><td valign="top"></td><td valign="top"><em>guestPort</em>&nbsp;</td><td>The port number to forward. </td></tr>
   </table>
   </dd>
@@ -304,12 +304,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae96798be41f57536c0b1d80b86c42a8d"></a><!-- doxytag: member="INATEngine::tftpPrefix" ref="ae96798be41f57536c0b1d80b86c42a8d" args="" -->
+<a class="anchor" id="a4983d7bb80ba770cdb50a0082e0bcab2"></a><!-- doxytag: member="INATEngine::TFTPPrefix" ref="a4983d7bb80ba770cdb50a0082e0bcab2" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute wstring <a class="el" href="interface_i_n_a_t_engine.html#ae96798be41f57536c0b1d80b86c42a8d">INATEngine::tftpPrefix</a></td>
+          <td class="memname">attribute wstring <a class="el" href="interface_i_n_a_t_engine.html#a4983d7bb80ba770cdb50a0082e0bcab2">INATEngine::TFTPPrefix</a></td>
         </tr>
       </table>
 </div>
@@ -319,12 +319,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a918b311b98561d63529328803c51927b"></a><!-- doxytag: member="INATEngine::tftpBootFile" ref="a918b311b98561d63529328803c51927b" args="" -->
+<a class="anchor" id="a18dca49ddc5ed064f8aca01c4bbcb0d4"></a><!-- doxytag: member="INATEngine::TFTPBootFile" ref="a18dca49ddc5ed064f8aca01c4bbcb0d4" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute wstring <a class="el" href="interface_i_n_a_t_engine.html#a918b311b98561d63529328803c51927b">INATEngine::tftpBootFile</a></td>
+          <td class="memname">attribute wstring <a class="el" href="interface_i_n_a_t_engine.html#a18dca49ddc5ed064f8aca01c4bbcb0d4">INATEngine::TFTPBootFile</a></td>
         </tr>
       </table>
 </div>
@@ -334,12 +334,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6ca78fbcf6110dc5b244f5cbd68a4541"></a><!-- doxytag: member="INATEngine::tftpNextServer" ref="a6ca78fbcf6110dc5b244f5cbd68a4541" args="" -->
+<a class="anchor" id="a77cd8385d8fbf1157344616f08c410c6"></a><!-- doxytag: member="INATEngine::TFTPNextServer" ref="a77cd8385d8fbf1157344616f08c410c6" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute wstring <a class="el" href="interface_i_n_a_t_engine.html#a6ca78fbcf6110dc5b244f5cbd68a4541">INATEngine::tftpNextServer</a></td>
+          <td class="memname">attribute wstring <a class="el" href="interface_i_n_a_t_engine.html#a77cd8385d8fbf1157344616f08c410c6">INATEngine::TFTPNextServer</a></td>
         </tr>
       </table>
 </div>
@@ -363,12 +363,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a69f57926ee3d2650a8a9dea20140a77c"></a><!-- doxytag: member="INATEngine::dnsPassDomain" ref="a69f57926ee3d2650a8a9dea20140a77c" args="" -->
+<a class="anchor" id="a342139e68b175c708ebbcc542c2eb091"></a><!-- doxytag: member="INATEngine::DNSPassDomain" ref="a342139e68b175c708ebbcc542c2eb091" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute boolean <a class="el" href="interface_i_n_a_t_engine.html#a69f57926ee3d2650a8a9dea20140a77c">INATEngine::dnsPassDomain</a></td>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_n_a_t_engine.html#a342139e68b175c708ebbcc542c2eb091">INATEngine::DNSPassDomain</a></td>
         </tr>
       </table>
 </div>
@@ -378,12 +378,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a06a95f391addc38b4957726cf9f45349"></a><!-- doxytag: member="INATEngine::dnsProxy" ref="a06a95f391addc38b4957726cf9f45349" args="" -->
+<a class="anchor" id="a443e76dfb1e8c392814d5d643453e870"></a><!-- doxytag: member="INATEngine::DNSProxy" ref="a443e76dfb1e8c392814d5d643453e870" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute boolean <a class="el" href="interface_i_n_a_t_engine.html#a06a95f391addc38b4957726cf9f45349">INATEngine::dnsProxy</a></td>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_n_a_t_engine.html#a443e76dfb1e8c392814d5d643453e870">INATEngine::DNSProxy</a></td>
         </tr>
       </table>
 </div>
@@ -393,12 +393,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a70eb997f60957b501ab34897bbb4622e"></a><!-- doxytag: member="INATEngine::dnsUseHostResolver" ref="a70eb997f60957b501ab34897bbb4622e" args="" -->
+<a class="anchor" id="a0b2f8f80f274b8085c2a0629f3a53035"></a><!-- doxytag: member="INATEngine::DNSUseHostResolver" ref="a0b2f8f80f274b8085c2a0629f3a53035" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute boolean <a class="el" href="interface_i_n_a_t_engine.html#a70eb997f60957b501ab34897bbb4622e">INATEngine::dnsUseHostResolver</a></td>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_n_a_t_engine.html#a0b2f8f80f274b8085c2a0629f3a53035">INATEngine::DNSUseHostResolver</a></td>
         </tr>
       </table>
 </div>
@@ -424,7 +424,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

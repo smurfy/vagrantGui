@@ -68,6 +68,15 @@
 <li>saveState()
 : <a class="el" href="interface_i_console.html#a6fe532c5267423f0a0d3f04da13019db">IConsole</a>
 </li>
+<li>seek()
+: <a class="el" href="interface_i_file.html#a15ebca8f10be9c916ddfda8493b321e5">IFile</a>
+</li>
+<li>setACL()
+: <a class="el" href="interface_i_file.html#afe40b15b4eb2dcef4dc45ef782e73842">IFile</a>
+</li>
+<li>setAutoDiscardForDevice()
+: <a class="el" href="interface_i_machine.html#aa02655252429d66d75188bcc56e41e7d">IMachine</a>
+</li>
 <li>setBandwidthGroupForDevice()
 : <a class="el" href="interface_i_machine.html#aa8ed8a03befa534d4df3c5342bf7fcf8">IMachine</a>
 </li>
@@ -108,11 +117,8 @@
 <li>setHWVirtExProperty()
 : <a class="el" href="interface_i_machine.html#a4e38cff5f3af00bdb490548a82ac7b44">IMachine</a>
 </li>
-<li>setIDEEmulationPort()
-: <a class="el" href="interface_i_storage_controller.html#a905893ae31e1f76e018e327b11d7f8c4">IStorageController</a>
-</li>
-<li>setIDs()
-: <a class="el" href="interface_i_medium.html#ac8b65ec862de84d76d9097b79bbca5e7">IMedium</a>
+<li>setIds()
+: <a class="el" href="interface_i_medium.html#ae80cb8c0dd6ce11b6c16a00871980f57">IMedium</a>
 </li>
 <li>setNetworkSettings()
 : <a class="el" href="interface_i_n_a_t_engine.html#afdf3bfaa7d7fcaabca37434b084beaba">INATEngine</a>
@@ -120,18 +126,18 @@
 <li>setNextOperation()
 : <a class="el" href="interface_i_progress.html#ab2a628ae0022d82637d332cb93b1643f">IProgress</a>
 </li>
+<li>setNoBandwidthGroupForDevice()
+: <a class="el" href="interface_i_machine.html#a94c2637db1f0f0fe4a687a4c2c245218">IMachine</a>
+</li>
 <li>setProcessed()
 : <a class="el" href="interface_i_event.html#a3c6dca949a20f509a58eedb31462cf16">IEvent</a>
-</li>
-<li>setProcessInput()
-: <a class="el" href="interface_i_guest.html#ac52add2b2b2c4b5874636f6bc3f6a392">IGuest</a>
 </li>
 <li>setProperties()
 : <a class="el" href="interface_i_medium.html#a34eea84f94452bce694f4f69f6ad9d24">IMedium</a>
 </li>
 <li>setProperty()
-: <a class="el" href="interface_i_medium.html#a5e4bfcfd8544ad0ea7e372f8ab424882">IMedium</a>
-, <a class="el" href="interface_i_network_adapter.html#ae80cba5047de8d9b764159d84954b1c6">INetworkAdapter</a>
+: <a class="el" href="interface_i_network_adapter.html#ae80cba5047de8d9b764159d84954b1c6">INetworkAdapter</a>
+, <a class="el" href="interface_i_medium.html#a5e4bfcfd8544ad0ea7e372f8ab424882">IMedium</a>
 </li>
 <li>setRegister()
 : <a class="el" href="interface_i_machine_debugger.html#a00e85339f5f30b804ac9aa18039e2afa">IMachineDebugger</a>
@@ -145,6 +151,9 @@
 <li>setSeamlessMode()
 : <a class="el" href="interface_i_display.html#afcb558d99cf7f18561162a0f2db2aeba">IDisplay</a>
 </li>
+<li>setSettingsSecret()
+: <a class="el" href="interface_i_virtual_box.html#a38fb6658059621ddffb5c5482bd63289">IVirtualBox</a>
+</li>
 <li>setStorageControllerBootable()
 : <a class="el" href="interface_i_machine.html#a5d4d1c7791274f8baaef6e341f029cd2">IMachine</a>
 </li>
@@ -152,7 +161,7 @@
 : <a class="el" href="interface_i_performance_collector.html#a434a1a92dc59e2bdaed255d61cfdf35b">IPerformanceCollector</a>
 </li>
 <li>setVideoModeHint()
-: <a class="el" href="interface_i_display.html#a92c7438e43a8885afe06262541f903aa">IDisplay</a>
+: <a class="el" href="interface_i_display.html#a1a4da65b9ad3775327dc9eec5e311cd3">IDisplay</a>
 </li>
 <li>setVisibleRegion()
 : <a class="el" href="interface_i_framebuffer.html#aac811856aac09ce54871faf9bf07950a">IFramebuffer</a>
@@ -172,9 +181,24 @@
 <li>stop()
 : <a class="el" href="interface_i_d_h_c_p_server.html#a6708e2b51a31e77cddd18357d84fadec">IDHCPServer</a>
 </li>
+<li>symlinkCreate()
+: <a class="el" href="interface_i_guest_session.html#af1c85274751bd9f6fcb35636915e8cc8">IGuestSession</a>
+</li>
+<li>symlinkExists()
+: <a class="el" href="interface_i_guest_session.html#a45c2503b61f587450b68f916779bd5ea">IGuestSession</a>
+</li>
+<li>symlinkRead()
+: <a class="el" href="interface_i_guest_session.html#ac9bf2337dc694021b93de32f23ad5e9f">IGuestSession</a>
+</li>
+<li>symlinkRemoveDirectory()
+: <a class="el" href="interface_i_guest_session.html#a5c19fc13e17244e208172fcfa130c929">IGuestSession</a>
+</li>
+<li>symlinkRemoveFile()
+: <a class="el" href="interface_i_guest_session.html#ae9c79980211bbaf387e4ae852bd2daf6">IGuestSession</a>
+</li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

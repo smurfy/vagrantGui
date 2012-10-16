@@ -1,5 +1,5 @@
 [OPTIONS]
-Compiled file=\home\vbox\tinderbox\4.1-sdk\out\linux.amd64\release\bin\sdk\docs\VirtualBoxAPI.chm
+Compiled file=\home\vbox\tinderbox\sdk\out\linux.amd64\release\bin\sdk\docs\VirtualBoxAPI.chm
 Compatibility=1.1
 Full-text search=Yes
 Contents file=index.hhc
@@ -111,6 +111,8 @@ interface_i_b_i_o_s_settings.html
 interface_i_b_i_o_s_settings-members.html
 interface_i_can_show_window_event.html
 interface_i_can_show_window_event-members.html
+interface_i_clipboard_mode_changed_event.html
+interface_i_clipboard_mode_changed_event-members.html
 interface_i_console.html
 interface_i_console-members.html
 interface_i_c_p_u_changed_event.html
@@ -119,8 +121,12 @@ interface_i_c_p_u_execution_cap_changed_event.html
 interface_i_c_p_u_execution_cap_changed_event-members.html
 interface_i_d_h_c_p_server.html
 interface_i_d_h_c_p_server-members.html
+interface_i_directory.html
+interface_i_directory-members.html
 interface_i_display.html
 interface_i_display-members.html
+interface_i_drag_and_drop_mode_changed_event.html
+interface_i_drag_and_drop_mode_changed_event-members.html
 interface_i_event.html
 interface_i_event-members.html
 interface_i_event_listener.html
@@ -143,14 +149,22 @@ interface_i_extra_data_can_change_event.html
 interface_i_extra_data_can_change_event-members.html
 interface_i_extra_data_changed_event.html
 interface_i_extra_data_changed_event-members.html
+interface_i_file.html
+interface_i_file-members.html
 interface_i_framebuffer.html
 interface_i_framebuffer-members.html
 interface_i_framebuffer_overlay.html
 interface_i_framebuffer_overlay-members.html
+interface_i_fs_obj_info.html
+interface_i_fs_obj_info-members.html
 interface_i_guest.html
 interface_i_guest-members.html
-interface_i_guest_dir_entry.html
-interface_i_guest_dir_entry-members.html
+interface_i_guest_directory.html
+interface_i_guest_directory-members.html
+interface_i_guest_file.html
+interface_i_guest_file-members.html
+interface_i_guest_fs_obj_info.html
+interface_i_guest_fs_obj_info-members.html
 interface_i_guest_keyboard_event.html
 interface_i_guest_keyboard_event-members.html
 interface_i_guest_monitor_changed_event.html
@@ -159,14 +173,18 @@ interface_i_guest_mouse_event.html
 interface_i_guest_mouse_event-members.html
 interface_i_guest_o_s_type.html
 interface_i_guest_o_s_type-members.html
+interface_i_guest_process.html
+interface_i_guest_process-members.html
 interface_i_guest_property_changed_event.html
 interface_i_guest_property_changed_event-members.html
+interface_i_guest_session.html
+interface_i_guest_session-members.html
 interface_i_host.html
 interface_i_host-members.html
 interface_i_host_network_interface.html
 interface_i_host_network_interface-members.html
-interface_i_host_pci_device_plug_event.html
-interface_i_host_pci_device_plug_event-members.html
+interface_i_host_p_c_i_device_plug_event.html
+interface_i_host_p_c_i_device_plug_event-members.html
 interface_i_host_u_s_b_device.html
 interface_i_host_u_s_b_device-members.html
 interface_i_host_u_s_b_device_filter.html
@@ -221,14 +239,16 @@ interface_i_parallel_port.html
 interface_i_parallel_port-members.html
 interface_i_parallel_port_changed_event.html
 interface_i_parallel_port_changed_event-members.html
-interface_i_pci_address.html
-interface_i_pci_address-members.html
-interface_i_pci_device_attachment.html
-interface_i_pci_device_attachment-members.html
+interface_i_p_c_i_address.html
+interface_i_p_c_i_address-members.html
+interface_i_p_c_i_device_attachment.html
+interface_i_p_c_i_device_attachment-members.html
 interface_i_performance_collector.html
 interface_i_performance_collector-members.html
 interface_i_performance_metric.html
 interface_i_performance_metric-members.html
+interface_i_process.html
+interface_i_process-members.html
 interface_i_progress.html
 interface_i_progress-members.html
 interface_i_reusable_event.html
@@ -308,7 +328,6 @@ globals.html
 globals_0x62.html
 globals_0x63.html
 globals_0x64.html
-globals_0x65.html
 globals_0x66.html
 globals_0x67.html
 globals_0x68.html
@@ -327,7 +346,6 @@ globals_eval.html
 globals_eval_0x62.html
 globals_eval_0x63.html
 globals_eval_0x64.html
-globals_eval_0x65.html
 globals_eval_0x66.html
 globals_eval_0x67.html
 globals_eval_0x68.html

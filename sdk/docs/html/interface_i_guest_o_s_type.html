@@ -56,41 +56,49 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended RAM size in Megabytes.  <a href="#a61f0bdf50477db57fc518942ae9b524a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#aeb7f6fe6127a6c89f98999e6caa0d50b">recommendedVRAM</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended video RAM size in Megabytes.  <a href="#aeb7f6fe6127a6c89f98999e6caa0d50b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a8c91fb9beb1617bd9cc71ec079bc3b9e">recommended2DVideoAcceleration</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if 2D video acceleration is recommended for this OS type.  <a href="#a8c91fb9beb1617bd9cc71ec079bc3b9e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#aa625e70b77b1d933fc3918ea9fcd715a">recommended3DAcceleration</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if 3D acceleration is recommended for this OS type.  <a href="#aa625e70b77b1d933fc3918ea9fcd715a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute long long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#ade924d5b076ec4c7d806ae1731026fa0">recommendedHDD</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended hard disk size in bytes.  <a href="#ade924d5b076ec4c7d806ae1731026fa0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
 <a class="el" href="_virtual_box_8idl.html#a96c97a415133544e2413087febd964b1">NetworkAdapterType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a50f2111ca1d1a09a06fe3e35110fb478">adapterType</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns recommended network adapter for this OS type.  <a href="#a50f2111ca1d1a09a06fe3e35110fb478"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a57cf2e4a4014408e2f7a7ddd4b76cbac">recommendedPae</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using PAE is recommended for this OS type.  <a href="#a57cf2e4a4014408e2f7a7ddd4b76cbac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a606bd2bc8ba31a6a31ad2ffbe11e1467">recommendedPAE</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using PAE is recommended for this OS type.  <a href="#a606bd2bc8ba31a6a31ad2ffbe11e1467"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
-<a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#afc167c9468bc88eee6250c0eaa7a49b8">recommendedDvdStorageController</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage controller type for DVD/CD drives.  <a href="#afc167c9468bc88eee6250c0eaa7a49b8"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a3ca9bbc7ea3f80e0496ad23c41a94845">recommendedDvdStorageBus</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage bus type for DVD/CD drives.  <a href="#a3ca9bbc7ea3f80e0496ad23c41a94845"></a><br/></td></tr>
+<a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#afaed4abf3306378a92641c036edd8db7">recommendedDVDStorageController</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage controller type for DVD/CD drives.  <a href="#afaed4abf3306378a92641c036edd8db7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a039c5d7be4250300138d9fd2bcc59c92">recommendedDVDStorageBus</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage bus type for DVD/CD drives.  <a href="#a039c5d7be4250300138d9fd2bcc59c92"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
-<a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a9c1703d240a7b7a37d577b6c885d5db6">recommendedHdStorageController</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage controller type for HD drives.  <a href="#a9c1703d240a7b7a37d577b6c885d5db6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a053cee25957162924f98a052809bc67f">recommendedHdStorageBus</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage bus type for HD drives.  <a href="#a053cee25957162924f98a052809bc67f"></a><br/></td></tr>
+<a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a1aec536ccd364b9f30cf6c8502d84eed">recommendedHDStorageController</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage controller type for HD drives.  <a href="#a1aec536ccd364b9f30cf6c8502d84eed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a8acc76a635752bc690f065d25fb32a24">recommendedHDStorageBus</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended storage bus type for HD drives.  <a href="#a8acc76a635752bc690f065d25fb32a24"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#afddb85483810aea160a6bf2c90259b55">FirmwareType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#aa8b14d5e79a78a4bd98b290ae35b303e">recommendedFirmware</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended firmware type.  <a href="#aa8b14d5e79a78a4bd98b290ae35b303e"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a496923304d5ff9c36bd4d961f6d4f2a6">recommendedUsbHid</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using USB Human Interface Devices, such as keyboard and mouse recommended.  <a href="#a496923304d5ff9c36bd4d961f6d4f2a6"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#aa7b8ba78a873146fa64cb7117d4a7148">recommendedHpet</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using HPET is recommended for this OS type.  <a href="#aa7b8ba78a873146fa64cb7117d4a7148"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a936b08f2189c77375a251602a5492cf3">recommendedUsbTablet</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using a USB Tablet is recommended.  <a href="#a936b08f2189c77375a251602a5492cf3"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#ac13ddd1f4ece69a24be378c346a1dfdf">recommendedRtcUseUtc</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if the RTC of this VM should be set to UTC.  <a href="#ac13ddd1f4ece69a24be378c346a1dfdf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a67eb04443ced186b0e26cdd68ec7cf79">recommendedUSBHID</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using USB Human Interface Devices, such as keyboard and mouse recommended.  <a href="#a67eb04443ced186b0e26cdd68ec7cf79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a573afbaf1c82a71723962cc839890cc6">recommendedHPET</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using HPET is recommended for this OS type.  <a href="#a573afbaf1c82a71723962cc839890cc6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#ae6e87a2ee23f715bdc3bcaa7d0ab65f7">recommendedUSBTablet</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if using a USB Tablet is recommended.  <a href="#ae6e87a2ee23f715bdc3bcaa7d0ab65f7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a2c4c3bc8d2742101b650e0f88dd095de">recommendedRTCUseUTC</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if the RTC of this VM should be set to UTC.  <a href="#a2c4c3bc8d2742101b650e0f88dd095de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="_virtual_box_8idl.html#a0c8eff86d82f71a0a7f2e99a4a702ffa">ChipsetType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a6ea18fc671f4de480fe41ff8c40929e5">recommendedChipset</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended chipset type.  <a href="#a6ea18fc671f4de480fe41ff8c40929e5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <br class="typebreak"/>
 <a class="el" href="_virtual_box_8idl.html#a315a68595f915d18fedc2af9e06c48ea">AudioControllerType</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a85165fbfd38ab4db0026d8968685c326">recommendedAudioController</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Recommended audio type.  <a href="#a85165fbfd38ab4db0026d8968685c326"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a46994fb90839744c78af096b03b140c1">recommendedFloppy</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> a floppy drive is recommended for this OS type.  <a href="#a46994fb90839744c78af096b03b140c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_guest_o_s_type.html#a8150bd5305bc866f1f458cf05bcba298">recommendedUSB</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> a USB controller is recommended for this OS type.  <a href="#a8150bd5305bc866f1f458cf05bcba298"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{432C1546-1354-4ABF-BF08-878A32A373F5}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{6D968F9A-858B-4C50-BF17-241F069E94C2}</code> </dd></dl>
 <hr/><h2>Member Data Documentation</h2>
 <a class="anchor" id="ad22e0bef1b1ee48a18ca4fd8fed11603"></a><!-- doxytag: member="IGuestOSType::familyId" ref="ad22e0bef1b1ee48a18ca4fd8fed11603" args="" -->
 <div class="memitem">
@@ -227,6 +235,36 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8c91fb9beb1617bd9cc71ec079bc3b9e"></a><!-- doxytag: member="IGuestOSType::recommended2DVideoAcceleration" ref="a8c91fb9beb1617bd9cc71ec079bc3b9e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a8c91fb9beb1617bd9cc71ec079bc3b9e">IGuestOSType::recommended2DVideoAcceleration</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns <code>true</code> if 2D video acceleration is recommended for this OS type. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa625e70b77b1d933fc3918ea9fcd715a"></a><!-- doxytag: member="IGuestOSType::recommended3DAcceleration" ref="aa625e70b77b1d933fc3918ea9fcd715a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#aa625e70b77b1d933fc3918ea9fcd715a">IGuestOSType::recommended3DAcceleration</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns <code>true</code> if 3D acceleration is recommended for this OS type. </p>
+
+</div>
+</div>
 <a class="anchor" id="ade924d5b076ec4c7d806ae1731026fa0"></a><!-- doxytag: member="IGuestOSType::recommendedHDD" ref="ade924d5b076ec4c7d806ae1731026fa0" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -257,12 +295,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a57cf2e4a4014408e2f7a7ddd4b76cbac"></a><!-- doxytag: member="IGuestOSType::recommendedPae" ref="a57cf2e4a4014408e2f7a7ddd4b76cbac" args="" -->
+<a class="anchor" id="a606bd2bc8ba31a6a31ad2ffbe11e1467"></a><!-- doxytag: member="IGuestOSType::recommendedPAE" ref="a606bd2bc8ba31a6a31ad2ffbe11e1467" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a57cf2e4a4014408e2f7a7ddd4b76cbac">IGuestOSType::recommendedPae</a></td>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a606bd2bc8ba31a6a31ad2ffbe11e1467">IGuestOSType::recommendedPAE</a></td>
         </tr>
       </table>
 </div>
@@ -272,12 +310,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afc167c9468bc88eee6250c0eaa7a49b8"></a><!-- doxytag: member="IGuestOSType::recommendedDvdStorageController" ref="afc167c9468bc88eee6250c0eaa7a49b8" args="" -->
+<a class="anchor" id="afaed4abf3306378a92641c036edd8db7"></a><!-- doxytag: member="IGuestOSType::recommendedDVDStorageController" ref="afaed4abf3306378a92641c036edd8db7" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a> <a class="el" href="interface_i_guest_o_s_type.html#afc167c9468bc88eee6250c0eaa7a49b8">IGuestOSType::recommendedDvdStorageController</a></td>
+          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a> <a class="el" href="interface_i_guest_o_s_type.html#afaed4abf3306378a92641c036edd8db7">IGuestOSType::recommendedDVDStorageController</a></td>
         </tr>
       </table>
 </div>
@@ -287,12 +325,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3ca9bbc7ea3f80e0496ad23c41a94845"></a><!-- doxytag: member="IGuestOSType::recommendedDvdStorageBus" ref="a3ca9bbc7ea3f80e0496ad23c41a94845" args="" -->
+<a class="anchor" id="a039c5d7be4250300138d9fd2bcc59c92"></a><!-- doxytag: member="IGuestOSType::recommendedDVDStorageBus" ref="a039c5d7be4250300138d9fd2bcc59c92" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a> <a class="el" href="interface_i_guest_o_s_type.html#a3ca9bbc7ea3f80e0496ad23c41a94845">IGuestOSType::recommendedDvdStorageBus</a></td>
+          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a> <a class="el" href="interface_i_guest_o_s_type.html#a039c5d7be4250300138d9fd2bcc59c92">IGuestOSType::recommendedDVDStorageBus</a></td>
         </tr>
       </table>
 </div>
@@ -302,12 +340,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9c1703d240a7b7a37d577b6c885d5db6"></a><!-- doxytag: member="IGuestOSType::recommendedHdStorageController" ref="a9c1703d240a7b7a37d577b6c885d5db6" args="" -->
+<a class="anchor" id="a1aec536ccd364b9f30cf6c8502d84eed"></a><!-- doxytag: member="IGuestOSType::recommendedHDStorageController" ref="a1aec536ccd364b9f30cf6c8502d84eed" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a> <a class="el" href="interface_i_guest_o_s_type.html#a9c1703d240a7b7a37d577b6c885d5db6">IGuestOSType::recommendedHdStorageController</a></td>
+          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#a30e41b568ef0e6e848e4879364f75972">StorageControllerType</a> <a class="el" href="interface_i_guest_o_s_type.html#a1aec536ccd364b9f30cf6c8502d84eed">IGuestOSType::recommendedHDStorageController</a></td>
         </tr>
       </table>
 </div>
@@ -317,12 +355,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a053cee25957162924f98a052809bc67f"></a><!-- doxytag: member="IGuestOSType::recommendedHdStorageBus" ref="a053cee25957162924f98a052809bc67f" args="" -->
+<a class="anchor" id="a8acc76a635752bc690f065d25fb32a24"></a><!-- doxytag: member="IGuestOSType::recommendedHDStorageBus" ref="a8acc76a635752bc690f065d25fb32a24" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a> <a class="el" href="interface_i_guest_o_s_type.html#a053cee25957162924f98a052809bc67f">IGuestOSType::recommendedHdStorageBus</a></td>
+          <td class="memname">readonly attribute <a class="el" href="_virtual_box_8idl.html#ab955ac5f95964be27366be7bbc8f3cf0">StorageBus</a> <a class="el" href="interface_i_guest_o_s_type.html#a8acc76a635752bc690f065d25fb32a24">IGuestOSType::recommendedHDStorageBus</a></td>
         </tr>
       </table>
 </div>
@@ -347,12 +385,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a496923304d5ff9c36bd4d961f6d4f2a6"></a><!-- doxytag: member="IGuestOSType::recommendedUsbHid" ref="a496923304d5ff9c36bd4d961f6d4f2a6" args="" -->
+<a class="anchor" id="a67eb04443ced186b0e26cdd68ec7cf79"></a><!-- doxytag: member="IGuestOSType::recommendedUSBHID" ref="a67eb04443ced186b0e26cdd68ec7cf79" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a496923304d5ff9c36bd4d961f6d4f2a6">IGuestOSType::recommendedUsbHid</a></td>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a67eb04443ced186b0e26cdd68ec7cf79">IGuestOSType::recommendedUSBHID</a></td>
         </tr>
       </table>
 </div>
@@ -362,12 +400,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa7b8ba78a873146fa64cb7117d4a7148"></a><!-- doxytag: member="IGuestOSType::recommendedHpet" ref="aa7b8ba78a873146fa64cb7117d4a7148" args="" -->
+<a class="anchor" id="a573afbaf1c82a71723962cc839890cc6"></a><!-- doxytag: member="IGuestOSType::recommendedHPET" ref="a573afbaf1c82a71723962cc839890cc6" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#aa7b8ba78a873146fa64cb7117d4a7148">IGuestOSType::recommendedHpet</a></td>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a573afbaf1c82a71723962cc839890cc6">IGuestOSType::recommendedHPET</a></td>
         </tr>
       </table>
 </div>
@@ -377,12 +415,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a936b08f2189c77375a251602a5492cf3"></a><!-- doxytag: member="IGuestOSType::recommendedUsbTablet" ref="a936b08f2189c77375a251602a5492cf3" args="" -->
+<a class="anchor" id="ae6e87a2ee23f715bdc3bcaa7d0ab65f7"></a><!-- doxytag: member="IGuestOSType::recommendedUSBTablet" ref="ae6e87a2ee23f715bdc3bcaa7d0ab65f7" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a936b08f2189c77375a251602a5492cf3">IGuestOSType::recommendedUsbTablet</a></td>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#ae6e87a2ee23f715bdc3bcaa7d0ab65f7">IGuestOSType::recommendedUSBTablet</a></td>
         </tr>
       </table>
 </div>
@@ -392,12 +430,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac13ddd1f4ece69a24be378c346a1dfdf"></a><!-- doxytag: member="IGuestOSType::recommendedRtcUseUtc" ref="ac13ddd1f4ece69a24be378c346a1dfdf" args="" -->
+<a class="anchor" id="a2c4c3bc8d2742101b650e0f88dd095de"></a><!-- doxytag: member="IGuestOSType::recommendedRTCUseUTC" ref="a2c4c3bc8d2742101b650e0f88dd095de" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#ac13ddd1f4ece69a24be378c346a1dfdf">IGuestOSType::recommendedRtcUseUtc</a></td>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a2c4c3bc8d2742101b650e0f88dd095de">IGuestOSType::recommendedRTCUseUTC</a></td>
         </tr>
       </table>
 </div>
@@ -437,8 +475,38 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a46994fb90839744c78af096b03b140c1"></a><!-- doxytag: member="IGuestOSType::recommendedFloppy" ref="a46994fb90839744c78af096b03b140c1" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a46994fb90839744c78af096b03b140c1">IGuestOSType::recommendedFloppy</a></td>
+        </tr>
+      </table>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<div class="memdoc">
+
+<p>Returns <code>true</code> a floppy drive is recommended for this OS type. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8150bd5305bc866f1f458cf05bcba298"></a><!-- doxytag: member="IGuestOSType::recommendedUSB" ref="a8150bd5305bc866f1f458cf05bcba298" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_guest_o_s_type.html#a8150bd5305bc866f1f458cf05bcba298">IGuestOSType::recommendedUSB</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns <code>true</code> a USB controller is recommended for this OS type. </p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

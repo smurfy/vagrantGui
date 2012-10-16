@@ -42,14 +42,14 @@
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a44adad9e850d16c64a4f1fba5f55e07c">enableStaticIpConfig</a> (in wstring <a class="el" href="interface_i_host_network_interface.html#a239bee3574a976b7ed33398b4400c1c8">IPAddress</a>, in wstring <a class="el" href="interface_i_host_network_interface.html#a5bf1bc2f03a30723bcfda6945d155c40">networkMask</a>)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">sets and enables the static IP V4 configuration for the given interface.  <a href="#a44adad9e850d16c64a4f1fba5f55e07c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a3755ce5ff17e1edd47124ea824031a3f">enableStaticIpConfigV6</a> (in wstring <a class="el" href="interface_i_host_network_interface.html#a5c65980491fb82b4523e03b88a9d6656">IPV6Address</a>, in unsigned long <a class="el" href="interface_i_host_network_interface.html#a625ea871954baee65e90a1733b272b3a">IPV6NetworkMaskPrefixLength</a>)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">sets and enables the static IP V6 configuration for the given interface.  <a href="#a3755ce5ff17e1edd47124ea824031a3f"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#ab3a760cc994280e53301c91af75d4de2">enableDynamicIpConfig</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">enables the dynamic IP configuration.  <a href="#ab3a760cc994280e53301c91af75d4de2"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a045f508bdb1a109d91bcd02485666d98">dhcpRediscover</a> ()</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">refreshes the IP configuration for dhcp-enabled interface.  <a href="#a045f508bdb1a109d91bcd02485666d98"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a3039fb1165d040e81b07e976f94ca60e">enableStaticIPConfig</a> (in wstring <a class="el" href="interface_i_host_network_interface.html#a239bee3574a976b7ed33398b4400c1c8">IPAddress</a>, in wstring <a class="el" href="interface_i_host_network_interface.html#a5bf1bc2f03a30723bcfda6945d155c40">networkMask</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">sets and enables the static IP V4 configuration for the given interface.  <a href="#a3039fb1165d040e81b07e976f94ca60e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a533f439c3430d42b88b081dead2ab9f7">enableStaticIPConfigV6</a> (in wstring <a class="el" href="interface_i_host_network_interface.html#a5c65980491fb82b4523e03b88a9d6656">IPV6Address</a>, in unsigned long <a class="el" href="interface_i_host_network_interface.html#a625ea871954baee65e90a1733b272b3a">IPV6NetworkMaskPrefixLength</a>)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">sets and enables the static IP V6 configuration for the given interface.  <a href="#a533f439c3430d42b88b081dead2ab9f7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a426995adee3fd237d81c68902ea0ae99">enableDynamicIPConfig</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">enables the dynamic IP configuration.  <a href="#a426995adee3fd237d81c68902ea0ae99"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a36f9f2fc1fc1c9d60286dde19e350c3e">DHCPRediscover</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">refreshes the IP configuration for DHCP-enabled interface.  <a href="#a36f9f2fc1fc1c9d60286dde19e350c3e"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a6f3185fa45500e0c14a53b04613c7a69">name</a></td></tr>
@@ -58,8 +58,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the interface UUID.  <a href="#a48bd2dbf642d844b87da26b4f415c61c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a9a1d4230921a31b3205e031520f6f86b">networkName</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the name of a virtual network the interface gets attached to.  <a href="#a9a1d4230921a31b3205e031520f6f86b"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#add1b3feab5c50105dac522ed83312a6f">dhcpEnabled</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Specifies whether the DHCP is enabled for the interface.  <a href="#add1b3feab5c50105dac522ed83312a6f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a667c4275f9be9c1fc9c4a877924e5b76">DHCPEnabled</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Specifies whether the DHCP is enabled for the interface.  <a href="#a667c4275f9be9c1fc9c4a877924e5b76"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a239bee3574a976b7ed33398b4400c1c8">IPAddress</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the IP V4 address of the interface.  <a href="#a239bee3574a976b7ed33398b4400c1c8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host_network_interface.html#a5bf1bc2f03a30723bcfda6945d155c40">networkMask</a></td></tr>
@@ -85,14 +85,14 @@ Public Attributes</h2></td></tr>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Represents one of host's network interfaces. </p>
 <p>IP V6 address and network mask are strings of 32 hexdecimal digits grouped by four. Groups are separated by colons. For example, fe80:0000:0000:0000:021e:c2ff:fed2:b030.</p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{CE6FAE58-7642-4102-B5DB-C9005C2320A8}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{87A4153D-6889-4DD6-9654-2E9FF0AE8DEC}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a44adad9e850d16c64a4f1fba5f55e07c"></a><!-- doxytag: member="IHostNetworkInterface::enableStaticIpConfig" ref="a44adad9e850d16c64a4f1fba5f55e07c" args="(in wstring IPAddress, in wstring networkMask)" -->
+<a class="anchor" id="a3039fb1165d040e81b07e976f94ca60e"></a><!-- doxytag: member="IHostNetworkInterface::enableStaticIPConfig" ref="a3039fb1165d040e81b07e976f94ca60e" args="(in wstring IPAddress, in wstring networkMask)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IHostNetworkInterface::enableStaticIpConfig </td>
+          <td class="memname">void IHostNetworkInterface::enableStaticIPConfig </td>
           <td>(</td>
           <td class="paramtype">in wstring&nbsp;</td>
           <td class="paramname"> <em>IPAddress</em>, </td>
@@ -123,12 +123,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3755ce5ff17e1edd47124ea824031a3f"></a><!-- doxytag: member="IHostNetworkInterface::enableStaticIpConfigV6" ref="a3755ce5ff17e1edd47124ea824031a3f" args="(in wstring IPV6Address, in unsigned long IPV6NetworkMaskPrefixLength)" -->
+<a class="anchor" id="a533f439c3430d42b88b081dead2ab9f7"></a><!-- doxytag: member="IHostNetworkInterface::enableStaticIPConfigV6" ref="a533f439c3430d42b88b081dead2ab9f7" args="(in wstring IPV6Address, in unsigned long IPV6NetworkMaskPrefixLength)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IHostNetworkInterface::enableStaticIpConfigV6 </td>
+          <td class="memname">void IHostNetworkInterface::enableStaticIPConfigV6 </td>
           <td>(</td>
           <td class="paramtype">in wstring&nbsp;</td>
           <td class="paramname"> <em>IPV6Address</em>, </td>
@@ -159,12 +159,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ab3a760cc994280e53301c91af75d4de2"></a><!-- doxytag: member="IHostNetworkInterface::enableDynamicIpConfig" ref="ab3a760cc994280e53301c91af75d4de2" args="()" -->
+<a class="anchor" id="a426995adee3fd237d81c68902ea0ae99"></a><!-- doxytag: member="IHostNetworkInterface::enableDynamicIPConfig" ref="a426995adee3fd237d81c68902ea0ae99" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IHostNetworkInterface::enableDynamicIpConfig </td>
+          <td class="memname">void IHostNetworkInterface::enableDynamicIPConfig </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -178,12 +178,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a045f508bdb1a109d91bcd02485666d98"></a><!-- doxytag: member="IHostNetworkInterface::dhcpRediscover" ref="a045f508bdb1a109d91bcd02485666d98" args="()" -->
+<a class="anchor" id="a36f9f2fc1fc1c9d60286dde19e350c3e"></a><!-- doxytag: member="IHostNetworkInterface::DHCPRediscover" ref="a36f9f2fc1fc1c9d60286dde19e350c3e" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void IHostNetworkInterface::dhcpRediscover </td>
+          <td class="memname">void IHostNetworkInterface::DHCPRediscover </td>
           <td>(</td>
           <td class="paramname"></td>
           <td>&nbsp;)&nbsp;</td>
@@ -193,7 +193,7 @@ Public Attributes</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>refreshes the IP configuration for dhcp-enabled interface. </p>
+<p>refreshes the IP configuration for DHCP-enabled interface. </p>
 
 </div>
 </div>
@@ -243,12 +243,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="add1b3feab5c50105dac522ed83312a6f"></a><!-- doxytag: member="IHostNetworkInterface::dhcpEnabled" ref="add1b3feab5c50105dac522ed83312a6f" args="" -->
+<a class="anchor" id="a667c4275f9be9c1fc9c4a877924e5b76"></a><!-- doxytag: member="IHostNetworkInterface::DHCPEnabled" ref="a667c4275f9be9c1fc9c4a877924e5b76" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_host_network_interface.html#add1b3feab5c50105dac522ed83312a6f">IHostNetworkInterface::dhcpEnabled</a></td>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_host_network_interface.html#a667c4275f9be9c1fc9c4a877924e5b76">IHostNetworkInterface::DHCPEnabled</a></td>
         </tr>
       </table>
 </div>
@@ -395,7 +395,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

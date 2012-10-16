@@ -87,8 +87,14 @@
 : <a class="el" href="interface_i_machine.html#a21f0811ae21e028b716037f2b68c42ff">IMachine</a>
 , <a class="el" href="interface_i_medium.html#aba5cce811ecd8523c9eb5f6b120f83cd">IMedium</a>
 </li>
+<li>cloneToBase()
+: <a class="el" href="interface_i_medium.html#ab88bae122d0b0e54fae88317ec6e758e">IMedium</a>
+</li>
 <li>close()
-: <a class="el" href="interface_i_medium.html#a8e006ecc7b5bc8d9d8cb281b237a8e23">IMedium</a>
+: <a class="el" href="interface_i_guest_session.html#a931fd027935b8381f241c50818d41d0c">IGuestSession</a>
+, <a class="el" href="interface_i_directory.html#a747db38a0031d8c8d93fb2fc3ab5f965">IDirectory</a>
+, <a class="el" href="interface_i_file.html#aa9a91e0adba6af348ff0f65a5512f06c">IFile</a>
+, <a class="el" href="interface_i_medium.html#a8e006ecc7b5bc8d9d8cb281b237a8e23">IMedium</a>
 </li>
 <li>compact()
 : <a class="el" href="interface_i_medium.html#a81373bdd26302231218e447f1de48d36">IMedium</a>
@@ -97,13 +103,13 @@
 : <a class="el" href="interface_i_display.html#acec4d4138daf56f5d520366c61579733">IDisplay</a>
 </li>
 <li>composeMachineFilename()
-: <a class="el" href="interface_i_virtual_box.html#a2f98d7378a83e703b92b9a1be0ce96f4">IVirtualBox</a>
+: <a class="el" href="interface_i_virtual_box.html#a5955bc85dcb74e3e5cc31487cd68e7c6">IVirtualBox</a>
 </li>
-<li>copyFromGuest()
-: <a class="el" href="interface_i_guest.html#aaf031ea31ca78011840dff379566efc6">IGuest</a>
+<li>copyFrom()
+: <a class="el" href="interface_i_guest_session.html#ad62edf2d0cf8d4be99f18fdeebcf8f9c">IGuestSession</a>
 </li>
-<li>copyToGuest()
-: <a class="el" href="interface_i_guest.html#ad71030733a21e88d8cc9742716c486e4">IGuest</a>
+<li>copyTo()
+: <a class="el" href="interface_i_guest_session.html#af1ab1ead6f79f8fbe7539e2f818e5a64">IGuestSession</a>
 </li>
 <li>createAggregator()
 : <a class="el" href="interface_i_event_source.html#a37209a96d2dc21dc18112f66fcaa036f">IEventSource</a>
@@ -112,7 +118,7 @@
 : <a class="el" href="interface_i_virtual_box.html#a0518d1086f522f60769bf84b3b60086f">IVirtualBox</a>
 </li>
 <li>createBandwidthGroup()
-: <a class="el" href="interface_i_bandwidth_control.html#a8554931a7c235ca446e0d405821fb8dd">IBandwidthControl</a>
+: <a class="el" href="interface_i_bandwidth_control.html#a7af373624f0bc0417127d3af5bdc8302">IBandwidthControl</a>
 </li>
 <li>createBaseStorage()
 : <a class="el" href="interface_i_medium.html#ad87488be2cb47aba746f8577334d5f8d">IMedium</a>
@@ -136,12 +142,15 @@
 : <a class="el" href="interface_i_event_source.html#aad89d43d3cbdc2e9201896c684cd25dc">IEventSource</a>
 </li>
 <li>createMachine()
-: <a class="el" href="interface_i_virtual_box.html#a15b6b59f23252430fcf2a56e8b69459b">IVirtualBox</a>
+: <a class="el" href="interface_i_virtual_box.html#aabb76f2d305052b305ccd78d18b05ab8">IVirtualBox</a>
+</li>
+<li>createSession()
+: <a class="el" href="interface_i_guest.html#ad01dc4d81f1f0be4b9097977ddf2dc19">IGuest</a>
 </li>
 <li>createSharedFolder()
 : <a class="el" href="interface_i_machine.html#ae49562a26a94c09044d8bdb9341d836b">IMachine</a>
-, <a class="el" href="interface_i_virtual_box.html#aafd2f954bf656e364b90448ac8606254">IVirtualBox</a>
 , <a class="el" href="interface_i_console.html#a4ce6de919b4684acc0f7a658a9de1c93">IConsole</a>
+, <a class="el" href="interface_i_virtual_box.html#aafd2f954bf656e364b90448ac8606254">IVirtualBox</a>
 </li>
 <li>createUSBDeviceFilter()
 : <a class="el" href="interface_i_host.html#a456e53ce05717c68490907e9010a7106">IHost</a>
@@ -151,7 +160,7 @@
 </li>
 </ul>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:00 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

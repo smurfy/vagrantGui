@@ -1,4 +1,4 @@
-/* $Revision: 75929 $ */
+/* $Revision: 75934 $ */
 /** @file VBoxXPCOMCGlue.h
  * Glue for dynamically linking with VBoxXPCOMC.
  */
@@ -31,7 +31,7 @@
 #ifndef ___VBoxXPCOMC_cglue_h
 #define ___VBoxXPCOMC_cglue_h
 
-#include "VBoxCAPI_v4_1.h"
+#include "VBoxCAPI_v4_2.h"
 
 #ifdef __cplusplus
 extern "C" {

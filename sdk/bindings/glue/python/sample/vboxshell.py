@@ -1,15 +1,17 @@
 #!/usr/bin/python
-#
-# Copyright (C) 2009-2011 Oracle Corporation
-#
-# This file is part of VirtualBox Open Source Edition (OSE), as
-# available from http://www.virtualbox.org. This file is free software;
-# you can redistribute it and/or modify it under the terms of the GNU
-# General Public License (GPL) as published by the Free Software
-# Foundation, in version 2 as it comes in the "COPYING" file of the
-# VirtualBox OSE distribution. VirtualBox OSE is distributed in the
-# hope that it will be useful, but WITHOUT ANY WARRANTY of any kind.
-#
+
+"""
+Copyright (C) 2009-2012 Oracle Corporation
+
+This file is part of VirtualBox Open Source Edition (OSE), as
+available from http://www.virtualbox.org. This file is free software;
+you can redistribute it and/or modify it under the terms of the GNU
+General Public License (GPL) as published by the Free Software
+Foundation, in version 2 as it comes in the "COPYING" file of the
+VirtualBox OSE distribution. VirtualBox OSE is distributed in the
+hope that it will be useful, but WITHOUT ANY WARRANTY of any kind.
+"""
+
 #################################################################################
 # This program is a simple interactive shell for VirtualBox. You can query      #
 # information and issue commands from a simple command line.                    #
@@ -218,7 +220,7 @@ def colSizeM(ctx,m):
 def createVm(ctx,name,kind):
     mgr = ctx['mgr']
     vb = ctx['vb']
-    mach = vb.createMachine("", name, kind, "", False)
+    mach = vb.createMachine("", name, [], kind, "")
     mach.saveSettings()
     print "created machine with UUID",mach.id
     vb.registerMachine(mach)
@@ -1073,6 +1075,7 @@ def execInGuest(ctx,console,args,env,user,passwd,tmo,inputPipe=None,outputPipe=N
         print "exec in guest needs at least program name"
         return
     guest = console.guest
+    guestSession = guest.createSession(user, passwd, "", "vboxshell guest exec")
     # shall contain program name as argv[0]
     gargs = args
     print "executing %s with args %s as %s" %(args[0], gargs, user)
@@ -1080,8 +1083,8 @@ def execInGuest(ctx,console,args,env,user,passwd,tmo,inputPipe=None,outputPipe=N
     if inputPipe is not None:
         flags = 1 # set WaitForProcessStartOnly
     print args[0]
-    (progress, pid) = guest.executeProcess(args[0], flags, gargs, env, user, passwd, tmo)
-    print "executed with pid %d" %(pid)
+    process = guestSession.processCreate(args[0], gargs, env, [], tmo)
+    print "executed with pid %d" %(process.PID)
     if pid != 0:
         try:
             while True:
@@ -2167,7 +2170,7 @@ def registerHddCmd(ctx,args):
    imageId = ""
    setParentId = False
    parentId = ""
-   hdd = vb.openMedium(loc, ctx['global'].constants.DeviceType_HardDisk, ctx['global'].constants.AccessMode_ReadWrite)
+   hdd = vb.openMedium(loc, ctx['global'].constants.DeviceType_HardDisk, ctx['global'].constants.AccessMode_ReadWrite, false)
    print "registered HDD as %s" %(hdd.id)
    return 0
 
@@ -2186,7 +2189,7 @@ def attachHddCmd(ctx,args):
    vb = ctx['vb']
    loc = args[2]
    try:
-      hdd = vb.findMedium(loc, ctx['global'].constants.DeviceType_HardDisk)
+      hdd = vb.openMedium(loc, ctx['global'].constants.DeviceType_HardDisk, ctx['global'].constants.AccessMode_ReadWrite, false)
    except:
       print "no HDD with path %s registered" %(loc)
       return 0
@@ -2221,7 +2224,7 @@ def detachHddCmd(ctx,args):
    vb = ctx['vb']
    loc = args[2]
    try:
-      hdd = vb.findMedium(loc, ctx['global'].constants.DeviceType_HardDisk)
+      hdd = vb.openMedium(loc, ctx['global'].constants.DeviceType_HardDisk, ctx['global'].constants.AccessMode_ReadWrite, false)
    except:
       print "no HDD with path %s registered" %(loc)
       return 0
@@ -2241,7 +2244,7 @@ def unregisterHddCmd(ctx,args):
    else:
       vmunreg = 0
    try:
-      hdd = vb.findMedium(loc, ctx['global'].constants.DeviceType_HardDisk)
+      hdd = vb.openMedium(loc, ctx['global'].constants.DeviceType_HardDisk, ctx['global'].constants.AccessMode_ReadWrite, false)
    except:
       print "no HDD with path %s registered" %(loc)
       return 0
@@ -2266,7 +2269,7 @@ def removeHddCmd(ctx,args):
    vb = ctx['vb']
    loc = args[1]
    try:
-      hdd = vb.findMedium(loc, ctx['global'].constants.DeviceType_HardDisk)
+      hdd = vb.openMedium(loc, ctx['global'].constants.DeviceType_HardDisk, ctx['global'].constants.AccessMode_ReadWrite, false)
    except:
       print "no HDD with path %s registered" %(loc)
       return 0
@@ -2282,7 +2285,7 @@ def registerIsoCmd(ctx,args):
       return 0
    vb = ctx['vb']
    loc = args[1]
-   iso = vb.openMedium(loc, ctx['global'].constants.DeviceType_DVD, ctx['global'].constants.AccessMode_ReadOnly)
+   iso = vb.openMedium(loc, ctx['global'].constants.DeviceType_DVD, ctx['global'].constants.AccessMode_ReadOnly, false)
    print "registered ISO as %s" %(iso.id)
    return 0
 
@@ -2294,7 +2297,7 @@ def unregisterIsoCmd(ctx,args):
    vb = ctx['vb']
    loc = args[1]
    try:
-      dvd = vb.findMedium(loc, ctx['global'].constants.DeviceType_DVD)
+      dvd = vb.openMedium(loc, ctx['global'].constants.DeviceType_DVD, ctx['global'].constants.AccessMode_ReadOnly, false)
    except:
       print "no DVD with path %s registered" %(loc)
       return 0
@@ -2312,7 +2315,7 @@ def removeIsoCmd(ctx,args):
    vb = ctx['vb']
    loc = args[1]
    try:
-      dvd = vb.findMedium(loc, ctx['global'].constants.DeviceType_DVD)
+      dvd = vb.openMedium(loc, ctx['global'].constants.DeviceType_DVD, ctx['global'].constants.AccessMode_ReadOnly, false)
    except:
       print "no DVD with path %s registered" %(loc)
       return 0
@@ -2335,7 +2338,7 @@ def attachIsoCmd(ctx,args):
    vb = ctx['vb']
    loc = args[2]
    try:
-      dvd = vb.findMedium(loc, ctx['global'].constants.DeviceType_DVD)
+      dvd = vb.openMedium(loc, ctx['global'].constants.DeviceType_DVD, ctx['global'].constants.AccessMode_ReadOnly, false)
    except:
       print "no DVD with path %s registered" %(loc)
       return 0
@@ -2358,7 +2361,7 @@ def detachIsoCmd(ctx,args):
    vb = ctx['vb']
    loc = args[2]
    try:
-      dvd = vb.findMedium(loc, ctx['global'].constants.DeviceType_DVD)
+      dvd = vb.openMedium(loc, ctx['global'].constants.DeviceType_DVD, ctx['global'].constants.AccessMode_ReadOnly, false)
    except:
       print "no DVD with path %s registered" %(loc)
       return 0
@@ -2377,7 +2380,7 @@ def mountIsoCmd(ctx,args):
    vb = ctx['vb']
    loc = args[2]
    try:
-      dvd = vb.findMedium(loc, ctx['global'].constants.DeviceType_DVD)
+      dvd = vb.openMedium(loc, ctx['global'].constants.DeviceType_DVD, ctx['global'].constants.AccessMode_ReadOnly, false)
    except:
       print "no DVD with path %s registered" %(loc)
       return 0

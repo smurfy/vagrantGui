@@ -42,8 +42,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">PID of the process that has created this Session object.  <a href="#a73dde7b8bea6025c3cbee00715a3fd6a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#af5657cd98999a7414ca2506997ef0839">getRemoteConsole</a> ([retval] out <a class="el" href="interface_i_console.html">IConsole</a> console)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the console object suitable for remote control.  <a href="#af5657cd98999a7414ca2506997ef0839"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#a5be04f2dc9a2315427d274fb71a7da2b">assignMachine</a> (in <a class="el" href="interface_i_machine.html">IMachine</a> machine)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Assigns the machine object associated with this direct-type session or informs the session that it will be a remote one (if <em>machine</em> == <code>null</code>).  <a href="#a5be04f2dc9a2315427d274fb71a7da2b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#a3de320339970b5a1293204d06aa9ca35">assignMachine</a> (in <a class="el" href="interface_i_machine.html">IMachine</a> machine, in <a class="el" href="_virtual_box_8idl.html#a5893ac36dd21da7bcd19a505205ea180">LockType</a> lockType)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Assigns the machine object associated with this direct-type session or informs the session that it will be a remote one (if <em>machine</em> == <code>null</code>).  <a href="#a3de320339970b5a1293204d06aa9ca35"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#af5f00d39c94505d0472c8762820d3d09">assignRemoteMachine</a> (in <a class="el" href="interface_i_machine.html">IMachine</a> machine, in <a class="el" href="interface_i_console.html">IConsole</a> console)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Assigns the machine and the (remote) console object associated with this remote-type session.  <a href="#af5f00d39c94505d0472c8762820d3d09"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#af511c75e1f7fda7bd825264eefb6b5c1">updateMachineState</a> (in <a class="el" href="_virtual_box_8idl.html#a80b08f71210afe16038e904a656ed9eb">MachineState</a> aMachineState)</td></tr>
@@ -62,6 +62,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Triggered when attached media of the associated virtual machine have changed.  <a href="#a5ca99d5f6a3098df0a6fe224dc7a9fa5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#ab5317b1ad72e5c063c5212aa786d6683">onStorageDeviceChange</a> (in <a class="el" href="interface_i_medium_attachment.html">IMediumAttachment</a> mediumAttachment, in boolean remove)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Triggered when attached storage devices of the associated virtual machine have changed.  <a href="#ab5317b1ad72e5c063c5212aa786d6683"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#abf2e5d3d6a2355759256867966472cf5">onClipboardModeChange</a> (in <a class="el" href="_virtual_box_8idl.html#a096d8cfa9dea55360b7d50c70176a222">ClipboardMode</a> clipboardMode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Notification when the shared clipboard mode changes.  <a href="#abf2e5d3d6a2355759256867966472cf5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#a5101577cddcecb781e3e71e3c234c3de">onDragAndDropModeChange</a> (in <a class="el" href="_virtual_box_8idl.html#a37d006b98a1330f12bc97f781d87b346">DragAndDropMode</a> dragAndDropMode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Notification when the drag'n'drop mode changes.  <a href="#a5101577cddcecb781e3e71e3c234c3de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#a6f76512b237b934d8ab2dd15f748870a">onCPUChange</a> (in unsigned long cpu, in boolean add)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Notification when a CPU changes.  <a href="#a6f76512b237b934d8ab2dd15f748870a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_internal_session_control.html#a4e80978b9dd21279e6d4bd4377b66ce8">onCPUExecutionCapChange</a> (in unsigned long executionCap)</td></tr>
@@ -137,7 +141,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5be04f2dc9a2315427d274fb71a7da2b"></a><!-- doxytag: member="IInternalSessionControl::assignMachine" ref="a5be04f2dc9a2315427d274fb71a7da2b" args="(in IMachine machine)" -->
+<a class="anchor" id="a3de320339970b5a1293204d06aa9ca35"></a><!-- doxytag: member="IInternalSessionControl::assignMachine" ref="a3de320339970b5a1293204d06aa9ca35" args="(in IMachine machine, in LockType lockType)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -145,9 +149,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void IInternalSessionControl::assignMachine </td>
           <td>(</td>
           <td class="paramtype">in <a class="el" href="interface_i_machine.html">IMachine</a>&nbsp;</td>
-          <td class="paramname"> <em>machine</em></td>
-          <td>&nbsp;)&nbsp;</td>
+          <td class="paramname"> <em>machine</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">in <a class="el" href="_virtual_box_8idl.html#a5893ac36dd21da7bcd19a505205ea180">LockType</a>&nbsp;</td>
+          <td class="paramname"> <em>lockType</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
         </tr>
       </table>
 </div>
@@ -450,6 +463,58 @@ Public Member Functions</h2></td></tr>
 <td><a class="el" href="group___virtual_box___c_o_m__result__codes.html#ga6660966bcbac1dcdedef5358eaf85e31">VBOX_E_INVALID_OBJECT_STATE </a> </td><td>Session type prevents operation.   </td></tr>
 </table>
 </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="abf2e5d3d6a2355759256867966472cf5"></a><!-- doxytag: member="IInternalSessionControl::onClipboardModeChange" ref="abf2e5d3d6a2355759256867966472cf5" args="(in ClipboardMode clipboardMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IInternalSessionControl::onClipboardModeChange </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="_virtual_box_8idl.html#a096d8cfa9dea55360b7d50c70176a222">ClipboardMode</a>&nbsp;</td>
+          <td class="paramname"> <em>clipboardMode</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Notification when the shared clipboard mode changes. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>clipboardMode</em>&nbsp;</td><td>The new shared clipboard mode. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5101577cddcecb781e3e71e3c234c3de"></a><!-- doxytag: member="IInternalSessionControl::onDragAndDropModeChange" ref="a5101577cddcecb781e3e71e3c234c3de" args="(in DragAndDropMode dragAndDropMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IInternalSessionControl::onDragAndDropModeChange </td>
+          <td>(</td>
+          <td class="paramtype">in <a class="el" href="_virtual_box_8idl.html#a37d006b98a1330f12bc97f781d87b346">DragAndDropMode</a>&nbsp;</td>
+          <td class="paramname"> <em>dragAndDropMode</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Notification when the drag'n'drop mode changes. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>dragAndDropMode</em>&nbsp;</td><td>The new mode for drag'n'drop. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1005,7 +1070,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

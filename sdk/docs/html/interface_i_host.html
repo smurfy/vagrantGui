@@ -106,13 +106,13 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Host operating system's version string.  <a href="#a18952c5a5add675f88862f80d304d539"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute long long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host.html#aa747ebb7faac6e2e05924d192dbfe2a4">UTCTime</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the current host time in milliseconds since 1970-01-01 UTC.  <a href="#aa747ebb7faac6e2e05924d192dbfe2a4"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host.html#a77fe19ee78464df74544aa5e4f9a34bd">Acceleration3DAvailable</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> when the host supports 3D hardware acceleration.  <a href="#a77fe19ee78464df74544aa5e4f9a34bd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_host.html#a6074762deb6e691206ba6be5d9dc16eb">acceleration3DAvailable</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> when the host supports 3D hardware acceleration.  <a href="#a6074762deb6e691206ba6be5d9dc16eb"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>The <a class="el" href="interface_i_host.html" title="The IHost interface represents the physical machine that this VirtualBox installation runs on...">IHost</a> interface represents the physical machine that this VirtualBox installation runs on. </p>
 <p>An object implementing this interface is returned by the <a class="el" href="interface_i_virtual_box.html#a3990a395752fe51af1730b2269d068a6">IVirtualBox::host</a><b></b> attribute. This interface contains read-only information about the host's physical hardware (such as what processors and disks are available, what the host operating system is, and so on) and also allows for manipulating some of the host's hardware, such as global USB device filters and host interface networking.</p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{DAB4A2B8-C735-4F08-94FC-9BEC84182E2F}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{30678943-32DF-4830-B413-931B25AC86A0}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="a7e2287c6a8227597fa634423e53d3395"></a><!-- doxytag: member="IHost::getProcessorSpeed" ref="a7e2287c6a8227597fa634423e53d3395" args="(in unsigned long cpuId,[retval] out unsigned long speed)" -->
 <div class="memitem">
@@ -1002,12 +1002,12 @@ If USB functionality is not available in the given edition of VirtualBox, this m
 
 </div>
 </div>
-<a class="anchor" id="a77fe19ee78464df74544aa5e4f9a34bd"></a><!-- doxytag: member="IHost::Acceleration3DAvailable" ref="a77fe19ee78464df74544aa5e4f9a34bd" args="" -->
+<a class="anchor" id="a6074762deb6e691206ba6be5d9dc16eb"></a><!-- doxytag: member="IHost::acceleration3DAvailable" ref="a6074762deb6e691206ba6be5d9dc16eb" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_host.html#a77fe19ee78464df74544aa5e4f9a34bd">IHost::Acceleration3DAvailable</a></td>
+          <td class="memname">readonly attribute boolean <a class="el" href="interface_i_host.html#a6074762deb6e691206ba6be5d9dc16eb">IHost::acceleration3DAvailable</a></td>
         </tr>
       </table>
 </div>
@@ -1018,7 +1018,7 @@ If USB functionality is not available in the given edition of VirtualBox, this m
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

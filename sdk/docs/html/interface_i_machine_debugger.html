@@ -81,8 +81,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get the VM statistics in a XMLish format.  <a href="#a47e121e97d86933f0a53b14e9d1831b6"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#ac669033f7cb9417e957e1e69b8459fc5">singlestep</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Switch for enabling singlestepping.  <a href="#ac669033f7cb9417e957e1e69b8459fc5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#abf989736b7a4e6d1102ec9c30f3a8049">singleStep</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Switch for enabling single-stepping.  <a href="#abf989736b7a4e6d1102ec9c30f3a8049"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#ab235138c011acbb69ebd752747e505de">recompileUser</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Switch for forcing code recompilation for user mode code.  <a href="#ab235138c011acbb69ebd752747e505de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#aaeef27dea478b82a00eeb65e95888515">recompileSupervisor</a></td></tr>
@@ -93,12 +93,18 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Switch for enabling and disabling the CSAM component.  <a href="#aec38674141728be9947e0b051bece2f6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a3d3db3a454a645b75ab44793a62e018c">logEnabled</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Switch for enabling and disabling the debug logger.  <a href="#a3d3db3a454a645b75ab44793a62e018c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#afb01eac50667f44b8012133600911db0">logFlags</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The debug logger flags.  <a href="#afb01eac50667f44b8012133600911db0"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a51eb17e1e7e60220381b6a08b0330982">logGroups</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The debug logger's group settings.  <a href="#a51eb17e1e7e60220381b6a08b0330982"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#acfe763321a2253babd8214a3a55b4814">logDestinations</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The debug logger's destination settings.  <a href="#acfe763321a2253babd8214a3a55b4814"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a22a4f075f6eccf6ce58b346dfff0c82f">logDbgFlags</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The debug logger flags.  <a href="#a22a4f075f6eccf6ce58b346dfff0c82f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#adfc496af2d2a2250ce5338e9d9325e53">logDbgGroups</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The debug logger's group settings.  <a href="#adfc496af2d2a2250ce5338e9d9325e53"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a50e8ab38cbe7ceee25f59c11abc950b0">logDbgDestinations</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The debug logger's destination settings.  <a href="#a50e8ab38cbe7ceee25f59c11abc950b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#aabd7c7a46cd32e64dfe20b41ab0e39b9">logRelFlags</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The release logger flags.  <a href="#aabd7c7a46cd32e64dfe20b41ab0e39b9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a909a84c1c09163b7b2b4788df951bcaf">logRelGroups</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The release logger's group settings.  <a href="#a909a84c1c09163b7b2b4788df951bcaf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a21446c1769769a8e1c417d57387eece4">logRelDestinations</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The relase logger's destination settings.  <a href="#a21446c1769769a8e1c417d57387eece4"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a86f699fa0675df3cd248e917b1797781">HWVirtExEnabled</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Flag indicating whether the VM is currently making use of CPU hardware virtualization extensions.  <a href="#a86f699fa0675df3cd248e917b1797781"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_machine_debugger.html#a94a061266676ace8ada6541cdf8f91d1">HWVirtExNestedPagingEnabled</a></td></tr>
@@ -858,18 +864,18 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Data Documentation</h2>
-<a class="anchor" id="ac669033f7cb9417e957e1e69b8459fc5"></a><!-- doxytag: member="IMachineDebugger::singlestep" ref="ac669033f7cb9417e957e1e69b8459fc5" args="" -->
+<a class="anchor" id="abf989736b7a4e6d1102ec9c30f3a8049"></a><!-- doxytag: member="IMachineDebugger::singleStep" ref="abf989736b7a4e6d1102ec9c30f3a8049" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">attribute boolean <a class="el" href="interface_i_machine_debugger.html#ac669033f7cb9417e957e1e69b8459fc5">IMachineDebugger::singlestep</a></td>
+          <td class="memname">attribute boolean <a class="el" href="interface_i_machine_debugger.html#abf989736b7a4e6d1102ec9c30f3a8049">IMachineDebugger::singleStep</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Switch for enabling singlestepping. </p>
+<p>Switch for enabling single-stepping. </p>
 
 </div>
 </div>
@@ -948,12 +954,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="afb01eac50667f44b8012133600911db0"></a><!-- doxytag: member="IMachineDebugger::logFlags" ref="afb01eac50667f44b8012133600911db0" args="" -->
+<a class="anchor" id="a22a4f075f6eccf6ce58b346dfff0c82f"></a><!-- doxytag: member="IMachineDebugger::logDbgFlags" ref="a22a4f075f6eccf6ce58b346dfff0c82f" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#afb01eac50667f44b8012133600911db0">IMachineDebugger::logFlags</a></td>
+          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#a22a4f075f6eccf6ce58b346dfff0c82f">IMachineDebugger::logDbgFlags</a></td>
         </tr>
       </table>
 </div>
@@ -963,12 +969,12 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a51eb17e1e7e60220381b6a08b0330982"></a><!-- doxytag: member="IMachineDebugger::logGroups" ref="a51eb17e1e7e60220381b6a08b0330982" args="" -->
+<a class="anchor" id="adfc496af2d2a2250ce5338e9d9325e53"></a><!-- doxytag: member="IMachineDebugger::logDbgGroups" ref="adfc496af2d2a2250ce5338e9d9325e53" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#a51eb17e1e7e60220381b6a08b0330982">IMachineDebugger::logGroups</a></td>
+          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#adfc496af2d2a2250ce5338e9d9325e53">IMachineDebugger::logDbgGroups</a></td>
         </tr>
       </table>
 </div>
@@ -978,18 +984,63 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="acfe763321a2253babd8214a3a55b4814"></a><!-- doxytag: member="IMachineDebugger::logDestinations" ref="acfe763321a2253babd8214a3a55b4814" args="" -->
+<a class="anchor" id="a50e8ab38cbe7ceee25f59c11abc950b0"></a><!-- doxytag: member="IMachineDebugger::logDbgDestinations" ref="a50e8ab38cbe7ceee25f59c11abc950b0" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#acfe763321a2253babd8214a3a55b4814">IMachineDebugger::logDestinations</a></td>
+          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#a50e8ab38cbe7ceee25f59c11abc950b0">IMachineDebugger::logDbgDestinations</a></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
 <p>The debug logger's destination settings. </p>
+
+</div>
+</div>
+<a class="anchor" id="aabd7c7a46cd32e64dfe20b41ab0e39b9"></a><!-- doxytag: member="IMachineDebugger::logRelFlags" ref="aabd7c7a46cd32e64dfe20b41ab0e39b9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#aabd7c7a46cd32e64dfe20b41ab0e39b9">IMachineDebugger::logRelFlags</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The release logger flags. </p>
+
+</div>
+</div>
+<a class="anchor" id="a909a84c1c09163b7b2b4788df951bcaf"></a><!-- doxytag: member="IMachineDebugger::logRelGroups" ref="a909a84c1c09163b7b2b4788df951bcaf" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#a909a84c1c09163b7b2b4788df951bcaf">IMachineDebugger::logRelGroups</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The release logger's group settings. </p>
+
+</div>
+</div>
+<a class="anchor" id="a21446c1769769a8e1c417d57387eece4"></a><!-- doxytag: member="IMachineDebugger::logRelDestinations" ref="a21446c1769769a8e1c417d57387eece4" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_machine_debugger.html#a21446c1769769a8e1c417d57387eece4">IMachineDebugger::logRelDestinations</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>The relase logger's destination settings. </p>
 
 </div>
 </div>
@@ -1118,7 +1169,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>

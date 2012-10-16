@@ -64,6 +64,8 @@ Public Attributes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The extension pack version string.  <a href="#a73a909c0f8d1472acf89856e2a923c88"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute unsigned long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_ext_pack_base.html#a38cdef2af5f2c72f01e7148fd128413e">revision</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The extension pack internal revision number.  <a href="#a38cdef2af5f2c72f01e7148fd128413e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_ext_pack_base.html#a37419e053282c41b784e769f7d2c5f49">edition</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Edition indicator.  <a href="#a37419e053282c41b784e769f7d2c5f49"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute wstring&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_ext_pack_base.html#ac9158d579b95e6752ee431df5b696782">VRDEModule</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The name of the VRDE module if the extension pack sports one.  <a href="#ac9158d579b95e6752ee431df5b696782"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">readonly attribute <a class="el" href="interface_i_ext_pack_plug_in.html">IExtPackPlugIn</a>[]&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_ext_pack_base.html#adb8e16273e35485554d9e236379285be">plugIns</a></td></tr>
@@ -79,7 +81,7 @@ Public Attributes</h2></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Interface for querying information about an extension pack as well as accessing COM objects within it. </p>
-<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{5FFB0B64-0AD6-467D-AF62-1157E7DC3C99}</code> </dd></dl>
+<dl class="user"><dt><b>Interface ID:</b></dt><dd><code>{F79B75D8-2890-4F34-FFFF-FFFFA144E82C}</code> </dd></dl>
 <hr/><h2>Member Function Documentation</h2>
 <a class="anchor" id="ae8645e6bed204946a277ec5c363957dc"></a><!-- doxytag: member="IExtPackBase::queryLicense" ref="ae8645e6bed204946a277ec5c363957dc" args="(in wstring preferredLocale, in wstring preferredLanguage, in wstring format,[retval] out wstring licenseText)" -->
 <div class="memitem">
@@ -175,7 +177,8 @@ Public Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>The extension pack version string. </p>
-<p>This is on the same form as other VirtualBox version strings, i.e.: "1.2.3", "1.2.3_BETA1", "1.2.3-OSE", "1.2.3r45678", "1.2.3r45678-OSE", "1.2.3_BETA1-r45678" or "1.2.3_BETA1-r45678-OSE" </p>
+<p>This is restricted to the dotted version number and optionally a build indicator. No tree revision or tag will be included in the string as those things are available as separate properties. An optional publisher tag may be present like for <a class="el" href="interface_i_virtual_box.html#aa39d78ffaa90c1abe9d340a1a0738ed9">IVirtualBox::version</a><b></b>.</p>
+<p>Examples: "1.2.3", "1.2.3_BETA1" and "1.2.3_RC2". </p>
 
 </div>
 </div>
@@ -191,6 +194,23 @@ Public Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>The extension pack internal revision number. </p>
+
+</div>
+</div>
+<a class="anchor" id="a37419e053282c41b784e769f7d2c5f49"></a><!-- doxytag: member="IExtPackBase::edition" ref="a37419e053282c41b784e769f7d2c5f49" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly attribute wstring <a class="el" href="interface_i_ext_pack_base.html#a37419e053282c41b784e769f7d2c5f49">IExtPackBase::edition</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Edition indicator. </p>
+<p>This is usually empty.</p>
+<p>Can for instance be used to help distinguishing between two editions of the same extension pack where only the license, service contract or something differs. </p>
 
 </div>
 </div>
@@ -288,7 +308,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/><address class="footer"><small>Generated on Thu Apr 12 2012 16:55:01 for VirtualBox Main API by&nbsp;
+<hr class="footer"/><address class="footer"><small>Generated on Thu Sep 13 2012 07:09:48 for VirtualBox Main API by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
 </body>
