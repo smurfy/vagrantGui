@@ -219,7 +219,7 @@ int VirtualboxUnifiedInterface::findSSHPort(IMachine *machine)
     INetworkAdapter *adapter;
     INATEngine *natDriver;
     machine->GetNetworkAdapter(0, &adapter);
-    adapter->get_NatDriver(&natDriver);
+    adapter->get_NATEngine(&natDriver);
 
     SAFEARRAY *redirectsArray = NULL;
     natDriver->get_Redirects(&redirectsArray);
